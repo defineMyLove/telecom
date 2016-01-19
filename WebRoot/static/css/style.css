@@ -1,0 +1,277 @@
+html{
+	/*background-image: url('../images/bg-body1.jpg');*/
+	background-color: #ffffff;
+	background-repeat: repeat-y;
+    background-position: center;
+    background-attachment: fixed;
+}
+body{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	/*background-image: url('../images/bg-body1.jpg');*/
+	height: 100%;
+    background-repeat: repeat-y;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #ffffff;
+    
+    
+
+}
+
+.head{
+	height:32px;
+	width:auto;
+	background-color: #037DB8;
+	margin-top: 50px;
+	
+	
+}
+
+/*logo*/
+.img{
+	margin-top: 0px;
+	margin-left: 15px;
+	height: 32px;
+}
+
+/*�����ͼdiv*/
+.mid{
+	height: 400px;
+	width: 1000px;
+	/*background-color: red;*/
+	margin: 0 auto;
+}
+
+/*���ֹ���div*/
+.word{
+	height: 25px;
+	width: 1000px;
+	/*background-color: #765492;*/
+	margin: 0 auto;
+}
+
+/*���ർ��ģ��*/
+.modules1{
+	height: 248px;
+	width: 333px;
+	background: #f3f3f3;
+	margin-top: 35px;
+	margin-left: 0px;
+	float: left;
+}
+
+.modules1 span{
+	font-size: 150%;
+	font-family: YouYuan;
+	
+}
+
+.modules2{
+	height: 248px;
+	width: 332px;
+	background-image:url('../images/divoic.jpg');
+	margin-top: 35px;
+	margin-left: 0px;
+	float: left;
+	border:1px #b1b1b0 solid; 
+	border-top: none; 
+	border-bottom: none;
+}
+
+.modules3{
+	height: 248px;
+	width: 333px;
+	background: #f3f3f3;
+	margin-top: 35px;
+	margin-left: 0px;
+	float: left;
+
+}
+
+.modules3 span{
+	font-size: 150%;
+	font-family: YouYuan;
+
+}
+
+.modules3 img{
+	height: 200px;
+	width: 290px;
+	margin-top: 9px;
+	margin-left: 21px;
+
+}
+
+/*����ģ��*/
+.link1{
+	height: 123px;
+	width: 1000px;
+	background: #f3f3f3;
+	clear:left;
+	margin: 0px 0px 0px 0px;
+	border:1px #b1b1b0 solid; 
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+.link1 img{
+	margin: 30px 0 0px 25px;
+}
+
+/*β��ģ��*/
+.endcss1{
+	float:left;
+	height: 188px;
+	width: 1000px;
+	background-color: #121212;
+	margin: 30px 0px 30px 0px;
+	filter:alpha(opacity=50);
+}
+
+.img1{
+	float:left;
+	clear: right;
+	margin-top: 45px;
+	margin-left: 30px;
+	position: relative;	
+}
+
+.endcss1 ul{
+	font-size: 16px;
+	float: left;
+	color: white;
+	position: relative;
+	Line-height: 16pt;
+	margin-top:0px;
+	margin-left: 25px;
+}
+
+.img2{
+	float:left;
+	width: 400px;
+	position: relative;
+	margin-top: 40px;
+	margin-left: 20px;
+	
+	
+}
+
+/*��������Ч���λ�ÿ���*/
+.up{
+margin-top: 8px;
+margin-left: 10px;
+}
+
+
+/*�����ε���Ƶ������ģ��*/
+.biaoti{
+	width: 1000px;
+	height: 123px;
+	margin: auto;
+	margin-top: 5px;
+}
+
+.biaoti img{
+	width: 1000px;
+
+}
+
+
+/*�����ε���Ƶ����ʽ���*/
+.wenbenwai{
+	margin: auto;
+}
+
+.wenben1{
+	margin: auto;
+	width: 998px;
+	height: 40px;
+	margin-top: 5px;	
+	border:1px #b1b1b0 solid; 
+	border-bottom: none;
+}
+.wenben1 img{
+	width: 998px;
+}
+
+.wenben2{
+	height: 1200px;
+	width: 150px;
+	background: #f3f3f3;
+	float:left;
+	border:1px #b1b1b0 solid; 
+}
+
+.wenben3{
+	float:left;
+	height: 1200px;
+	width: 847px;
+	background: #f3f3f3;
+	border:1px #b1b1b0 solid; 
+	border-left: none;
+}
+
+/*��̨��½������ʽ*/
+
+.login{
+	height: 550px;
+	width: 1000px;
+}
+
+.login img{
+	width: 1000px;
+	margin-top: 20px;
+	margin-left: 0px;
+	
+}
+
+.login form{
+	margin-top: -270px;
+	margin-left: 390px;
+}
+
+.denglu{
+	width: 87px;
+	margin-top: 45px;
+	margin-left: 72px;
+}
+
+/*�����ε����ָ�����ʽ*/
+.biaoge{
+	width: 830px;
+	border-bottom: 1px solid #037DB8;
+	margin-top: 1px;
+	font-size: 25px;
+	margin-left: 8px;
+	text-align:right;
+	font-size: 23px;
+	font-family: STKaiti;
+}
+
+/*�����ε����ָ�����ʽ*/
+.biaoge2{
+	width: 982px;
+	border-bottom: 1px solid #037DB8;
+	margin-top: 1px;
+	font-size: 25px;
+	margin-left: 8px;
+	text-align:right;
+	font-size: 23px;
+	font-family: STKaiti;
+}
+
+
+/*�����ε�����Ƶ����ʽ���*/
+.show{
+	float:left;
+	width: 998px;
+	background: #f3f3f3;
+	border:1px #b1b1b0 solid; 
+}
+
+.ui-table-container{
+    padding:10px;
+}

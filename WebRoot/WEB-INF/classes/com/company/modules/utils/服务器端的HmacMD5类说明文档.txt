@@ -1,0 +1,10 @@
+使用时需要调用方法GenerateDigest：
+
+public String GenerateDigest(String str, String str1)//str是challenge，str1是password
+
+str 要进行HMAC-md5运算的数据
+
+str1 HMAC-md5密钥
+
+返回签名后的 byte 数组
+

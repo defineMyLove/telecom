@@ -1,0 +1,1769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/WebRoot/static/sea-modules/easyui/demo/datagrid/rowborder.html" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5a7075b-4023-422b-82d1-81c2b0cae1e3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/flag/flagDetail.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/flag/flagAna.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/reader/readerDetail.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/flag/flagAdd.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/flag/flagMain.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/flag/flagQuery.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/reader/readerMain.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/product/ProductService.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\m1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/spring/SpringContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/UploadImage.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\m5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/ConvertUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\xinchanpin .jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/YEJI_INFO.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\scrollimg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/yeji/YejiController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/YEJI_FILE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/DateUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/shipin/ShipinController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/Threads.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/DateProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/MaintainController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/PropertyUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/UpLoadFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/MesObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/WORK_INFO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/dao/BaseDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/web/HttpInvoker.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\sony.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/lunwen/LunwenController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/DateProvider$ConfigurableDateProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/PropertyUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/StringUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lianxi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/product/ProductController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/MyFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/yeji/YejiClassifyService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/BwlUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/work/WorkController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/lunwen/ZhuanLanService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/FreeMarkerUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/JdbcUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/SHA1Encode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/MyFreeMarkerConfigurer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/application.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/dao/BaseDao.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\logo1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/Account.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/lunwen/ZhuanLanService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/TECH_ZHUANLAN.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/syscontext/SystemInit.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/ServletResponseUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/SHIPIN_INFO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/服务器端的HmacMD5类说明文档.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/dao/SqlParameter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/yeji/YejiClassifyService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/SysInfoController.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\orad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/spring/spring_schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/UploadException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/TECH_ZHUANLAN.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/YEJI_INFO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/spring/MyBindingInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/UploadForumIcon.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/upload/UpLoadContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/news/NewsService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/FreeMarkerUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/product/ProductClassifyController.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_hzimg2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/lunwen/LunwenController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/syscontext/SystemContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/DateProvider$CurrentDateProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/WebUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/displayTag/PaginationHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/component/Format.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/mesboard/MesBoardController.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\topicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/DateUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/solution/SolutionService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/UpLoadController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/upload/bean/UploadBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/news/NewsController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/ZipUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_hzimg6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/HomeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/FileUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/database_dialect.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/upload/UploadException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/Identities.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/Exceptions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tool/tools/db2java/Db2Java4Mysql.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/SpringBeanUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/dao/BaseBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/Exceptions.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/spring/spring_task.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/StringUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/MyFile.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/page/PageController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/WatchThread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/web/SplitPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/displayTag/PaginationContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/ZtreeNode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/FANGAN_INFO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/lunwen/ZhishiController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/product/ProductClassifyService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/NEW_INFO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/AccountService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/spring/spring_tx.xml" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_hzmenu.jpg" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\list_righttit.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/lunwen/ZhishiController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/TECH_ZHISHI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/WebUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/upload/UpLoadFile.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/syscontext/PromptType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/PropertiesLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/spring/spring_aop.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/filter/SessionTimeoutHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_hzimg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_selectbtn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/ServletResponseUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/RegExpUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/CHANPIN_FENLEI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/spring/SpringContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/product/ProductService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/Threads.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\m4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/exception/UploadException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/SYS_USER.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/FANGAN_INFO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/ZipUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/MES_BOARD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/lunwen/ZhishiService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/work/WorkController.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\logo2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tool/tools/memcache/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/exception/ExceptionHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\qqqqqldt_web_haed.png" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\xinwen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/NEW_INFO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/syscontext/SystemContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/exception/UploadException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/UpLoadContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/ZtreeNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/solution/SolutionClassifyService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/solution/SolutionController.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_email.jpg" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\support-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/spring/appServlet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/CHANPIN_INFO.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\listbanner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/bean/UploadBean.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\products.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/yeji/YejiClassifyController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tool/tools/memcache/memcachedX64.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/BwlUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/CHANPIN_INFO.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_hzimg3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\WEB-INF\classes\tools\memcache\readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/Identities.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/mesboard/MesBoardService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/yeji/YejiClassifyController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/solution/SolutionService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/SHA1Encode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/work/WorkService.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\WEB-INF\classes\tools\memcache\memcachedX86.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/MaintainController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/YEJI_FENLEI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/exception/BusinessException.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_menunav_01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/YEJI_FENLEI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/CHANPIN_FILE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/服务器端的HmacMD5类说明文档.txt" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\WEB-INF\classes\tools\memcache\memcachedX64.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/solution/SolutionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/lunwen/ZhishiService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/shipin/ShipinService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/mesboard/MesBoardService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/CHANPIN_FENLEI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/Account.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/syscontext/PromptType.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\m2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\list_pro.jpg" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_hzimg4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/mesboard/MesBoardController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/spring/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\WEB-INF\classes\tools\db2java\template\bean.ftl" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_menunav_02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/yeji/YejiService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/yeji/YejiController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/yeji/YejiService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/ToViewController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/page/PageController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/syscontext/SystemInit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/SysInfoController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/spring/MyBindingInitializer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/upload/UploadImage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/displayTag/PaginationHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/PasswordUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_cpico4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/PropertiesLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/AccountService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/TECH_ZHISHI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/news/NewsController.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\ldt_web_haed1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/product/ProductController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/upload/UploadForumIcon.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/product/ProductClassifyController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/generatorConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\leftna2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/upload/UploadResource.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\leftna1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/solution/SolutionClassifyController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/web/HttpInvoker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/jdbcspy.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/PasswordUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/DateProvider.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/solution/SolutionClassifyService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/FANGAN_FENLEI.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\WEB-INF\classes\tools\db2java\Db2Java4Mysql.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/component/Format.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/product/ProductClassifyService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/filter/SessionTimeoutHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/JdbcUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/SYS_USER.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/upload/UploadResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/dao/BaseBean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/HmacMD5.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/ByteUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_cpico2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/FileUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/work/WorkService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tool/tools/db2java/template/bean.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/shipin/ShipinController.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_listico.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/syscontext/Const.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\zhongguangdian.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/ByteUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/ToViewController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tool/tools/memcache/memcachedX86.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/upload_resource.properties" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_selectinput.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/JsonUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/exception/ExceptionHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/web/SplitPage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/DownLoadController.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_cpico3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/common/syscontext/ResponseMes.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/syscontext/Const.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/HomeController.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\xiexian.png" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_hzimg5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/MyFreeMarkerConfigurer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/web/ServiceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/displaytag.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/service/shipin/ShipinService.java" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\lc_tit.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/upload_image.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/web/ServiceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/SHIPIN_INFO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/domain/FANGAN_FENLEI.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\m3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/web/solution/SolutionClassifyController.class" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\WebRoot\static\images\list_btn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="G:\java\company\.idea\artifacts\shenxiaolin_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/displayTag/PaginationContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/JsonUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/syscontext/ResponseMes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/web/DownLoadController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/WORK_INFO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/electriccar/domain/MES_BOARD.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/HmacMD5.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/WatchThread.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/utils/ConvertUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/service/news/NewsService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/RegExpUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/modules/utils/SpringBeanUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/electriccar/common/exception/BusinessException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/company/modules/dao/SqlParameter.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/static/css/bootstrap-all.css" afterPath="$PROJECT_DIR$/WebRoot/static/css/bootstrap-all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/views/maintain/product/proAdd.jsp" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/product/proAdd.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/views/news.jsp" afterPath="$PROJECT_DIR$/WebRoot/views/news.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/views/maintain/product/tree.jsp" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/product/tree.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/views/maintain/product/proTree.jsp" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/product/proTree.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/views/maintain/main.jsp" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/views/maintain/yeji/yejiAdd.jsp" afterPath="$PROJECT_DIR$/WebRoot/views/maintain/yeji/yejiAdd.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/application.properties" afterPath="$PROJECT_DIR$/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" />
+    </list>
+    <ignored path="company.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="company" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="userMng.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebRoot/views/maintain/flag/userMng.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="66" selection-start="2309" selection-end="2309" vertical-scroll-proportion="-0.23781213" vertical-offset="1425" max-vertical-offset="6825">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/company/electriccar/web/DownLoadController.java" />
+        <option value="$PROJECT_DIR$/resources/sso.properties" />
+        <option value="$PROJECT_DIR$/src/com/company/electriccar/common/filter/UserHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/company/electriccar/common/syscontext/SystemContext.java" />
+        <option value="$PROJECT_DIR$/src/com/company/electriccar/common/filter/UserCheckHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/company/electriccar/web/MaintainController.java" />
+        <option value="$PROJECT_DIR$/src/com/company/electriccar/web/HomeController.java" />
+        <option value="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/WebRoot/views/maintain/flag/flagMain.jsp" />
+        <option value="$PROJECT_DIR$/src/com/company/modules/dao/BaseDao.java" />
+        <option value="$PROJECT_DIR$/WebRoot/views/maintain/main.jsp" />
+        <option value="$PROJECT_DIR$/src/com/company/electriccar/web/reader/FlagController.java" />
+        <option value="$PROJECT_DIR$/src/com/company/modules/utils/WebUtil.java" />
+        <option value="$PROJECT_DIR$/WebRoot/static/css/myapp.min.css" />
+        <option value="$PROJECT_DIR$/WebRoot/views/maintain/flag/userMng.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="invalid-module-dependency(module:company,melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER)" />
+      <problem id="invalid-module-dependency(module:company,org.eclipse.jst.j2ee.internal.module.container)" />
+      <problem id="invalid-module-dependency(module:company,org.eclipse.jst.j2ee.internal.web.container)" />
+    </ignored-problems>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nuocommon-1.1.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kisso-0.0.1-SNAPSHOT.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kisso-0.0.1-SNAPSHOT.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kisso-0.0.1-SNAPSHOT.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maintain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maintain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea-modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="electriccar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="electriccar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="electriccar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="project.propCompiler" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kisso/kisso/src/main/java" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.electriccar.common.filter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\java\company\WebRoot\static" />
+      <recent name="G:\java\company\WebRoot\static\css" />
+      <recent name="G:\java\company\WebRoot\views\maintain\flag" />
+      <recent name="G:\java\company\WebRoot\static\sea-modules" />
+      <recent name="G:\java\company\WebRoot\WEB-INF\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6.0.41" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+      <option name="OPEN_IN_BROWSER_URL" value="http://127.0.0.1:8080/" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="company:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_company_3" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53253" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="company:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5a7075b-4023-422b-82d1-81c2b0cae1e3" name="Default" comment="" />
+      <created>1453168904973</created>
+      <updated>1453168904973</updated>
+      <workItem from="1453168907623" duration="4383000" />
+      <workItem from="1453175273960" duration="17108000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="21491000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6354733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32317737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27094668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/common/filter/SessionTimeoutHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="42" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.0" vertical-offset="925" max-vertical-offset="5925">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/domain/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
+          <folding>
+            <element signature="e#217#218#0" expanded="false" />
+            <element signature="e#244#245#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
+            <element signature="e#316#317#0" expanded="false" />
+            <element signature="e#349#350#0" expanded="false" />
+            <element signature="e#378#379#0" expanded="false" />
+            <element signature="e#422#423#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#488#489#0" expanded="false" />
+            <element signature="e#514#515#0" expanded="false" />
+            <element signature="e#552#553#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/common/filter/SessionTimeoutHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="54" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="5925">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/DownLoadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="61" selection-start="160" selection-end="163" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="2475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/ServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="645" selection-end="645" vertical-scroll-proportion="-9.62963" vertical-offset="40" max-vertical-offset="2400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/SysInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="281" selection-end="281" vertical-scroll-proportion="-8.333333" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/ToViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="53" selection-start="837" selection-end="837" vertical-scroll-proportion="-9.62963" vertical-offset="215" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/UpLoadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="44" selection-start="960" selection-end="960" vertical-scroll-proportion="0.7790894" vertical-offset="63" max-vertical-offset="925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/lunwen/LunwenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.5025295" vertical-offset="27" max-vertical-offset="1475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/lunwen/ZhishiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="25" selection-start="1637" selection-end="1637" vertical-scroll-proportion="1.4112903" vertical-offset="0" max-vertical-offset="1475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/common/syscontext/SystemContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/common/filter/UserCheckHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="24" selection-start="2073" selection-end="2073" vertical-scroll-proportion="0.0" vertical-offset="894" max-vertical-offset="1750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/kisso-0.0.1-SNAPSHOT.jar!/wang/leq/sso/common/util/HttpUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="-11.0" vertical-offset="150" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/kisso-0.0.1-SNAPSHOT.jar!/wang/leq/sso/web/KissoConfigListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="25" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="3400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/kisso-0.0.1-SNAPSHOT.jar!/wang/leq/sso/client/SSOHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="26" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kisso/kisso/src/main/java/wang/leq/sso/common/util/ReflectUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="29" selection-start="3134" selection-end="3134" vertical-scroll-proportion="-0.29431438" vertical-offset="2851" max-vertical-offset="3675">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="56" selection-start="2647" selection-end="2647" vertical-scroll-proportion="1.1086956" vertical-offset="662" max-vertical-offset="1550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kisso/kisso/src/main/java/wang/leq/sso/common/CookieHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="46" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.458194" vertical-offset="2201" max-vertical-offset="6475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/upload_image.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/nuocommon-1.1.jar!/nuocommon.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/nuocommon-1.1.jar!/sso.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="33" selection-start="693" selection-end="693" vertical-scroll-proportion="0.8361204" vertical-offset="0" max-vertical-offset="650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kisso/kisso/src/main/java/wang/leq/sso/client/SSOHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="0" selection-start="3835" selection-end="3835" vertical-scroll-proportion="0.33226836" vertical-offset="2946" max-vertical-offset="5025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/static/sea-modules/alice/box/1.1.0/box.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/views/word.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="2" selection-start="398" selection-end="398" vertical-scroll-proportion="-5.147059" vertical-offset="0" max-vertical-offset="1450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/MaintainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="47" selection-start="2729" selection-end="2729" vertical-scroll-proportion="0.0" vertical-offset="1637" max-vertical-offset="2900">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/service/reader/FlagService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="42" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.8543046" vertical-offset="459" max-vertical-offset="4475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/modules/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="9" selection-start="4994" selection-end="4994" vertical-scroll-proportion="0.73013246" vertical-offset="3284" max-vertical-offset="8550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/static/css/iconfonts/online.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="1" selection-start="784" selection-end="784" vertical-scroll-proportion="0.47114253" vertical-offset="0" max-vertical-offset="849">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/static/sea-modules/ligerui/1.2.0/js/ligerui.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6592" column="9" selection-start="229354" selection-end="229354" vertical-scroll-proportion="-0.13907285" vertical-offset="164884" max-vertical-offset="431075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/views/maintain/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="277" column="26" selection-start="9502" selection-end="9502" vertical-scroll-proportion="-15.176471" vertical-offset="6409" max-vertical-offset="8075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/views/maintain/flag/flagAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="58" selection-start="562" selection-end="562" vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="1900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/modules/utils/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="28" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0" vertical-offset="1763" max-vertical-offset="3575">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/static/sea-modules/seajs-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="429" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/static/seajs-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/modules/utils/WebUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="32" selection-start="1113" selection-end="1122" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="1200">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1453192444331" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/electriccar/web/reader/FlagController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="5" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/static/css/myapp.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1587" column="27" selection-start="24901" selection-end="24901" vertical-scroll-proportion="-3.6666667" vertical-offset="39576" max-vertical-offset="439125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/views/maintain/flag/flagMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="563" selection-end="647" vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="4825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/static/css/bootstrap-all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="453" selection-end="453" vertical-scroll-proportion="-21.222221" vertical-offset="27" max-vertical-offset="92950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/views/maintain/flag/userMng.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="66" selection-start="2309" selection-end="2309" vertical-scroll-proportion="-0.23781213" vertical-offset="1425" max-vertical-offset="6825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>company:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring (company)|Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>company</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

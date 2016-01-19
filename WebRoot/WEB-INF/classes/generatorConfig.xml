@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry location="E:\.m2\repository\com\oracle\ojdbc14\10.2.0.2.0\ojdbc14-10.2.0.2.0.jar"/>
+    <context id="context1">
+        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl" userId="electriccar"
+                        password="electriccar"/>
+        <javaModelGenerator targetPackage="com.com.company.electriccar.domain" targetProject="F:\electriccar\src\main\java"/>
+        <sqlMapGenerator targetPackage="com.com.company.electriccar.mapper" targetProject="F:\electriccar\src\main\java"/>
+        <javaClientGenerator targetPackage="com.com.company.electriccar.mapper" targetProject="F:\electriccar\src\main\java"
+                             type="XMLMAPPER"/>
+
+        <!-- 流程部署&动态表单 start -->
+        <!--
+        <table tableName="PROC_KEY" >
+             <columnOverride column="CUR_VERSION" javaType="Integer"></columnOverride>
+             <columnOverride column="UPLOAD_STATE" javaType="Integer"></columnOverride>
+             <columnOverride column="DEPLOY_STATE" javaType="Integer"></columnOverride>
+         </table>
+        <table tableName="proc_deploy" >
+             <columnOverride column="PROC_DEPLOY_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="VERSION" javaType="Integer"></columnOverride>
+             <columnOverride column="DEPLOY_STATE" javaType="Integer"></columnOverride>
+             <columnOverride column="TASK_FORM_STATE" javaType="Integer"></columnOverride>
+         </table>
+          <table tableName="PROC_DIAGRAM" >
+         </table>
+         <table tableName="task_bind" >
+                 <columnOverride column="TASK_TYPE" javaType="Integer"></columnOverride>
+                 <columnOverride column="CASE_IND" javaType="Integer"></columnOverride>
+                 <columnOverride column="CASE_IND_VAL" javaType="Integer"></columnOverride>
+         </table>
+         <table tableName="TASK_ACTION">
+             <generatedKey column="ACTION_ID" sqlStatement="select SEQ_TASK_ACTION_ID.nextval from dual"/>
+             <columnOverride column="ACTION_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="PROC_VAR_DATA_TYPE" javaType="Integer"></columnOverride>
+             <columnOverride column="POSITION_INDEX" javaType="Integer"></columnOverride>
+             <columnOverride column="FORM_DEF_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="CASE_IND" javaType="Integer"></columnOverride>
+             <columnOverride column="CASE_IND_VAL" javaType="Integer"></columnOverride>
+         </table>
+        <table tableName="TASK_ACTION">
+             <generatedKey column="ACTION_ID" sqlStatement="select SEQ_TASK_ACTION_ID.nextval from dual"/>
+             <columnOverride column="ACTION_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="PROC_VAR_DATA_TYPE" javaType="Integer"></columnOverride>
+             <columnOverride column="POSITION_INDEX" javaType="Integer"></columnOverride>
+             <columnOverride column="FORM_DEF_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="CASE_IND" javaType="Integer"></columnOverride>
+             <columnOverride column="CASE_IND_VAL" javaType="Integer"></columnOverride>
+             <columnOverride column="ACTION_TYPE" javaType="Integer"></columnOverride>
+         </table>
+         <table tableName="form_def">
+             <columnOverride column="FORM_DEF_ID" javaType="Integer"></columnOverride>
+         </table>
+         <table tableName="form_field">
+             <columnOverride column="FIELD_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="FORM_DEF_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="INPUT_TYPE" javaType="Integer"></columnOverride>
+             <columnOverride column="DATA_TYPE" javaType="Integer"></columnOverride>
+             <columnOverride column="REQUIRED" javaType="Integer"></columnOverride>
+             <columnOverride column="POSITION_INDEX" javaType="Integer"></columnOverride>
+         </table>
+         <table tableName="field_item">
+             <columnOverride column="ITEM_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="FIELD_ID" javaType="Integer"></columnOverride>
+         </table>
+         <table tableName="form_instance">
+             <columnOverride column="FORM_DEF_ID" javaType="Integer"></columnOverride>
+         </table>
+         <table tableName="field_instance">
+             <columnOverride column="FIELD_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="FIELD_INTEGER_VAL" javaType="Integer"></columnOverride>
+             <columnOverride column="FIELD_ITEM_ID" javaType="Integer"></columnOverride>
+             <columnOverride column="FORM_DEF_ID" javaType="Integer"></columnOverride>
+         </table>
+         -->
+        <!-- 流程部署&动态表单end
+        <table tableName="CASE_STEP" >
+            <generatedKey column="STEP_ID" sqlStatement="select SEQ_CASE_STEP_ID.nextval from dual"/>
+            <columnOverride column="STEP_ID" javaType="Integer"></columnOverride>
+            <columnOverride column="FORM_DEF_ID" javaType="Integer"></columnOverride>
+            <columnOverride column="TASK_ACTION_ID" javaType="Integer"></columnOverride>
+            <columnOverride column="TASK_TYPE" javaType="Integer"></columnOverride>
+            <columnOverride column="ACTION_TYPE" javaType="Integer"></columnOverride>
+        </table>-->
+        <!-- 案件start -->
+        <!--
+        <table tableName="CASE_" >
+                <columnOverride column="CHUFA_STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="YISONG_STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="LIAN_STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="DAIBU_STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="QISU_STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="PANJUE_STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="JIEAN_STATE" javaType="Integer"></columnOverride>
+        </table>
+
+        <table tableName="CASE_XIANYIREN">
+            <generatedKey column="XIANYIREN_ID" sqlStatement="select SEQ_CASE_XIANYIREN_ID.nextval from dual"/>
+            <columnOverride column="XIANYIREN_ID" javaType="Integer"></columnOverride>
+            <columnOverride column="DAIBU_STATE" javaType="Integer"></columnOverride>
+            <columnOverride column="TIQINGQISU_STATE" javaType="Integer"></columnOverride>
+            <columnOverride column="TIQIGONGSU_STATE" javaType="Integer"></columnOverride>
+            <columnOverride column="FAYUANPANJUE_STATE" javaType="Integer"></columnOverride>
+        </table>
+         -->
+        <!-- 案件end
+         <table tableName="CASE_CONSULTATION">
+            <generatedKey column="ID" sqlStatement="select SEQ_FILE_RESOURCE_ID.nextval from dual"/>
+            <columnOverride column="INPUT_ORG_ID" javaType="Integer"></columnOverride>
+            <columnOverride column="ID" javaType="Integer"></columnOverride>
+            <columnOverride column="STATE" javaType="Integer"></columnOverride>
+        </table>
+        <table tableName="SERIAL_MODEM_GATEWAY_DEF">
+            <generatedKey column="ID" sqlStatement="select SEQ_MODEM_GATEWAY_ID.nextval from dual"/>
+            <columnOverride column="ID" javaType="Integer"></columnOverride>
+            <columnOverride column="BAUD_RATE" javaType="Integer"></columnOverride>
+            <columnOverride column="OUT_BOUND" javaType="Integer"></columnOverride>
+            <columnOverride column="IN_BOUND" javaType="Integer"></columnOverride>
+            <columnOverride column="INIT_STRING" javaType="Integer"></columnOverride>
+            <columnOverride column="STATE" javaType="Integer"></columnOverride>
+        </table>
+        <table tableName="SMS_BIND">
+            <generatedKey column="ID" sqlStatement="select SEQ_SMS_BIND_ID.nextval from dual"/>
+            <columnOverride column="ID" javaType="Integer"></columnOverride>
+            <columnOverride column="STATE" javaType="Integer"></columnOverride>
+        </table>
+        <table tableName="SMS_TEMPLATE">
+            <generatedKey column="ID" sqlStatement="select SEQ_SMS_TEMPLATE_ID.nextval from dual"/>
+            <columnOverride column="ID" javaType="Integer"></columnOverride>
+            <columnOverride column="TYPE" javaType="Integer"></columnOverride>
+            <columnOverride column="STATE" javaType="Integer"></columnOverride>
+        </table>
+        <table tableName="CASE_CONSULTATION">
+            <generatedKey column="ID" sqlStatement="select SEQ_CASE_CONSULTATION.nextval from dual"/>
+            <columnOverride column="ID" javaType="Integer"></columnOverride>
+            <columnOverride column="INPUT_ORG_ID" javaType="Integer"></columnOverride>
+            <columnOverride column="STATE" javaType="Integer"></columnOverride>
+            <columnOverride column="SET_TOP" javaType="Integer"></columnOverride>
+        </table>-->
+        <!--     <table tableName="FORUM_THEME">
+                <generatedKey column="ID" sqlStatement="select SEQ_FORUM_THEME_ID.nextval from dual"/>
+                <columnOverride column="ID" javaType="Integer"></columnOverride>
+                <columnOverride column="SECTION_ID" javaType="Integer"></columnOverride>
+                <columnOverride column="INPUT_ORG_ID" javaType="Integer"></columnOverride>
+                <columnOverride column="REPLY_COUNT" javaType="Integer"></columnOverride>
+                <columnOverride column="READ_COUNT" javaType="Integer"></columnOverride>
+                <columnOverride column="SET_TOP" javaType="Integer"></columnOverride>
+                <columnOverride column="STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="LATEST_REPLY_ID" javaType="Integer"></columnOverride>
+            </table> -->
+
+        <!--     <table tableName="NOTICE_FILE">
+                <generatedKey column="FILE_ID" sqlStatement="select SEQ_NOTICE_FILE_ID.nextval from dual"/>
+                <columnOverride column="FILE_ID" javaType="Integer"></columnOverride>
+                <columnOverride column="NOTICE_ID" javaType="Integer"></columnOverride>
+            </table>
+
+            <table tableName="FORUM_SECTION" domainObjectName="ForumCommunity">
+                <generatedKey column="ID" sqlStatement="select SEQ_FORUM_SECTION_ID.nextval from dual"/>
+                <columnOverride column="ID" javaType="Integer"></columnOverride>
+                <columnOverride column="LATEST_THEME" javaType="Integer"></columnOverride>
+                <columnOverride column="THEME_COUNT" javaType="Integer"></columnOverride>
+                <columnOverride column="REPLY_COUNT" javaType="Integer"></columnOverride>
+                <columnOverride column="STATE" javaType="Integer"></columnOverride>
+                <columnOverride column="SORT" javaType="Integer"></columnOverride>
+            </table>
+             <table tableName="INFO_TYPE">
+                <columnOverride column="TYPE_ID" javaType="Integer"></columnOverride>
+            </table>
+            <table tableName="LAY_INFO">
+                <columnOverride column="TYPE_ID" javaType="Integer"></columnOverride>
+            </table>
+             <table tableName="MODULE">
+                <columnOverride column="MODULE_ID" javaType="Integer"></columnOverride>
+                <columnOverride column="IS_LEAF" javaType="Integer"></columnOverride>
+                <columnOverride column="PARENT_ID" javaType="Integer"></columnOverride>
+                <columnOverride column="MODULE_CATEGORY" javaType="Integer"></columnOverride>
+                <columnOverride column="IS_MAINTAIN" javaType="Integer"></columnOverride>
+                <columnOverride column="ORDER_NO" javaType="Integer"></columnOverride>
+            </table>
+            <table tableName="CASE_REPLY">
+                <columnOverride column="ID_" javaType="Integer"></columnOverride>
+            </table> -->
+        <!--   <table tableName="ORGANISE">
+              <columnOverride column="ORG_CODE" javaType="Integer"></columnOverride>
+              <columnOverride column="UP_ORG_CODE" javaType="Integer"></columnOverride>
+              <columnOverride column="IS_LEAF" javaType="Integer"></columnOverride>
+              <columnOverride column="IS_DEPT" javaType="Integer"></columnOverride>
+              <columnOverride column="IS_LIANGFA_LEADER" javaType="Integer"></columnOverride>
+          </table> -->
+        <!-- <table tableName="CASE_" >
+                   <columnOverride column="CHUFA_STATE" javaType="Integer"></columnOverride>
+                   <columnOverride column="YISONG_STATE" javaType="Integer"></columnOverride>
+                   <columnOverride column="LIAN_STATE" javaType="Integer"></columnOverride>
+                   <columnOverride column="DAIBU_STATE" javaType="Integer"></columnOverride>
+                   <columnOverride column="QISU_STATE" javaType="Integer"></columnOverride>
+                   <columnOverride column="PANJUE_STATE" javaType="Integer"></columnOverride>
+                   <columnOverride column="JIEAN_STATE" javaType="Integer"></columnOverride>
+                   <columnOverride column="AMOUNT_INVOLVED" javaType="Integer"></columnOverride>
+           </table>
+
+           <table tableName="CASE_ATTACHMENT" >
+               <generatedKey column="ID" sqlStatement="select SEQ_CASE_ID.nextval from dual"/>
+               <columnOverride column="ID" javaType="Integer"></columnOverride>
+           </table> -->
+
+        <!--  <table tableName="CASE_WEIJI" >
+                 <columnOverride column="CASE_ID" javaType="Integer"></columnOverride>
+                 <columnOverride column="JIEAN_STATE" javaType="Integer"></columnOverride>
+         </table>
+
+         <table tableName="CASE_DUTY" >
+                 <columnOverride column="CASE_ID" javaType="Integer"></columnOverride>
+                 <columnOverride column="JIEAN_STATE" javaType="Integer"></columnOverride>
+         </table>
+         <table tableName="CASE_IMPORT" >
+                 <columnOverride column="UPLOAD_FLAG" javaType="Integer"></columnOverride>
+
+                 <columnOverride column="PENALTY_FILE_ID" javaType="Integer"></columnOverride>
+                 <columnOverride column="IMPORT_ID" javaType="Integer"></columnOverride>
+          </table>
+
+       <table tableName="FORM_PROC_INFO" domainObjectName="ProcInfo">
+            <columnOverride column="PROC_STATE" javaType="Integer"></columnOverride>
+        </table>
+          <table tableName="FORM_PROC_INFO" domainObjectName="ProcInfo">
+            <columnOverride column="PROC_STATE" javaType="Integer"></columnOverride>
+        </table>    -->
+        <table tableName="FORM_EVENT_INFO" domainObjectName="EventInfo">
+            <columnOverride column="TYPE" javaType="Integer"></columnOverride>
+            <columnOverride column="NATURE" javaType="Integer"></columnOverride>
+            <columnOverride column="SOURCE" javaType="Integer"></columnOverride>
+            <columnOverride column="PRIORITY" javaType="Integer"></columnOverride>
+            <columnOverride column="IS_REPEAT" javaType="Integer"></columnOverride>
+            <columnOverride column="IS_RE_BILL" javaType="Integer"></columnOverride>
+            <columnOverride column="IS_TIMEOUT" javaType="Integer"></columnOverride>
+            <columnOverride column="USER_FEEDBACK" javaType="Integer"></columnOverride>
+            <columnOverride column="SOLVE_ROLE" javaType="Integer"></columnOverride>
+            <columnOverride column="CLOSE_STATE" javaType="Integer"></columnOverride>
+            <columnOverride column="IS_TIMEOUT" javaType="Integer"></columnOverride>
+        </table>
+
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,61 @@
+@charset "utf-8";
+/*全局css样式*/
+html,body,head,title,map,applet,iframe,pre,a,acronym,address,cite,code,font,em,img,strong,sub,sup,b,i,fieldset,form,input,label,legend,caption,tbody,tfoot,tbody,div,table,tr,td,dd,dl,dt,ul,ol,li,p,span,h1,h2,h3,h4,h5,h6 {margin:0;padding:0;table-layout:fixed;word-break:break-all;word-wrap:break-word;font-size:12px; font-family:"微软雅黑","黑体","宋体" ; }
+ol,li {list-style:none;}
+.fl {float:left;} .fr {float:right;} .clear {clear:both; height:0px;font-size:0; line-height:0;}
+.overflow {overflow:hidden;}
+.moa {margin:0 auto;}
+a{blr:expression(this.onFocus=this.blur())}
+a,a:link,a:visited,a:active {color:#333; text-decoration:none;}
+a:hover {text-decoration:underline;color:#666;}
+a:focus {outline:none;}
+img{border:0;}
+.pad20 {padding:20px;}
+
+/*=====head=====*/
+.wrap {width:950px;}
+.head {width:950px;padding-top:32px;padding-bottom:28px;}
+.logo {background:url(../images/lc_logo.jpg) no-repeat;height:32px;width:300px;margin-right:60px;}
+.lctit {background:url(../images/lc_tit.jpg) no-repeat;height:19px;width:137px;margin-right:60px;margin:5px;}
+.lc_select {width:330px;}
+.lc_selectinput {background:url(../images/lc_selectinput.jpg) no-repeat;width:255px;height:33px;padding:1px 1px 1px 5px;}
+.lc_selectinput input {border:solid 0px #fff;width:255px;height:30px;line-height:30px;color:#949494;font-size:14px;}
+.lc_selectbtn {background:url(../images/lc_selectbtn.jpg) no-repeat;width:60px;height:35px;border:none;display:block;cursor:pointer;}
+
+/*=====nav=====*/
+.nav {width:100%;background:#3d68e6;line-height:40px;margin-bottom:10px;}
+#jsddm {position:relative; z-index:5;}
+#jsddm li {float:left;width:90px;}
+#jsddm li a	{ text-align:center;white-space:nowrap;font-size:14px;color:#fff;display:block;text-decoration:none;display: block;}
+#jsddm li a:hover{background: #133493}
+#jsddm li ul{margin: 0;padding: 0;position: absolute;visibility: hidden;border-top: 1px solid #fff;width:110px;}
+#jsddm li ul li	{float: none;display: inline;line-height:30px;}
+#jsddm li ul li a{width:90px;background:#3d68e6;color: #fff;overflow: hidden; text-align:left;padding:0 10px; /*自动隐藏文字*/text-overflow: ellipsis;/*文字隐藏后添加省略号*/white-space: nowrap;/*强制不换行*/}
+#jsddm li ul li a:hover	{background: #133493;color: #fff;}
+
+
+
+
+
+a.lc_email:link,a.lc_email:visited,a.lc_email:active {background:url(../images/lc_email.jpg) no-repeat left center;display:block;height:40px;padding-left:30px;fong-size:12px;line-height:40px;color:#fff; text-decoration:none;width:80px;}
+a.lc_email:hover {text-decoration:underline;background:url(../images/lc_email.jpg) no-repeat left center;display:block;height:40px;padding-left:30px;fong-size:12px;line-height:40px;color:#fff;width:80px;}
+
+/*=====更多>>=====*/
+a.more:link,a.more:visited,a.more:active {font-size:12px;width:50px;color:#333;background:none;line-height:36px;}
+a.more:hover {font-size:12px;width:50px;color:#333;background:none;text-decoration:underline;line-height:36px;}
+
+/*=====footer=====*/
+.aboutus {background:#4992fb;height:153px;margin-top:10px;}
+.aboutuscont {width:400px;padding-top:35px;}
+.aboutuscont dl {float:left;width:80px;text-align:center;margin:0 5px;}
+.aboutuscont dl dt {margin-bottom:10px;}
+.aboutuscont dl dd,.aboutuscont dl dd a {font-size:16px;color:#fff;height:30px;line-height:30px;}
+.aboutuscont span {line-height:140px;font-size:16px;color:#fff;height:85px;overflow:hidden;display:block;width:10px;float:left;}
+.copyright {background:#054199;padding:20px 0;}
+.copyright p {text-align:center;color:#fff;font-size:14px;line-height:28px;}
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+.mmPaginator {
+	font-size: 13px;
+    margin: 5px 0;
+    white-space: nowrap;
+}
+
+.mmPaginator .totalCountLabel{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 5px 0 0;
+    padding: 1px 0 0 0;
+    line-height: 1.5;
+    vertical-align: top;
+}
+.mmPaginator .totalCountLabel span{
+    color: blue;
+    font-weight: bold;
+}
+
+.mmPaginator .pageList{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 5px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mmPaginator .pageList li{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 2px;
+    /*padding: 0 6px;*/
+    padding: 0;
+    background: #fff;
+   border: 1px solid #b4b4b4;
+    /*line-height: 1.5;*/
+    vertical-align: top;
+
+}
+.mmPaginator .pageList li.moreLess{
+	border:none;
+}
+
+.mmPaginator .pageList li.active{
+    background: none;
+    padding-top: 1px;
+    border: 0;
+}
+
+.mmPaginator .pageList li.disable a{
+    color: #b4b4b4;
+    cursor: default;
+}
+
+.mmPaginator .pageList li.disable{
+    background: #F5F5F5;
+}
+
+.mmPaginator .pageList li a{
+    color: #1c1c1c;
+    text-align: center;
+    cursor: pointer;
+    /*#rengeng add#*/
+     display: inline-block;
+    *display: inline;
+    line-height: 1.5;
+    padding: 1px 8px;
+    /*#rengeng add#*/
+}
+
+.mmPaginator .pageList li a.head{
+
+}
+
+.mmPaginator .pageList li a.headDisable{
+
+}
+
+.mmPaginator .pageList li a.prev{
+
+}
+
+.mmPaginator .pageList li a.prevDisable{
+
+}
+
+.mmPaginator .pageList li a.next{
+
+}
+
+.mmPaginator .pageList li a.nextDisable{
+
+}
+
+.mmPaginator .pageList li a.tail{
+
+}
+
+.mmPaginator .pageList li a.tailDisable{
+
+}
+
+.mmPaginator .pageList li a.current{
+
+}
+
+.mmPaginator .pageList li a.skip{
+
+}
+
+.mmPaginator .limit{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 1.5;
+    vertical-align: top;
+}
+
+.mmPaginator .limit select{
+	border: 1px solid #b4b4b4;
+	color: #1c1c1c;
+    padding: 1px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+

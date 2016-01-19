@@ -1,0 +1,139 @@
+<div id="__groupUserSelector" ms-controller="MS_CONTROLLER" style="display:none;background: #FFF;width:250px;border: 1px solid #d1d1d1;">
+	<div class="fs-contact-content">
+		<div class="fs-contact-tabs ui-tab">
+			<ul class="ui-switchable-nav ui-tab-items">
+				<li class="ui-tab-item ui-switchable-active"><a href="javascript:;">群组成员</a></li>
+			</ul>
+			<div class="ui-switchable-content">
+				<div  class="ui-tab-panel clearfix ui-switchable-panel" style="display: block;" ms-visible="tabIndex==0">
+					<div class="fs-contact-letter-nav clearfix">
+						<ul class="list-0">
+							<li ms-repeat="pindexArrLine1" ms-class-fs-contact-letter-selected="selectedUserPindex.indexOf(el)>-1" ms-click="toIndex(controllerId+(el=='#'?'_':el)+'u',controllerId+'_userList')">{{el}}</li>
+						</ul>
+						<ul class="list-1">
+							<li ms-repeat="pindexArrLine2" ms-class-fs-contact-letter-selected="selectedUserPindex.indexOf(el)>-1" ms-click="toIndex(controllerId+(el=='#'?'_':el)+'u',controllerId+'_userList')">{{el}}</li>
+						</ul>
+					</div>
+					<div class="fs-scrollbar">
+						<div class="fs-scrollbar-inner viewport" style="height: 286px;overflow: auto;" ms-attr-id="{{controllerId+'_userList'}}">
+							<div class="fs-contact-list-wrapper fs-scrollbar-box overview" style="height: auto; top: 0px;overflow-x: hidden;">
+								<ul class="fs-contact-list">
+									<li ms-repeat="userList">
+										<div class="index-box clearfix" ms-attr-id="{{controllerId+(el.index=='#'?'_':el.index)+'u'}}">
+											<div class="index-keyword">{{el.index}}</div>
+											<div class="item-length">{{el.items.size()}}</div>
+										</div>
+										<ul class="fs-contact-view">
+											<li class="fs-contact-item" ms-repeat="el.items" ms-click="itemClick(1,el)">
+												<div class="contact-item-pic">
+													<img ms-attr-src="el.userPhoto">
+												</div>
+												<span class="contact-item-name">{{el.userName}} {{el.noteName && '('+el.noteName+')'}}</span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fs-contact-bbar clearfix">
+			<div class="fs-contact-summary" ms-visible="tabIndex==0">共有{{userCount}}位成员</div>
+		</div>
+	</div>
+	
+	<div ms-click="closePopup" class="ui-dialog-close" title="关闭本框" data-role="close" style="display: block;position: absolute;top: 5px;right: 13px;">×</div>
+	<style>
+	.ui-dialog-close {
+    position: relative;
+    _position: absolute;
+    float: right;
+    top: 13px;
+    right: 13px;
+    _height: 26px;
+    padding: 0 4px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #FFF;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+    background: transparent;
+    _background: #FFF;
+    border: 0;
+    -webkit-appearance: none;
+}
+.ui-dialog-close:hover,
+.ui-dialog-close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.ui-tab-items li {
+list-style: none;
+vertical-align: top;
+position: relative;
+top: 1px;
+}
+.ui-tab-item {
+display: inline-block;
+margin-right: 20px;
+}
+.ui-tab-item a {
+line-height: 40px;
+height: 40px;
+color: #4D4D4D;
+display: inline-block;
+}
+.fs-contact-content{padding-top:10px}
+.fs-contact-content ul, .fs-contact-content ol {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+.fs-contact-letter-nav{width: 250px;padding: 15px 10px;}
+.fs-contact-list-wrapper {float: left;height: 286px;width: 225px;overflow: auto;padding-left: 14px;}
+.fs-contact-list{position:relative}
+.fs-contact-letter-nav .list-0,.fs-contact-letter-nav .list-1{float:left;width: 100%;}
+.fs-contact-letter-nav .list-1{margin-top:2px}
+.fs-contact-letter-nav li {float: left;width: 14px;height: 15px;line-height: 15px;color: #ddebfc;text-align: center;font-weight: 700;margin: 1px;}
+.fs-contact-tabs .ui-switchable-content,.fs-contact-tabs .ui-switchable-panel{height:354px;background-color: #FFF;}
+.fs-contact-tabs .ui-switchable-panel{overflow:hidden}
+.fs-contact-tabs .ui-tab-items{padding-left:50px;border-bottom:#cfcfcf solid 1px}
+.fs-contact-list li{width: 225px;padding-left: 35px;position: relative;}
+.fs-contact-tabs .ui-tab-item {
+	font-size: 12px;
+	margin-right: 5px;
+	border-bottom: #cfcfcf solid 1px;
+	background-color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc),to(#f1f1f1));
+	background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1);
+	background: -o-linear-gradient(top, #fcfcfc, #f1f1f1);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#f1f1f1');
+	background: linear-gradient(to bottom, #fcfcfc, #f1f1f1)
+}
+.fs-contact-tabs .ui-switchable-active {background:-webkit-gradient(linear,left top,left bottom,from(#f1f1f1),to(#fcfcfc));background:-moz-linear-gradient(top,#f1f1f1,#fcfcfc);background:-o-linear-gradient(top,#f1f1f1,#fcfcfc);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#fcfcfc');background:linear-gradient(to bottom,#f1f1f1,#fcfcfc);border-bottom:#fff solid 1px}
+.fs-contact-tabs .ui-tab-item a{height:25px;line-height:25px;border:#cfcfcf solid 1px;border-bottom:0;color:#000;padding:0 10px;text-decoration: none;}
+.fs-contact-tabs .ui-tab-item a:ACTIVE,.fs-contact-tabs .ui-tab-item a:HOVER,.fs-contact-tabs .ui-tab-item a:VISITED{text-decoration: none;}
+.fs-contact-list .index-keyword {font-size: 23px;color: #d8dade;font-weight: 700;}
+.fs-contact-list .item-length {display: none;float: right;color: #959698;}
+.fs-contact-list .index-box {width: 35px;height: 30px;line-height: 30px;position: absolute;left: 0;top: 0;}
+.fs-contact-item {height: 30px;line-height: 30px;margin-bottom: 12px;overflow: hidden;color: #2f3032;cursor: pointer;margin-right: 10px;}
+.fs-contact-item .contact-item-pic {float: left;width: 30px;height: 30px;margin-right: 10px;}
+.fs-contact-item .contact-item-pic img {width: 30px;height: 30px;}
+.fs-contact-item:hover{background-color:#e6f3f7}
+.fs-contact-item-selected{background:#cbe6ef}
+.fs-contact-item-selected:hover{background:#c5e3ed}
+.fs-contact-view li {width: auto;padding: 0;}
+.fs-contact-bbar{padding:0 10px;background:#f7f7f7;border-top:1px solid #d1d1d1;height:32px}
+.fs-contact-summary{float:left;color:#949494;line-height:30px}
+.fs-contact-letter-nav li.fs-contact-letter-selected {color: #7cb3f5;cursor: pointer;}
+	</style>
+</div>

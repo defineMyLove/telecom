@@ -1,0 +1,45 @@
+@charset "utf-8";
+.fl {float:left;}
+.fr {float:right;}
+.moa {margin:0 auto;}
+.clear {clear:both;}
+.titmenu {background:#2196f3;height:50px; text-align:center;color:#fff;font:bold 20px/50px "微软雅黑", "黑体", "宋体";}
+    .nmpbgimg {position:relative;}
+    .nmptx {border:solid 3px #fff; position:relative;bottom:45px;margin:0 auto;width:86px;height:45px;}
+	.nmptx img {width:80px;height:80px;}
+    .content {margin:15px;}
+	.xm {border-bottom:dashed 1px #999;margin-bottom:20px;}
+	.xm h3 {text-align:center;font:bold 20px/35px "微软雅黑", "黑体", "宋体";color:#444;}
+    .xm p {text-align:center;font:normal 14px/24px "微软雅黑", "黑体", "宋体";color:#999;margin-bottom:15px;}
+    .gongsi,a.gongsi:hover {font:bold 16px/35px "微软雅黑", "黑体", "宋体";color:#444;width:100%;display:block;margin-bottom:10px;}
+	.ucardxx p img {width:15px;height:15px;float:left;margin:2px 10px 2px 2px;}
+	.ucardxx p {line-height:20px;color:#666;font-size:14px;}
+	a.addfriends {width:100%;background:#fff;border-top:solid 1px #2196f3;height:50px;display:block; text-align:center;font:normal 16px/50px "微软雅黑", "黑体", "宋体"; position:fixed;bottom:0; text-decoration:none;color:#2196f3;}
+	a.addfriends img {width:30px;height:25px;margin-right:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

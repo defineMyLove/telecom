@@ -1,0 +1,8 @@
+<Context>
+    <Resource name="electriccar_stable_frame" auth="Container"
+              type="javax.sql.DataSource"
+
+              username="postgres" password="qwe"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://1.1.1.111:5432/ddccx"/>
+</Context>

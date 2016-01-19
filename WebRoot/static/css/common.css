@@ -1,0 +1,284 @@
+/**
+*  此文件的样式目前被分成三类：全局，重设，组件
+*
+*/
+
+@charset "UTF-8";
+@import url("bootstrap.css");
+/**
+*全局样式
+*/
+* body {
+    font-family: "微软雅黑", "宋体", "Arial", "sans-serif";
+    font-size: 12px;
+    background-color: #FFFFFF;
+}
+
+
+html {
+    scrollbar-3dlight-color: #c2cbd2; /*- 最外左 -*/
+    scrollbar-highlight-color: #f1f4fd; /*- 左二 -*/
+    scrollbar-face-color: #c5d6ff; /*- 面子 -*/
+    scrollbar-arrow-color: #666; /*- 箭头 -*/
+    scrollbar-shadow-color: #c2cbd2; /*- 右二 -*/
+    scrollbar-darkshadow-color: #f1f4fd; /*- 右一 -*/
+    scrollbar-base-color: #eef5ff; /*- 基色 -*/
+    scrollbar-track-color: #f7faff; /*- 滑道 -*/
+}
+a {
+    color: #55A4F2;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
+/** 全局-对齐**/
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+/** liger UI tab**/
+#tabDiv {
+    border: 1px solid #A3C0E8;
+}
+
+/*zTree 组织机构 添加样式*/
+.tree li button.add {
+    background: url("../images/add.png") no-repeat scroll 0 0 transparent;
+}
+/*全局-使table里的单元格之间不太挤  */
+.searchform td {
+    height: 25px;
+    padding-left: 7px;
+}
+
+/*全局-检索命中文本样式*/
+em {
+    color: red;
+    background-color: yellow;
+    font-style: normal;
+}
+
+/*全局-超时预警样式*/
+
+h1.redLight {
+    background: url("../images/red_light.jpg") no-repeat scroll center top transparent;
+    height: 21px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1.yellowLight {
+    background: url("../images/yellow_light.jpg") no-repeat scroll center top transparent;
+    height: 21px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1.greenLight {
+    background: url("../images/green_light.jpg") no-repeat scroll center top transparent;
+    height: 21px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*弹出框树样式*/
+#popupDiv div.titleDiv {
+    color: gray;
+    margin: 5px 0px 5px 5px;
+}
+
+#popupDiv div.treeDiv {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    overflow: auto;
+    height: 310px;
+    width: 286px;
+}
+
+#popupDiv div.buttonDiv {
+    margin: 5px 0px 0px 5px;
+}
+
+#popupDiv div.infoMsg {
+    color: red;
+    margin-left: 5px;
+}
+/**  文字省略**/
+.ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cutout {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.link {
+    color: #2779AA;
+    cursor: pointer;
+}
+.panel {
+    padding: 10px;
+    overflow: hidden;
+}
+
+/**
+*
+*   重设样式(重设原有html组件样式)
+*
+*
+*
+*/
+
+/* 重设-表单 样式 */
+textarea {
+    display: inline;
+    padding: 2px;
+    width: 92%;
+    border: 1px solid #ABC1D1;
+}
+
+.select {
+    width: 81%;
+    height: 21px;
+    display: inline;
+    border: 1px solid #ABC1D1;
+}
+
+.text {
+    width: 80%;
+    border: 1px solid #ABC1D1;
+}
+
+.text_over {
+    border: 1px #0156a9 solid;
+    background-color: #e6f2ff;
+}
+/** 重设-fieldset**/
+.fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 27px;
+    font-size: 19.5px;
+    font-weight: bold;
+    line-height: 36px;
+    color: #333333;
+    border: 0;
+    border-bottom: 1px solid #A3C0E8;
+}
+
+/**
+*
+*   组件样式(自定义组件样式)
+*
+*
+*
+*/
+/*组件-表单校验 */
+input.error, select.error,textarea.error {
+    border: 1px solid red;
+    background-color: #FFB9B9;
+}
+
+label.error {
+    background: url("../images/unchecked.gif") no-repeat 0px 0px;
+    padding-left: 16px;
+    color: red;
+}
+
+label.success {
+    background: url("../images/checked.gif") no-repeat 0px 0px;
+    padding-left: 16px;
+}
+
+/** 组件-表格样式**/
+.table-add {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 0 1px 1px 0;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-color: #ABB8CE;
+    background: #EDEDED;
+    border-top: 1px solid #ABB8CE;
+    border-left: 1px solid #ABB8CE;
+}
+
+.table-add td {
+    border-color: #F8F8F8 #ABB8CE #ABB8CE #F8F8F8;
+    background: #E0E8F5;
+    padding: 4px;
+    text-align: right;
+    vertical-align: top;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0;
+}
+
+.table-add .tabRight {
+    padding: 5px 4px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 1px 1px 0 #E4EDFB;
+    vertical-align: middle;
+    background: #D0DBEE;
+    vertical-align: middle;
+}
+
+
+/**
+ *组件-必填样式(与javascript配合使用,js位于jqueryUtil.js内)
+**/
+span.required {
+    margin-left: 5px;
+    color: red;
+    font-weight: bold;
+}
+/**
+ *组件-带标题的区域样式
+**/
+.div-search {
+    background-color: #FFFFFF;
+    border: 1px solid #A3C0E8;
+    border-radius: 4px 4px 4px 4px;
+    margin: 15px 0;
+    padding: 39px 19px 14px;
+    position: relative;
+}
+
+.div-search .title {
+    background-color: #F5F5F5;
+    border: 1px solid #A3C0E8;
+    border-radius: 4px 0 4px 0;
+    color: #08C;
+    content: "查询";
+    font-size: 15px;
+    font-weight: bold;
+    left: -1px;
+    padding: 7px 11px;
+    position: absolute;
+    top: -1px;
+}

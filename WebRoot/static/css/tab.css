@@ -1,0 +1,90 @@
+@charset "utf-8";
+.menu1box{
+position:relative;
+overflow:hidden;
+height:35px;
+width:282px;
+text-align:left;
+}
+#menu1{
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+
+}
+#menu1 li{
+float:left;
+display:block;
+cursor:pointer;
+color:#000000;
+width:141px;
+line-height:35px;
+height:35px;
+background:url(../images/login_bor_15.jpg) no-repeat bottom;
+font-weight:bold;
+font-size:16px;
+text-align:center;
+font-family:"微软雅黑";
+}
+#menu1 li.hover{
+background:url(../images/login_bor_14.jpg) no-repeat bottom;
+color:#000000;
+width:141px;
+line-height:35px;
+height:35px;
+font-size:16px;
+text-align:center;
+}
+.main1box{
+clear:both;
+margin-top:-1px;
+height:261px;
+width:279px;
+padding-left:3px;
+padding-top:15px;
+overflow:scroll;
+overflow-x:hidden;
+}
+#main1 ul{
+display: none;
+list-style:none;
+}
+#main1 ul.block{
+display: block;
+list-style:none;
+}
+#main1 ul tr{
+color:#000000;
+height:30px;
+}
+#main1 ul td{
+font-size:12px;
+}
+#main1 ul input[type="text"]
+{
+height:20px;
+width:130px;
+line-height:20px;
+}
+#main1 ul .button 
+{
+height:27px;
+width:92px;
+background:url(../images/btn_14.jpg) no-repeat;
+border:none;
+display:block;
+float:left;
+}
+#main1 ul .submit
+{
+height:27px;
+width:92px;
+background:url(../images/btn_16.jpg) no-repeat;
+border:none;
+display:block;
+float:left;
+margin-left:15px;
+}
+
+

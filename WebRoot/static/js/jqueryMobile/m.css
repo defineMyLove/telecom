@@ -1,0 +1,244 @@
+/**
+*全局样式
+*/
+* body {
+    font-family: "微软雅黑", "宋体", "Arial", "sans-serif";
+    font-size: 12px;
+    background-color: #FFFFFF;
+}
+#page-home {
+    background: white;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+.home-header {
+    background: #1C395C;
+    border-color: #1C395C!important;
+}
+.home-header .ui-title{
+    margin: .6em .8em;
+}
+.ui-header .menu {
+    background: 0;
+    border: 0;
+    height: 14px;
+    left: 15px;
+    top: 15px;
+    text-shadow: none;
+    width: 20px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.ui-header .menu .ui-btn-inner {
+    border: 0!important;
+    height: 14px;
+    padding: 0;
+    width: 20px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.ui-header .menu span.menu-bar {
+    background-color: white;
+    display: block;
+    height: 3px;
+    margin: 0 0 2px;
+    width: 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.home-header .login-action {
+    background: 0;
+    border: 0;
+    text-shadow: none;
+    top: 5px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.home-header .login-action .ui-btn-inner {
+    border: 0;
+}
+.home-header .login-action .ui-btn-text {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    text-shadow: none;
+}
+.ui-content {
+    padding: 0;
+    overflow: visible;
+    overflow-x: hidden;
+}
+#body {
+    background: #6297C6 url(images/home.png) center top no-repeat;
+    background-size: 100% auto;
+    height: 280px;
+    min-height: 290px;
+    position: relative;
+}
+#body #inner {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    background-size: 100% auto;
+}
+#body #inner .btn-container {
+    padding: 0 20px;
+}
+.btn-container .ui-link {
+    color: white;
+    font-weight: bold;
+}
+.btn-container .ui-link:visited {
+    color: #2489CE;
+}
+.btn-primary.ui-link, .btn-primary.ul-link:hover, .btn-primary.visited, .btn-primary:hover {
+    color: white!important;
+    text-decoration: none;
+}
+
+.btn-primary {
+    font-size: 14px;;
+    background: #F60;
+    display: block;
+    font-weight: 300!important;
+    height: 41px;
+    line-height: 41px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.icon-rightarrow-white, .ui-icon-tc-downarrow, .ui-icon-tc-downarrow-v2, .ui-icon-tc-home, .ui-icon-tc-map, .ui-icon-tc-menu, .ui-icon-tc-question, .ui-icon-tc-rightarrow, .ui-icon-tc-rightarrow-highlight, .ui-icon-tc-search, .ui-icon-tc-shield, .ui-icon-tc-user {
+    background-image: url("images/mobile-web-icons-18.png");
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+.btn-primary .icon-rightarrow-white {
+    position: absolute;
+    margin: -9px 0 0;
+    top: 50%;
+    right: 20px;
+}
+.icon-rightarrow-white {
+    height: 18px;
+    width: 10px;
+}
+.icon-rightarrow-white {
+    background-position: -529px 50%;
+}
+#page-home #sub-links {
+    border-bottom: 1px solid #B2B2B2;
+    padding: 20px;
+    list-style-type: none;
+    height: 35px;
+    margin: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix::after, .clearfix::before {
+    display: table;
+    content: "";
+}
+
+#sub-links li {
+    float: left;
+    height: 35px;
+    width: 100%;
+}
+#sub-links li a {
+    opacity: 1.0;
+    background: #6297C6;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#page-home #sub-links li a .ui-btn-inner {
+    border: 0;
+    font-size: 14px;
+    font-weight: 300;
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    text-align: center;
+}
+#page-home #sub-links li a .ui-btn-inner {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 35px;
+    text-align: center;
+}
+.ui-btn-corner-all {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#page-home #sub-links li a .ui-btn-inner .ui-btn-text{
+    color:#ffffff;
+    text-shadow: 0 0 0 #444;
+}
+#page-home footer {
+    padding-top: 15px;
+    text-align: center;
+}
+.ui-body-a, .ui-overlay-a {
+    color: white;
+    text-shadow: 0 0 0 #EEE;
+    font-weight:normal;
+}
+#page-home footer .ui-body-a .ui-link, #page-home footer a {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+}
+#page-home .ft {
+    margin: 0 0 10px;
+    text-align: center;
+    color: #6A8EAF;
+    text-decoration: none;
+    font-size: 12px;
+}
+#page-home footer p.ft {
+    border-top: 1px solid #B2B2B2;
+    color: #999;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+/* 验证*/
+
+label.error {
+    color: red;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-top: 0.5em;
+    width: 100%;
+    float: none;
+}
+
+@media screen and (orientation: portrait){
+    label.error { margin-left: 0; display: block; }
+}
+
+@media screen and (orientation: landscape){
+    label.error { display: inline-block; margin-left: 22%; }
+}
+
+em { color: red; font-weight: bold; padding-right: .25em; }
