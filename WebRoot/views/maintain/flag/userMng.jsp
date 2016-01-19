@@ -19,6 +19,7 @@
         seajs.use([ '$', 'app-util', 'avalon', 'todc-bootstrap', 'chosen'],
                 function ($, appUtil, avalon) {
                     $(function () {
+                        var param = {};
                         avalon.filters.isAdmin = function (isAdmin) {
                             if (isAdmin == 0) {
                                 return '普通成员';
@@ -41,19 +42,22 @@
                                 totalRow: 0,
                                 totalPage: 0
                             },
-                            pageQuery: function (pageNumber) {
+                            pageQuery: function (pageNumber,param) {
                                 if (pageNumber != 1 && (pageNumber > pageVM.page.totalPage || pageNumber < 1)) {
                                     return;
                                 }
-                                var data = {
-                                    pageNumber: pageNumber,
-                                    pageSize: pageVM.page.pageSize
-                                };
+                                var data ={
+                                            pageNumber:pageNumber,
+                                            pageSize:pageVM.page.pageSize
+                                        }
+                                if(data != undefined && data != null) {
+                                    $.extend(data, param);
+                                }
                                 $.ajax({
                                     async: true,
                                     type: "POST",
                                     url: "${path}/maintain/flag/list",
-                                    data: data,
+                                    data: pageVM.data,
                                     success: function (response) {
                                         pageVM.page = {
                                             pageNumber: response.page,
@@ -97,6 +101,15 @@
                                 if ($event.keyCode == 13) {
                                     pageVM.addUser();
                                 }
+                            },
+                            filter: function(e) {
+                                var obj = this;
+                                if($.trim(obj.value)=="") {
+                                    delete param[obj.name];
+                                }else{
+                                    param[obj.name] = obj.value;
+                                }
+                                pageVM.pageQuery(1, param);
                             },
                             addUser: function () {
                                 var key = $.trim(pageVM.keyForAdd);
@@ -183,28 +196,28 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" name="flag_id" td type="text" placeholder="输入标签ID">
+                            <div class="input-prepend input-append"  style="display: inline-block;margin-right: 10px;">
+                                <input class="span2" ms-on-input="filter" name="flag_id" td type="text" placeholder="输入标签ID">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" name="flag_id" td type="text" placeholder="输入木筏ID">
+                                <input class="span2"  ms-on-input="filter" name="raft_id" td type="text" placeholder="输入木筏ID">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" name="flag_id" td type="text" placeholder="输入温度值">
+                                <input class="span2"  ms-on-input="filter" name="tempetature" td type="text" placeholder="输入温度值">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" name="flag_id" td type="text" placeholder="输入电池状态">
+                                <input class="span2"  ms-on-input="filter" name="buttery" td type="text" placeholder="输入电池状态">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" name="flag_id" td type="text" placeholder="输入状态">
+                                <input class="span2"  ms-on-input="filter" name="state" td type="text" placeholder="输入状态">
                             </div>
                         </td>
                     </tr>
@@ -248,7 +261,7 @@
                     </button>
                     <button type="button" class="btn last"
                             ms-class="disabled:page.pageNumber==page.totalPage||page.totalPage==0" ms-click="pageQuery(page.totalPage)">末页</button>
-                    <select class="pagesize" title="每页条数">
+                    <select class="pagesize input-mini" title="每页条数">
                         <option value="30" selected="selected">30</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
