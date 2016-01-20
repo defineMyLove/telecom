@@ -17,3 +17,4 @@ seajs.config({
         'position':'arale/position/1.0.1/position'
     }
 });
+seajs.use('seajs/seajs-style/1.0.2/seajs-style.js');

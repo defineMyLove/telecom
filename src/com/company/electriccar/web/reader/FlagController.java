@@ -33,7 +33,7 @@ public class FlagController {
     // 进入 新增用户界面
     @RequestMapping(value = "addUI")
     public ModelAndView addUI(String id,ResponseMes res) {
-        ModelAndView view = new ModelAndView("/mainta新增公告in/flag/flagAdd");
+        ModelAndView view = new ModelAndView("/maintain/flag/flagAdd");
         view.addObject("msg", ResponseMes.parseMsg(res));
         if (StringUtil.isNotBlank(id)) {
             view.addObject("info",zhuanLanService.selectByPk(id));

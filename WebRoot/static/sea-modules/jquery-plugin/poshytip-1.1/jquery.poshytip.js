@@ -4,7 +4,7 @@
  * Copyright 2010-2011, Vasil Dinkov, http://vadikom.com/
  */
 define(function(require, exports, module) {
-var $ = require('$');require('./tip-yellowsimple/tip-yellowsimple.css');
+var $ = require('$');require('./jquery-plugin/poshytip-1.1/tip-yellowsimple/tip-yellowsimple.css');
 (function($) {
 
 	var tips = [],

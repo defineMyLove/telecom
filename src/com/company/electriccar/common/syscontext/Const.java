@@ -9,7 +9,7 @@ package com.company.electriccar.common.syscontext;
 public interface Const {
 
 
-    String USER_SESSION_ID = "LOGIN_USER";
+    String USER_SESSION_ID = "LOGIN_USER";  //jsp中用到
     /**  短信验证码**/
     String SMS_ID = "SMS_ID";
     int USER_TYPE_PUTONG = 1;

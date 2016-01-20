@@ -214,9 +214,9 @@
 <body style="padding:0px;background:#EAEEF5;">
 <div id="pageloading"></div>
 <div id="topmenu" class="l-topmenu">
-    <div class="l-topmenu-logo"></div>
+    <div class="l-topmenu-logo">电信内部管理系统</div>
     <div class="l-topmenu-welcome">
-        <a href="index.aspx" class="l-link2">${LOGIN_USER.name}</a>
+        <a class="l-link2">${LOGIN_USER.userName}</a>
         <span class="space">|</span>
         <%--<a href="https://me.alipay.com/daomi" class="l-link2" target="_blank">信息</a>
         <span class="space">|</span>--%>
@@ -225,54 +225,20 @@
 </div>
 <div id="layout1" style="width:99.2%;margin:0 auto; margin-top:4px; ">
     <div position="left" title="主要菜单" id="accordion1">
-        <%--<div title="关于我们">
+
+        <div title="电信套餐管理">
             <div style=" height:7px;"></div>
             <a class="l-link"
-               href="javascript:addTab('yejifenlei','公司业绩分类管理','${path}/toView?view=/maintain/yeji/yejiClassifyMain')">公司业绩分类管理</a>
+               href="javascript:addTab('solutionfenlei','套餐类别管理','${path}/toView?view=/maintain/solution/solutionClassifyMain')">套餐类别管理</a>
             <a class="l-link"
-               href="javascript:addTab('yeji','公司业绩管理','${path}/toView?view=/maintain/yeji/tree')">公司业绩管理</a>
-            <a class="l-link"
-               href="javascript:addTab('guize_opensettig','视频管理','${path}/toView?view=/maintain/shipin/shipinMain')">视频管理</a>
+               href="javascript:addTab('lingqudianpage','套餐管理','${path}/toView?view=/maintain/solution/tree')">套餐管理</a>
         </div>
 
-        <div title="新闻管理">
-            <div style=" height:7px;"></div>
-            <a class="l-link"
-               href="javascript:addTab('gonggaopage','新闻管理','${path}/toView?view=/maintain/news/newsMain')">新闻管理</a>
-        </div>
-        <div title="产品销售">
-            <div style=" height:7px;"></div>
-            <a class="l-link"
-               href="javascript:addTab('xiaqupage','产品分类管理','${path}/toView?view=/maintain/product/tree')">产品分类管理</a>
-            <a class="l-link"
-               href="javascript:addTab('chanpinqupage','产品管理','${path}/toView?view=/maintain/product/proTree')">产品管理</a>
-        </div>
-        <div title="解决方案">
-            <div style=" height:7px;"></div>
-            <a class="l-link"
-               href="javascript:addTab('solutionfenlei','解决方案类别管理','${path}/toView?view=/maintain/solution/solutionClassifyMain')">解决方案类别管理</a>
-            <a class="l-link"
-               href="javascript:addTab('lingqudianpage','解决方案管理','${path}/toView?view=/maintain/solution/tree')">解决方案管理</a>
-        </div>
-        <div title="技术交流" class="l-scroll">
-            <div style=" height:7px;"></div>
-            <a class="l-link"
-               href="javascript:addTab('userpage','论文专栏管理','${path}/toView?view=/maintain/lunwen/lunwenMain')">论文专栏管理</a>
-            <a class="l-link"
-               href="javascript:addTab('xzqhpage','知识库管理','${path}/toView?view=/maintain/zhishi/zhishiMain')">知识库管理</a>
-            <a class="l-link"
-               href="javascript:addTab('dicpage','留言板管理','${path}/toView?view=maintain/mesboard/mesboardMain')">留言板管理</a>
-        </div>
-        <div title="工作机会">
-            <div style=" height:7px;"></div>
-            <a class="l-link"
-               href="javascript:addTab('chetiepage','工作机会管理','${path}/toView?view=/maintain/work/workMain')">工作机会管理</a>
-        </div>--%>
 
-        <div title="读卡器管理">
+        <div title="发展人管理">
             <div style=" height:7px;"></div>
             <a class="l-link"
-               href="javascript:addTab('readermanger','读卡器管理','${path}/toView?view=/maintain/reader/readerMain')">读卡器管理</a>
+               href="javascript:addTab('readermanger','发展人管理','${path}/toView?view=/maintain/saleman/saleMain')">发展人管理</a>
         </div>
 
         <div title="标签管理">
@@ -303,7 +269,11 @@
     function refreshGrid() {
         var tab = $("#framecenter").ligerGetTabManager();
         var frameId = tab.getSelectedTabItemID();
-        document.getElementById(frameId).contentWindow.submitLiger();
+        if (document.getElementById(frameId).contentWindow.submitLiger) {
+            document.getElementById(frameId).contentWindow.submitLiger();
+        } else {
+            document.getElementById(frameId).contentWindow.pageVM.pageQuery(1);
+        }
     }
     function openDialog(title, url, width, height, buttons) {
         currDialog = $.ligerDialog.open({id: 'newDialog', title: title, url: url, height: 600, width: 800, buttons: buttons, isResize: true
