@@ -90,6 +90,8 @@
 
         //全局变量
         window.$ = $;
+
+        tab.addTabItem({tabid:"homePage", text: "首页", url: '${path}/toView?view=/maintain/homePage'});
     });
     function f_heightChanged(options) {
         if (tab)
@@ -98,7 +100,7 @@
             accordion.setHeight(options.middleHeight - 24);
     }
     top.addTab = function (tabid, text, url) {
-        tab.addTabItem({ tabid: tabid, text: text, url: url });
+        tab.addTabItem({ tabid: tabid, text: text, url: url});
     }
 </script>
 <style type="text/css">

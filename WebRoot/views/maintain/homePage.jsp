@@ -15,7 +15,7 @@
     <script type="text/javascript" src="${path}/static/sea-modules/seajs-config.js"></script>
 
     <script type="text/javascript">
-        seajs.use([ '$', 'app-util', 'avalon','niceScroll', 'todc-bootstrap', 'chosen'],
+        seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen'],
                 function ($, appUtil, avalon) {
                     $(function () {
                         $('#content .container').niceScroll({
@@ -28,13 +28,18 @@
                         });
 
                         var param = {};
-                        avalon.filters.isAdmin = function (isAdmin) {
+                        avalon.filters.state = function (isAdmin) {
+                            //(0:新入库1:暂不处理2:完善数据,3:办理套餐4:归档)
                             if (isAdmin == 0) {
-                                return '普通成员';
+                                return '新入库';
                             } else if (isAdmin == 1) {
-                                return '管理员';
+                                return '不处理';
                             } else if (isAdmin == 2) {
-                                return '任务调度员';
+                                return '完善数据';
+                            } else if (isAdmin == 3) {
+                                return '已办理套餐';
+                            } else if (isAdmin == 4) {
+                                return '已归档';
                             }
                             return '';
                         }
@@ -64,7 +69,7 @@
                                 $.ajax({
                                     async: true,
                                     type: "POST",
-                                    url: "${path}/maintain/saleman/list",
+                                    url: "${path}/maintain/cusinfo/list",
                                     data: data,
                                     success: function (response) {
                                         pageVM.page = {
@@ -86,7 +91,7 @@
                                     $.ajax({
                                         async: true,
                                         type: "POST",
-                                        url: "${path}/maintain/saleman/del",
+                                        url: "${path}/maintain/cusinfo/del",
                                         data: {id: user.id},
                                         success: function (response) {
                                             if (response.result) {
@@ -100,7 +105,7 @@
                                 });
                             },
                             edit: function (user) {
-                                window.top.openDialog("修改", "${path}/maintain/saleman/addUI?id=" + user.id, 80, 80, [
+                                window.top.openDialog("修改", "${path}/maintain/cusinfo/addUI?id=" + user.id, 80, 80, [
                                     { text: '确定', onclick: function (item, dialog) {
                                         window.top.submitForm()
                                     }, cls: 'l-dialog-btn-highlight' },
@@ -111,21 +116,6 @@
                             },
                             isAdd: false,
                             keyForAdd: '',
-                            showAdd: function (show) {
-                                window.top.openDialog("添加", "${path}/maintain/saleman/addUI", 80, 80, [
-                                    { text: '确定', onclick: function (item, dialog) {
-                                        window.top.submitForm()
-                                    }, cls: 'l-dialog-btn-highlight' },
-                                    { text: '取消', onclick: function (item, dialog) {
-                                        window.top.closeDialog();
-                                    }}
-                                ]);
-                            },
-                            /*  keyup: function ($event) {
-                             if ($event.keyCode == 13) {
-                             pageVM.addUser();
-                             }
-                             },*/
                             changePageSize: function ($event) {
                                 pageVM.page.pageSize = parseInt(this.options[this.selectedIndex].value);
                                 pageVM.pageQuery(1);
@@ -141,30 +131,6 @@
                                     param[obj.name] = obj.value;
                                 }
                                 pageVM.pageQuery(1, param);
-                            },
-                            addUser: function () {
-                                var key = $.trim(pageVM.keyForAdd);
-                                if (key == '') {
-                                    appUtil.messager.danger("请输入诺部落号或者手机号。");
-                                    return;
-                                }
-                                var btn = $("#addBtn").button('loading');
-                                $.ajax({
-                                    async: true,
-                                    type: "POST",
-                                    url: "${base}my/comp/addUser",
-                                    data: {key: key},
-                                    success: function (response) {
-                                        btn.button('reset');
-                                        if (response.result) {
-                                            appUtil.messager.success(response.msg);
-                                            pageVM.keyForAdd = '';
-                                            pageVM.pageQuery(1);
-                                        } else {
-                                            appUtil.messager.danger(response.msg);
-                                        }
-                                    }
-                                });
                             }
                         });
                         window.pageVM = pageVM;
@@ -181,89 +147,87 @@
 <body>
 <section id="content" ms-controller="pageVM" class="ms-controller">
     <div class="container">
-        <!-- <div class="block-header">
-            <h2>成员管理</h2>
-        </div> -->
-        <div class="card" style="display: none;" ms-visible="isAdd">
-            <div class="card-header ch-alt">
-                <h2>添加成员
-                    <small>请输入要添加的成员诺部落号或者手机号，回车键或者点击【添加】按钮完成操作。</small>
-                </h2>
-            </div>
-            <div class="card-body card-padding">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="form-group fg-line">
-                            <input type="text" class="form-control" ms-duplex-string="keyForAdd" ms-keyup="keyup"
-                                   placeholder="诺部落号、手机号">
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <button type="button" class="btn btn-primary m-t-5 waves-effect" ms-click="addUser" id="addBtn">
-                            添加
-                        </button>
-                        <button type="button" class="btn btn-primary m-t-5 m-l-10 waves-effect"
-                                ms-click="showAdd(false)">取消
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div class="block-header">
+            <h2>机会库</h2>
         </div>
+
         <div class="card">
-            <div class="card-header ch-alt">
-                <a class="btn bgm-teal btn-float" href="javascript:;" title="添加" ms-click="showAdd(true)"><i
-                        class="md md-add"></i></a>
-            </div>
+            <%--  <div class="card-header ch-alt">
+                  <a class="btn bgm-teal btn-float" href="javascript:;" title="添加" ms-click="showAdd(true)"><i
+                          class="md md-add"></i></a>
+              </div>--%>
             <div class="card-body card-padding">
                 <table class="table table-vmiddle table-hover">
                     <thead>
                     <tr>
-                        <th>编号</th>
-                        <th>姓名</th>
-                        <th>电话</th>
-                        <th>地址</th>
+                        <th>客户姓名</th>
+                        <th>客户电话</th>
+                        <th>客户身份证号</th>
+                        <th>客户地址</th>
+                        <th>发展人编号</th>
+                        <th>发展人姓名</th>
                         <th>操作</th>
                     </tr>
                     <tr>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="card_no" td type="text"
-                                       placeholder="编号">
+                                <input class="span2" ms-on-input="filter" name="cus_name" td type="text"
+                                       placeholder="客户姓名">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="name" td type="text"
-                                       placeholder="姓名">
+                                <input class="span2" ms-on-input="filter" name="cus_tel" td type="text"
+                                       placeholder="客户电话">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="tel" td type="text"
-                                       placeholder="电话">
+                                <input class="span2" ms-on-input="filter" name="cus_card_id" td type="text"
+                                       placeholder="客户身份证号">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="address" td type="text"
-                                       placeholder="地址">
+                                <input class="span2" ms-on-input="filter" name="cus_address" td type="text"
+                                       placeholder="客户地址">
                             </div>
                         </td>
-
+                        <td>
+                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                                <input class="span2" ms-on-input="filter" name="sale_no" td type="text"
+                                       placeholder="发展人编号">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                                <input class="span2" ms-on-input="filter" name="sale_name" td type="text"
+                                       placeholder="发展人姓名">
+                            </div>
+                        </td>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ms-repeat="list">
-                        <td>{{el.card_no}}</td>
-                        <td>{{el.name}}</td>
-                        <td>{{el.tel}}</td>
-                        <td>{{el.address}}</td>
+                        <td>{{el.cus_name}}</td>
+                        <td>{{el.cus_tel}}</td>
+                        <td>{{el.cus_card_id}}</td>
+                        <td>{{el.cus_address}}</td>
+                        <td>{{el.sale_no}}</td>
+                        <td>{{el.sale_name}}</td>
+                        <td>{{el.state|state}}</td>
                         <td>
-                            <ul class="actions">
-                                <li><a href="javascript:;" ms-click="remove(el,$remove)"><i
-                                        class="md md-delete"></i></a></li>
-                                <li><a href="javascript:;" ms-click="edit(el)"><i class="md md-edit"></i></a></li>
-                            </ul>
+                            <c:if test="${isAdmin==0||isAdmin==2}">
+                                <a class="btn btn-default" href="#" role="button">完善信息</a>
+                                <button class="btn btn-default">暂不处理</button>
+                                <button class="btn btn-default">办理套餐</button>
+                            </c:if>
+                            <c:if test="${isAdmin==3}">
+                                <button class="btn btn-default">归档</button>
+                            </c:if>
+                            <c:if test="${isAdmin==1}">
+                                <button class="btn btn-default">重新处理</button>
+                            </c:if>
                         </td>
                     </tr>
                     </tbody>

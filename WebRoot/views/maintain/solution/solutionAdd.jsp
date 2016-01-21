@@ -6,34 +6,48 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="${path}/static/css/common.css"/>
     <script src="${path}/static/sea-modules/sea.js"></script>
-    <script src="${path}/static/seajs-config.js"></script>
-    <script charset="utf-8" src="${path}/static/js/kindeditor/kindeditor-min.js"></script>
+    <script type="text/javascript" src="${path}/static/sea-modules/seajs-config.js"></script>
+    <!-- 编辑器配置文件 -->
+    <script type="text/javascript" src="${path}/js/ueditor1_4_3/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="${path}/js/ueditor1_4_3/ueditor.all.js"></script>
     <script type="text/javascript">
-        if('${msg}'){
-            top.common.tip.notify({title:'${msg}'});
+        if ('${msg}') {
+            top.common.tip.notify({title: '${msg}'});
         }
-        seajs.use(['$', 'jquery-util'], function ($, jqueryUtile) {
-            //全局变量
-            window.$ = $;
-            //表单验证
-            jqueryUtil.formValidate({
-                form: "showForm",
-                rules: {
-                    "title": {required: true,maxlength:50},
-                    "content": {required: true}
-                },
-                submitHandler: function (form) {
-                    form.submit();
-                }
-            });
+        seajs.use([ '$', 'app-util', 'validateUtil', 'todc-bootstrap'], function ($, appUtil, validateUtil) {
+            $(function () {
+                //初始化文本编辑器
+                var ue = UE.getEditor('ueditor');
 
-            $("#add").click(
-                    function () {
-                        $("#showForm").attr("action", '${path}/maintain/solution/add').submit();
+                //全局变量
+                window.$ = $;
+                //表单验证
+                validateUtil.formValidate({
+                    form: "showForm",
+                    rules: {
+                        "title": {required: true, maxlength: 50}
+                    },
+                    submitHandler: function (form) {
+                        if (!ue.hasContents()) {
+                            appUtil.showMsg("alert", "请填写公告内容。", function () {
+                                ue.focus();
+                            });
+                            return false;
+                        }
+                        $('#content').val(ue.getContent());
+                        form.submit();
                     }
-            );
+                });
+
+                $("#add").click(
+                        function () {
+                            $("#showForm").attr("action", '${path}/maintain/solution/add').submit();
+                        }
+                );
+            });
         });
-        function submitForm(){
+        function submitForm() {
             document.getElementById("submitBtn").click();
         }
     </script>
@@ -59,14 +73,10 @@
                         内容
                     </td>
                     <td width="30%" style="text-align: left;">
-                        <textarea rows="20" cols="30"  name="content" id="content">${info.content}</textarea>
-                        <script type="text/javascript">
-                            KE.show({
-                                id: 'content',
-                                width: '80%',
-                                height: '300px',
-                                imageUploadJson: '${path}/maintain/upload/image'
-                            });
+                        <input id="content" name="content" type="hidden"/>
+                        <!-- 加载编辑器的容器 -->
+                        <script id="ueditor" name="ueditor" type="text/plain" style="width:100%;height:500px;">
+                                ${info.content}
                         </script>
                     </td>
                 </tr>

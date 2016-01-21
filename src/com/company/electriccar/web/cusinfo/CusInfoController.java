@@ -1,8 +1,9 @@
-package com.company.electriccar.web;
+package com.company.electriccar.web.cusinfo;
 
 import com.company.electriccar.common.syscontext.ResponseMes;
-import com.company.electriccar.domain.PRO_FLAG;
+import com.company.electriccar.domain.CUS_INFO;
 import com.company.electriccar.domain.SALEMAN;
+import com.company.electriccar.service.CusInfoService;
 import com.company.electriccar.service.SaleManService;
 import com.company.modules.utils.JsonUtil;
 import com.company.modules.utils.StringUtil;
@@ -20,10 +21,10 @@ import javax.servlet.http.HttpServletResponse;
  * Created by zxl on 14-6-17.
  */
 @Controller
-@RequestMapping("/maintain/saleman")
-public class SaleManController {
+@RequestMapping("/maintain/cusinfo")
+public class CusInfoController {
     @Autowired
-    SaleManService zhuanLanService;
+    CusInfoService zhuanLanService;
 
     /**
      * 添加动作
@@ -32,7 +33,7 @@ public class SaleManController {
      * @return
      */
     @RequestMapping(value = "add")
-    public ModelAndView add(HttpServletRequest request, SALEMAN user) {
+    public ModelAndView add(HttpServletRequest request, CUS_INFO user) {
        zhuanLanService.add(user);
         return WebUtil.goSysInfoPage(request,"","window.top.refreshGrid();window.top.closeDialog();");
     }
@@ -56,7 +57,7 @@ public class SaleManController {
 
     // 查询
     @RequestMapping(value = "list")
-    public void list(SALEMAN zhuan,HttpServletRequest request,HttpServletResponse response) {
+    public void list(CUS_INFO zhuan,HttpServletRequest request,HttpServletResponse response) {
         WebUtil.writeJson(response, JsonUtil.map2Json(zhuanLanService.find(zhuan, request)));
     }
 }

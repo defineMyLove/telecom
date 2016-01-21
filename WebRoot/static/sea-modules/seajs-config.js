@@ -61,7 +61,8 @@ seajs.config({
         //列表页
         'app-util':'module/app-util/util.js',
         'app-listPage':'module/app-listPage/listPage.js',
-        'num-Util':'module/app-util/numUtil.js'
+        'num-Util':'module/app-util/numUtil.js',
+        'ligerui':'ligerui/1.2.0/js/ligerui.all.js'
     }
 });
 seajs.use('seajs/seajs-style/1.0.2/seajs-style.js');
