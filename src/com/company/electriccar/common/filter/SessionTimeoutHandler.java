@@ -3,6 +3,7 @@ package com.company.electriccar.common.filter;
 import com.company.electriccar.common.syscontext.SystemContext;
 import com.company.electriccar.domain.Account;
 import org.apache.commons.lang.StringUtils;
+import wang.leq.sso.client.SSOHelper;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -51,12 +52,16 @@ public class SessionTimeoutHandler implements Filter {
             filterChain.doFilter(servletRequest, servletResponse);
             return;
         } else {
-            String path = handlePage;
+           /* String path = handlePage;
             String special = findSpecialHandlePage(request);
             if (special != null) {
                 path = special;
             }
-            response.sendRedirect(request.getContextPath() + path);
+            response.sendRedirect(request.getContextPath() + path);*/
+            /**
+             * 重新登录
+             */
+            SSOHelper.login(request, response);
         }
     }
 

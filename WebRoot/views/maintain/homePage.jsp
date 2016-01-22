@@ -3,146 +3,229 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
 <head>
-    <title>成员管理</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- app css -->
-    <link href="${path}/static/css/bootstrap-all.css" rel="stylesheet" type="text/css"/>
-    <link href="${path}/static/css/myapp.min.css" rel="stylesheet">
-    <script type="text/javascript" src="${path}/static/sea-modules/sea.js"></script>
-    <script type="text/javascript" src="${path}/static/sea-modules/seajs-config.js"></script>
+<title>成员管理</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- app css -->
+<link href="${path}/static/css/bootstrap-all.css" rel="stylesheet" type="text/css"/>
+<link href="${path}/static/css/myapp.min.css" rel="stylesheet">
+<script type="text/javascript" src="${path}/static/sea-modules/sea.js"></script>
+<script type="text/javascript" src="${path}/static/sea-modules/seajs-config.js"></script>
 
-    <script type="text/javascript">
-        seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen'],
-                function ($, appUtil, avalon) {
-                    $(function () {
-                        $('#content .container').niceScroll({
-                            cursorcolor: 'rgba(0,0,0,0.6)',
-                            cursorborder: 0,
-                            cursorborderradius: 0,
-                            cursorwidth: '8px',
-                            bouncescroll: true,
-                            mousescrollstep: 100
-                        });
-
-                        var param = {};
-                        avalon.filters.state = function (isAdmin) {
-                            //(0:新入库1:暂不处理2:完善数据,3:办理套餐4:归档)
-                            if (isAdmin == 0) {
-                                return '新入库';
-                            } else if (isAdmin == 1) {
-                                return '不处理';
-                            } else if (isAdmin == 2) {
-                                return '完善数据';
-                            } else if (isAdmin == 3) {
-                                return '已办理套餐';
-                            } else if (isAdmin == 4) {
-                                return '已归档';
-                            }
-                            return '';
-                        }
-
-                        var pageVM = avalon.define({
-                            $id: 'pageVM',
-                            list: [],
-                            pageCount: [],
-                            //分页参数
-                            page: {
-                                pageNumber: 1,
-                                pageSize: 30,
-                                totalRow: 0,
-                                totalPage: 0
-                            },
-                            pageQuery: function (pageNumber, param) {
-                                if (pageNumber != 1 && (pageNumber > pageVM.page.totalPage || pageNumber < 1)) {
-                                    return;
-                                }
-                                var data = {
-                                    page: pageNumber,
-                                    pageSize: pageVM.page.pageSize
-                                }
-                                if (data != undefined && data != null) {
-                                    $.extend(data, param);
-                                }
-                                $.ajax({
-                                    async: true,
-                                    type: "POST",
-                                    url: "${path}/maintain/cusinfo/list",
-                                    data: data,
-                                    success: function (response) {
-                                        pageVM.page = {
-                                            pageNumber: response.page,
-                                            pageSize: response.pageSize,
-                                            totalRow: response.total,
-                                            totalPage: response.totalPage
-                                        };
-                                        pageVM.pageCount = [];
-                                        for (var i = 0; i < pageVM.page.totalPage; i++) {
-                                            pageVM.pageCount.push("");
-                                        }
-                                        pageVM.list = response.rows;
-                                    }
-                                });
-                            },
-                            remove: function (user, $remove) {
-                                appUtil.confirm("确认移除该发展人（" + user.name + "）吗？", function () {
-                                    $.ajax({
-                                        async: true,
-                                        type: "POST",
-                                        url: "${path}/maintain/cusinfo/del",
-                                        data: {id: user.id},
-                                        success: function (response) {
-                                            if (response.result) {
-                                                appUtil.messager.success(response.msg);
-                                                pageVM.pageQuery(1);
-                                            } else {
-                                                appUtil.messager.danger(response.msg);
-                                            }
-                                        }
-                                    });
-                                });
-                            },
-                            edit: function (user) {
-                                window.top.openDialog("修改", "${path}/maintain/cusinfo/addUI?id=" + user.id, 80, 80, [
-                                    { text: '确定', onclick: function (item, dialog) {
-                                        window.top.submitForm()
-                                    }, cls: 'l-dialog-btn-highlight' },
-                                    { text: '取消', onclick: function (item, dialog) {
-                                        window.top.closeDialog();
-                                    }}
-                                ]);
-                            },
-                            isAdd: false,
-                            keyForAdd: '',
-                            changePageSize: function ($event) {
-                                pageVM.page.pageSize = parseInt(this.options[this.selectedIndex].value);
-                                pageVM.pageQuery(1);
-                            },
-                            goPage: function ($event) {
-                                pageVM.pageQuery(parseInt(this.options[this.selectedIndex].value));
-                            },
-                            filter: function (e) {
-                                var obj = this;
-                                if ($.trim(obj.value) == "") {
-                                    delete param[obj.name];
-                                } else {
-                                    param[obj.name] = obj.value;
-                                }
-                                pageVM.pageQuery(1, param);
-                            }
-                        });
-                        window.pageVM = pageVM;
-                        pageVM.pageQuery(1);
-                    });
+<script type="text/javascript">
+seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen'],
+        function ($, appUtil, avalon) {
+            $(function () {
+                $('#content .container').niceScroll({
+                    cursorcolor: 'rgba(0,0,0,0.6)',
+                    cursorborder: 0,
+                    cursorborderradius: 0,
+                    cursorwidth: '8px',
+                    bouncescroll: true,
+                    mousescrollstep: 100
                 });
-    </script>
-    <style type="text/css">
-        table td {
-            vertical-align: middle !important;
-        }
-    </style>
+
+                var param = {};
+                avalon.filters.state = function (isAdmin) {
+                    //(0:新入库1:暂不处理2:完善数据,3:办理套餐4:归档)
+                    if (isAdmin == 0) {
+                        return '新入库';
+                    } else if (isAdmin == 1) {
+                        return '不处理';
+                    } else if (isAdmin == 2) {
+                        return '完善数据';
+                    } else if (isAdmin == 3) {
+                        return '已办理套餐';
+                    } else if (isAdmin == 4) {
+                        return '已归档';
+                    }
+                    return '';
+                }
+
+                var pageVM = avalon.define({
+                    $id: 'pageVM',
+                    list: [],
+                    pageCount: [],
+                    //分页参数
+                    page: {
+                        pageNumber: 1,
+                        pageSize: 30,
+                        totalRow: 0,
+                        totalPage: 0
+                    },
+                    playSound: function (src) {
+                        // $('#embed').remove();
+                        // $('body').append('<embed id="embed" src="${path}/static/sound/chat_request.wav" autostart="true"  style="visibility: hidden" loop="false">');
+                    },
+                    addInfo: function (el) {
+                        window.top.openDialog("完善信息", "${path}/maintain/cusinfo/addInfo?id=" + el.id, 40, 30, [
+                            { text: '确定', onclick: function (item, dialog) {
+                                window.top.submitForm()
+                            }, cls: 'l-dialog-btn-highlight' },
+                            { text: '取消', onclick: function (item, dialog) {
+                                window.top.closeDialog();
+                            }}
+                        ]);
+                    },
+                    buchuli: function (el) {
+                        appUtil.confirm("确认暂不处理客户（" + el.cus_name + "," + el.cus_tel + "）吗？", function () {
+                            $.ajax({
+                                async: true,
+                                type: "POST",
+                                url: "${path}/maintain/cusinfo/buchuli",
+                                data: {id: el.id},
+                                success: function (response) {
+                                    if (response.result) {
+                                        appUtil.messager.success(response.msg);
+                                        pageVM.pageQuery(1);
+                                    } else {
+                                        appUtil.messager.danger(response.msg);
+                                    }
+                                }
+                            });
+                        });
+                    },
+                    banli: function (el) {
+                        window.top.openDialog("办理套餐", "${path}/maintain/cusinfo/banliUI?id=" + el.id, 80, 80, [
+                            { text: '确定', onclick: function (item, dialog) {
+                                window.top.submitForm()
+                            }, cls: 'l-dialog-btn-highlight' },
+                            { text: '取消', onclick: function (item, dialog) {
+                                window.top.closeDialog();
+                            }}
+                        ]);
+                    },
+                    guidang: function (el) {
+                        appUtil.confirm("归档后不可更改，确认归档客户（" + el.cus_name + "," + el.cus_tel + "）吗？", function () {
+                            $.ajax({
+                                async: true,
+                                type: "POST",
+                                url: "${path}/maintain/cusinfo/guidang",
+                                data: {id: el.id},
+                                success: function (response) {
+                                    if (response.result) {
+                                        appUtil.messager.success(response.msg);
+                                        pageVM.pageQuery(1);
+                                    } else {
+                                        appUtil.messager.danger(response.msg);
+                                    }
+                                }
+                            });
+                        });
+                    },
+                    chuli: function (el) {
+                        appUtil.confirm("确认处理客户（" + el.cus_name + "," + el.cus_tel + "）吗？", function () {
+                            $.ajax({
+                                async: true,
+                                type: "POST",
+                                url: "${path}/maintain/cusinfo/chuli",
+                                data: {id: el.id},
+                                success: function (response) {
+                                    if (response.result) {
+                                        appUtil.messager.success(response.msg);
+                                        pageVM.pageQuery(1);
+                                    } else {
+                                        appUtil.messager.danger(response.msg);
+                                    }
+                                }
+                            });
+                        });
+                    },
+                    log: function (el) {
+
+                    },
+                    pageQuery: function (pageNumber, param) {
+                        if (pageNumber != 1 && (pageNumber > pageVM.page.totalPage || pageNumber < 1)) {
+                            return;
+                        }
+                        var data = {
+                            page: pageNumber,
+                            pageSize: pageVM.page.pageSize
+                        }
+                        if (data != undefined && data != null) {
+                            $.extend(data, param);
+                        }
+                        $.ajax({
+                            async: true,
+                            type: "POST",
+                            url: "${path}/maintain/cusinfo/list",
+                            data: data,
+                            success: function (response) {
+                                pageVM.page = {
+                                    pageNumber: response.page,
+                                    pageSize: response.pageSize,
+                                    totalRow: response.total,
+                                    totalPage: response.totalPage
+                                };
+                                pageVM.pageCount = [];
+                                for (var i = 0; i < pageVM.page.totalPage; i++) {
+                                    pageVM.pageCount.push("");
+                                }
+                                pageVM.list = response.rows;
+                                pageVM.playSound();
+                            }
+                        });
+                    },
+                    remove: function (user, $remove) {
+                        appUtil.confirm("确认移除该发展人（" + user.name + "）吗？", function () {
+                            $.ajax({
+                                async: true,
+                                type: "POST",
+                                url: "${path}/maintain/cusinfo/del",
+                                data: {id: user.id},
+                                success: function (response) {
+                                    if (response.result) {
+                                        appUtil.messager.success(response.msg);
+                                        pageVM.pageQuery(1);
+                                    } else {
+                                        appUtil.messager.danger(response.msg);
+                                    }
+                                }
+                            });
+                        });
+                    },
+                    edit: function (user) {
+                        window.top.openDialog("修改", "${path}/maintain/cusinfo/addUI?id=" + user.id, 80, 80, [
+                            { text: '确定', onclick: function (item, dialog) {
+                                window.top.submitForm()
+                            }, cls: 'l-dialog-btn-highlight' },
+                            { text: '取消', onclick: function (item, dialog) {
+                                window.top.closeDialog();
+                            }}
+                        ]);
+                    },
+                    isAdd: false,
+                    keyForAdd: '',
+                    changePageSize: function ($event) {
+                        pageVM.page.pageSize = parseInt(this.options[this.selectedIndex].value);
+                        pageVM.pageQuery(1);
+                    },
+                    goPage: function ($event) {
+                        pageVM.pageQuery(parseInt(this.options[this.selectedIndex].value));
+                    },
+                    filter: function (e) {
+                        var obj = this;
+                        if ($.trim(obj.value) == "") {
+                            delete param[obj.name];
+                        } else {
+                            param[obj.name] = obj.value;
+                        }
+                        pageVM.pageQuery(1, param);
+                    }
+                });
+                window.pageVM = pageVM;
+                pageVM.pageQuery(1);
+                setInterval("pageVM.pageQuery(1)", 30 * 1000); //指定30秒刷新一次
+            });
+        });
+</script>
+<style type="text/css">
+    table td {
+        vertical-align: middle !important;
+    }
+</style>
 </head>
 <body>
 <section id="content" ms-controller="pageVM" class="ms-controller">
@@ -166,6 +249,7 @@
                         <th>客户地址</th>
                         <th>发展人编号</th>
                         <th>发展人姓名</th>
+                        <th>状态</th>
                         <th>操作</th>
                     </tr>
                     <tr>
@@ -205,6 +289,12 @@
                                        placeholder="发展人姓名">
                             </div>
                         </td>
+                        <td>
+                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                                <input class="span2" ms-on-input="filter" name="state" td type="text"
+                                       placeholder="状态">
+                            </div>
+                        </td>
                     </tr>
                     </thead>
                     <tbody>
@@ -213,21 +303,26 @@
                         <td>{{el.cus_tel}}</td>
                         <td>{{el.cus_card_id}}</td>
                         <td>{{el.cus_address}}</td>
-                        <td>{{el.sale_no}}</td>
+                        <td>{{el.sale_id}}</td>
                         <td>{{el.sale_name}}</td>
                         <td>{{el.state|state}}</td>
                         <td>
-                            <c:if test="${isAdmin==0||isAdmin==2}">
-                                <a class="btn btn-default" href="#" role="button">完善信息</a>
-                                <button class="btn btn-default">暂不处理</button>
-                                <button class="btn btn-default">办理套餐</button>
-                            </c:if>
-                            <c:if test="${isAdmin==3}">
-                                <button class="btn btn-default">归档</button>
-                            </c:if>
-                            <c:if test="${isAdmin==1}">
-                                <button class="btn btn-default">重新处理</button>
-                            </c:if>
+                                <span ms-if="el.state==0||el.state==2">
+                                <a class="btn btn-default" href="#" role="button" ms-click="addInfo(el)">完善信息</a>
+                                <button class="btn btn-danger" ms-click="buchuli(el)">暂不处理</button>
+                                <button class="btn btn-primary" ms-click="banli(el)">办理套餐</button>
+                                </span>
+
+                                  <span ms-if="el.state==3">
+                                <button class="btn btn-default" ms-click="guidang(el)">归档</button>
+                                      </span>
+                                    <span ms-if="el.state==1">
+                                <button class="btn btn-default" ms-click="chuli(el)">重新处理</button>
+                                        </span>
+
+                            <span ms-if="el.state==4||el.state==3||el.state==2||el.state==1">
+                                    <button class="btn btn-default" ms-click="log(el)">操作日志</button>
+                        </span>
                         </td>
                     </tr>
                     </tbody>

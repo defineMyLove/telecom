@@ -91,7 +91,7 @@
         //全局变量
         window.$ = $;
 
-        tab.addTabItem({tabid:"homePage", text: "首页", url: '${path}/toView?view=/maintain/homePage'});
+        tab.addTabItem({tabid:"homePage", text: "首页", url: '${path}/toView?view=/maintain/homePage',showClose:false});
     });
     function f_heightChanged(options) {
         if (tab)
@@ -228,28 +228,31 @@
 <div id="layout1" style="width:99.2%;margin:0 auto; margin-top:4px; ">
     <div position="left" title="主要菜单" id="accordion1">
 
-        <div title="电信套餐管理">
+        <div title="系统管理">
             <div style=" height:7px;"></div>
             <a class="l-link"
                href="javascript:addTab('solutionfenlei','套餐类别管理','${path}/toView?view=/maintain/solution/solutionClassifyMain')">套餐类别管理</a>
             <a class="l-link"
                href="javascript:addTab('lingqudianpage','套餐管理','${path}/toView?view=/maintain/solution/tree')">套餐管理</a>
-        </div>
-
-
-        <div title="发展人管理">
-            <div style=" height:7px;"></div>
             <a class="l-link"
                href="javascript:addTab('readermanger','发展人管理','${path}/toView?view=/maintain/saleman/saleMain')">发展人管理</a>
+            <a class="l-link"
+               href="javascript:addTab('readermanger','综合查询','${path}/toView?view=/maintain/saleman/query')">综合查询</a>
         </div>
 
-        <div title="标签管理">
+
+       <%-- <div title="发展人管理">
+            <div style=" height:7px;"></div>
+
+        </div>--%>
+
+   <%--     <div title="标签管理">
             <div style=" height:7px;"></div>
             <a class="l-link" href="javascript:addTab('bqmanger','标签管理','${path}/toView?view=/maintain/flag/userMng')">标签管理</a>
             <a class="l-link" href="javascript:addTab('bqquery','标签查询','${path}/toView?view=/maintain/flag/flagQuery')">标签查询</a>
             <a class="l-link"
                href="javascript:addTab('bqana','标签统计','${path}/toView?view=/maintain/flag/flagAna')">标签统计</a>
-        </div>
+        </div>--%>
     </div>
     <div position="center" id="framecenter">
 
@@ -278,7 +281,9 @@
         }
     }
     function openDialog(title, url, width, height, buttons) {
-        currDialog = $.ligerDialog.open({id: 'newDialog', title: title, url: url, height: 600, width: 800, buttons: buttons, isResize: true
+        var realWidth = $(document.body).width()*width/100;
+        var realHeight = $(document.body).height()*height/100;
+        currDialog = $.ligerDialog.open({id: 'newDialog', title: title, url: url, height: realHeight, width:realWidth , buttons: buttons, isResize: true
         });
     }
     function submitForm() {

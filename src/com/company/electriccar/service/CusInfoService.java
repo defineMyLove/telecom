@@ -1,5 +1,6 @@
 package com.company.electriccar.service;
 
+import com.company.electriccar.common.syscontext.Const;
 import com.company.electriccar.domain.CUS_INFO;
 import com.company.modules.dao.BaseDao;
 import com.company.modules.dao.SqlParameter;
@@ -37,9 +38,24 @@ public class CusInfoService {
         return serviceResponse;
     }
 
+    /**
+     * 查询客户信息，不包括客户的套餐信息
+     * @param id
+     * @return
+     */
     public Map selectByPk(String id) {
         return
                 baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from CUS_INFO where id ='" + id + "'");
+    }
+
+    /**
+     * 查询客户信息，包括客户的套餐信息
+     * @param id
+     * @return
+     */
+    public Map selectAllByPk(String id) {
+        return
+                baseDao.queryForMap("select a.*,FROM_UNIXTIME(left( a.create_time,10), '%Y-%m-%d' )  as create_time_str,b.* from CUS_INFO a left join cus_card_info b on a.id = b.cus_id and id ='" + id + "'");
     }
 
     public ServiceResponse deleteById(String id) {
@@ -53,7 +69,7 @@ public class CusInfoService {
     }
 
     public Map find(CUS_INFO zhuan, HttpServletRequest request) {
-        StringBuffer buffer = new StringBuffer("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' ) as createTime from CUS_INFO where 1=1 ");
+        StringBuffer buffer = new StringBuffer("select a.*,FROM_UNIXTIME(left( a.create_time,10), '%Y-%m-%d' ) as createTime,b.name as sale_name from CUS_INFO a, saleman b where a.sale_id = b.card_no");
         if (StringUtil.isNotBlank(zhuan.getCus_name())) {
             buffer.append(" and cus_name like '%" + zhuan.getCus_name() + "%'");
         }
@@ -72,5 +88,21 @@ public class CusInfoService {
         buffer.append(" order by create_time desc");
         Map resultMap = baseDao.queryForDataGrid(request, buffer.toString(), new SqlParameter());
         return resultMap;
+    }
+
+    /**
+     * 修改状态
+     * @param id
+     * @return
+     */
+    public ServiceResponse updateState(String id,int state) {
+        ServiceResponse response = new ServiceResponse();
+        response.setResult(true);
+        response.setMsg("操作成功");
+        CUS_INFO zhuanlan = new CUS_INFO();
+        zhuanlan.setId(id);
+        zhuanlan.setState(state);
+        zhuanlan.update();
+        return response;
     }
 }

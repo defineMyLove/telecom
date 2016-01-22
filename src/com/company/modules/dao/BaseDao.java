@@ -152,7 +152,7 @@ public class BaseDao {
 	
 	public Map queryForDataGrid(HttpServletRequest request,String sql,SqlParameter param){
 		int pageindex = ConvertUtil.obj2Integer(request.getParameter("page")==null?1:request.getParameter("page")); //当前页码
-		int pagesize = ConvertUtil.obj2Integer(request.getParameter("pageSize")==null?1:request.getParameter("pageSize"));; //每页显示条数
+		int pagesize = ConvertUtil.obj2Integer(request.getParameter("pageSize")==null?10:request.getParameter("pageSize"));; //每页显示条数
 		List<Map> list = queryForList(sql,param);//TODO 此处分页采用的是将所有数据加载至内存后，使用JAVA分页，需优化
 		int infoCount = list.size();
 		int bin = (pageindex-1)* pagesize ;

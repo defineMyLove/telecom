@@ -50,4 +50,14 @@ public interface Const {
     /** 字典分组**/
     String GROUP_BRAND="brand";
     String  ORDER_AMOUNT ="0.1";
+
+
+    /**
+     * 客户状态   //(0:新入库1:暂不处理2:完善数据,3:办理套餐4:归档)
+     */
+    Integer CUS_STATE_NEW =0;
+    Integer CUS_STATE_BUCHULI =1;
+    Integer CUS_STATE_WANSHAN =2;
+    Integer CUS_STATE_BANLI =3;
+    Integer CUS_STATE_GUIDANG =4;
 }

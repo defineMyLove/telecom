@@ -57,6 +57,9 @@ public class MaintainController {
     /**
      * 登录页面
      */
+    /**
+     * 登录 （注解跳过权限验证）
+     */
     @RequestMapping(value = "login")
     public void login(HttpServletRequest request,HttpServletResponse response) {
         String basePath = getServerUrl(request);
