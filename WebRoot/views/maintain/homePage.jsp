@@ -33,12 +33,8 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                     if (isAdmin == 0) {
                         return '新入库';
                     } else if (isAdmin == 1) {
-                        return '不处理';
+                        return '已办理';
                     } else if (isAdmin == 2) {
-                        return '完善数据';
-                    } else if (isAdmin == 3) {
-                        return '已办理套餐';
-                    } else if (isAdmin == 4) {
                         return '已归档';
                     }
                     return '';
@@ -103,7 +99,7 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                                 async: true,
                                 type: "POST",
                                 url: "${path}/maintain/cusinfo/guidang",
-                                data: {id: el.id},
+                                data: {id: el.product_id},
                                 success: function (response) {
                                     if (response.result) {
                                         appUtil.messager.success(response.msg);
@@ -207,11 +203,21 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                     },
                     filter: function (e) {
                         var obj = this;
-                        if ($.trim(obj.value) == "") {
-                            delete param[obj.name];
-                        } else {
-                            param[obj.name] = obj.value;
+                        if(obj.selectedIndex) { //下拉框处理
+                            var selectedVal = obj.value;
+                            if(selectedVal==0) {
+                                delete param[obj.name];
+                            }else{
+                                param[obj.name] = selectedVal;
+                            }
+                        }else{
+                            if ($.trim(obj.value) == "") {
+                                delete param[obj.name];
+                            } else {
+                                param[obj.name] = obj.value;
+                            }
                         }
+
                         pageVM.pageQuery(1, param);
                     }
                 });
@@ -291,8 +297,12 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="card_state" td type="text"
-                                       placeholder="状态">
+                                <select name="state"  ms-on-change="filter" class="form-control">
+                                    <option value="0">选择状态</option>
+                                    <option value="1">新入库</option>
+                                    <option value="2">已处理</option>
+                                    <option value="3">归档</option>
+                                </select>
                             </div>
                         </td>
                     </tr>
@@ -305,22 +315,19 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         <td>{{el.cus_address}}</td>
                         <td>{{el.sale_id}}</td>
                         <td>{{el.sale_name}}</td>
-                        <td>{{el.state|state}}</td>
+                        <td>{{el.card_state|state}}</td>
                         <td>
-                                <span ms-if="el.state==0||el.state==2">
+                                <span ms-if="el.card_state==0">
                                 <a class="btn btn-default" href="#" role="button" ms-click="addInfo(el)">完善信息</a>
-                                <button class="btn btn-danger" ms-click="buchuli(el)">暂不处理</button>
+                                <%--<button class="btn btn-danger" ms-click="buchuli(el)">暂不处理</button>--%>
                                 <button class="btn btn-primary" ms-click="banli(el)">办理套餐</button>
                                 </span>
 
-                                  <span ms-if="el.state==3">
+                                  <span ms-if="el.card_state==1">
                                 <button class="btn btn-default" ms-click="guidang(el)">归档</button>
                                       </span>
-                                    <span ms-if="el.state==1">
-                                <button class="btn btn-default" ms-click="chuli(el)">重新处理</button>
-                                        </span>
 
-                            <span ms-if="el.state==4||el.state==3||el.state==2||el.state==1">
+                            <span ms-if="el.card_state==4||el.card_state==3||el.card_state==2||el.card_state==1">
                                     <button class="btn btn-default" ms-click="log(el)">操作日志</button>
                         </span>
                         </td>
@@ -329,22 +336,6 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                 </table>
             </div>
             <div class="bootgrid-footer container-fluid">
-                <%--<div class="row">
-                    <div class="col-sm-6">
-                        <ul class="pagination" style="margin: 0;">
-                            <li class="prev active" ms-class="disabled:page.pageNumber<2"
-                                ms-click="pageQuery(page.pageNumber-1)"><a class="button"><i
-                                    class="md md-chevron-left"></i></a></li>
-                            <li class="next active"
-                                ms-class="disabled:page.pageNumber==page.totalPage||page.totalPage==0"
-                                ms-click="pageQuery(page.pageNumber+1)"><a class="button"><i
-                                    class="md md-chevron-right"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 infoBar">
-                        <div class="infos">第{{page.pageNumber}}页，共{{page.totalPage}}页,{{page.totalRow}}条</div>
-                    </div>
-                </div>--%>
                 <div class="pager form-horizontal tablesorter-pager" data-column="0">
                     <button type="button" ms-class="disabled:page.pageNumber<2" class="btn first"
                             ms-click="pageQuery(1)">首页

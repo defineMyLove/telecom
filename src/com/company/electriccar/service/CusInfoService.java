@@ -121,7 +121,7 @@ public class CusInfoService {
         ServiceResponse response = new ServiceResponse();
         response.setResult(true);
         response.setMsg("操作成功");
-        CUS_INFO zhuanlan = new CUS_INFO();
+        CUS_CARD_INFO zhuanlan = new CUS_CARD_INFO();
         zhuanlan.setId(id);
         zhuanlan.setState(state);
         zhuanlan.update();
@@ -156,5 +156,9 @@ public class CusInfoService {
             temp.insert();
         }
         return response;
+    }
+
+    public void updateCusInfo(CUS_INFO user) {
+        user.update();
     }
 }

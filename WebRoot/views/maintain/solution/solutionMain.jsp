@@ -38,7 +38,7 @@
                 columns: [
                     { display: '图片', name: 'pic_path', align: 'left'},
                     { display: '标题', name: 'name', align: 'left'},
-                    { display: '描述', name: 'desc', align: 'left'},
+                    { display: '描述', name: 'note', align: 'left'},
                     { display: '创建时间', name: 'create_time', align: 'left'},
                     { display: '内容', name: 'content', align: 'left'}
                 ],
@@ -49,6 +49,7 @@
                 },
                 root: 'rows',
                 record: 'total',
+                pagesizeParmName:'pageSize',
                 toolbar: { items: [
                     { id: 'add', text: '添加', click: itemclick, icon: 'add' },
                     { line: true },

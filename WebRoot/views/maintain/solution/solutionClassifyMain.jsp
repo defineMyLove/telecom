@@ -42,6 +42,7 @@
                 url: '${path}/maintain/solutionclassify/list',
                 root: 'rows',
                 record: 'total',
+                pagesizeParmName:'pageSize',
                 toolbar: { items: [
                     { id: 'add', text: '添加', click: itemclick, icon: 'add' },
                     { line: true },
@@ -93,7 +94,7 @@
             var rows = manager.getSelectedRow();
 
             if ('add' === item.id) {
-                window.top.openDialog("添加功能","${path}/maintain/solutionclassify/addUI",80,80, [
+                window.top.openDialog("添加功能","${path}/maintain/solutionclassify/addUI",50,40, [
                     { text: '确定', onclick: function (item, dialog) {window.top.submitForm()},cls:'l-dialog-btn-highlight' },
                     { text: '取消', onclick: function (item, dialog) { window.top.closeDialog(); }}
                 ]);
@@ -102,7 +103,7 @@
                     $.ligerDialog.warn("请选择一条记录");
                     return;
                 }
-                window.top.openDialog("添加功能","${path}/maintain/solutionclassify/addUI?id="+rows.id,80,80, [
+                window.top.openDialog("添加功能","${path}/maintain/solutionclassify/addUI?id="+rows.id,50,40, [
                     { text: '确定', onclick: function (item, dialog) {window.top.submitForm()},cls:'l-dialog-btn-highlight' },
                     { text: '取消', onclick: function (item, dialog) { window.top.closeDialog(); }}
                 ]);
@@ -125,7 +126,7 @@
                     $.ligerDialog.warn("请选择一条记录");
                     return;
                 }
-                window.top.openDialog("详情","${path}/maintain/solutionclassify/detail?id="+rows.id,80,80, [
+                window.top.openDialog("详情","${path}/maintain/solutionclassify/detail?id="+rows.id,50,40, [
                     { text: '取消', onclick: function (item, dialog) { window.top.closeDialog(); }}
                 ]);
             }
@@ -135,7 +136,7 @@
 <body>
 <div class="panel">
     <div class="div-search">
-        <div class="title">解决方案分类查询
+        <div class="title">套餐类别查询
         </div>
         <form:form method="post" id="queryForm">
             <table border="0" cellpadding="2" cellspacing="1" width="100%" class="searchform">

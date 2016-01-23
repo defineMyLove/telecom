@@ -17,7 +17,7 @@
         <span id="pageTitle">产品详情</span>
     </header>
 </article>
-<div id="tab" style="display: block;overflow:auto;top:5em;bottom: 5em;position:absolute;max-width:720px">
+<div id="tab" style="display: block;overflow:auto;font-size:16px;top:65px;bottom: 5em;position:absolute;max-width:720px;padding:5px;">
     ${info.content}
 </div>
 <section class="pro-property-action-area" id="pro-operation">

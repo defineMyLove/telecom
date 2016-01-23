@@ -6,30 +6,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="${path}/static/css/common.css"/>
     <script src="${path}/static/sea-modules/sea.js"></script>
-    <script src="${path}/static/seajs-config.js"></script>
-    <script charset="utf-8" src="${path}/static/js/kindeditor/kindeditor-min.js"></script>
+    <script src="${path}/static/sea-modules/seajs-config.js"></script>
     <script type="text/javascript">
-        if('${msg}'){
-            top.common.tip.notify({title:'${msg}'});
+        if ('${msg}') {
+            top.common.tip.notify({title: '${msg}'});
         }
 
-        KE.show({
-            id: 'content',
-            width: '80%',
-            height: '300px',
-            imageUploadJson: '${path}/maintain/upload/image'
-        });
-
-        seajs.use(['$', 'jquery-util'], function ($, jqueryUtil,pupZtree) {
+        seajs.use(['$', 'validateUtil'], function ($, jqueryUtil, pupZtree) {
             //全局变量
             window.$ = $;
             //表单验证
             jqueryUtil.formValidate({
                 form: "showForm",
                 rules: {
-                    "title": {required: true,maxlength:50},
-                    "order_no": {required: true},
-                    "type": {required: true}
+                    "name": {required: true, maxlength: 50},
+                    "order_no": {required: true}
                 },
                 submitHandler: function (form) {
                     form.submit();
@@ -42,7 +33,7 @@
                     }
             );
         });
-        function submitForm(){
+        function submitForm() {
             $('#submitBtn')[0].click();
         }
     </script>

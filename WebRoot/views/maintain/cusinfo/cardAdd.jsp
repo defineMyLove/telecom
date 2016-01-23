@@ -111,6 +111,11 @@
             }
         }
     </script>
+    <style type="text/css">
+        table td{
+            vertical-align: middle!important;
+        }
+    </style>
 </head>
 <body>
 <section id="content">
@@ -208,7 +213,6 @@
                 </div>
             </div>
             <div class="col-sm-6">
-
                 <!-- 其他联系电话 -->
                 <div ms-controller="otherPhoneVM">
                     <div class="card">

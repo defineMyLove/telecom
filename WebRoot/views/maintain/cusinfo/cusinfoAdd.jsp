@@ -38,7 +38,7 @@
 <body>
 <div class="panel">
     <fieldset class="fieldset">
-        <form:form id="showForm" method="post" action="${path}/maintain/cusinfo/add">
+        <form:form id="showForm" method="post" action="${path}/maintain/cusinfo/update">
             <input id="id" name="id" value="${info.id}" type="hidden"/>
             <table width="90%" class="table-add">
                 <tr>

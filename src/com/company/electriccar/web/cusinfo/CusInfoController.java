@@ -37,9 +37,9 @@ public class CusInfoController {
      * @param user
      * @return
      */
-    @RequestMapping(value = "add")
-    public ModelAndView add(HttpServletRequest request, CUS_INFO user) {
-        zhuanLanService.add(user);
+    @RequestMapping(value = "update")
+    public ModelAndView update(HttpServletRequest request, CUS_INFO user) {
+        zhuanLanService.updateCusInfo(user);
         return WebUtil.goSysInfoPage(request, "", "window.top.refreshGrid();window.top.closeDialog();");
     }
 

@@ -73,7 +73,7 @@
                         简短描述
                     </td>
                     <td width="80%" style="text-align: left;">
-                        <input type="text" class="text" name="desc" id="desc" value="${info.desc}"/>
+                        <input type="text" class="text" name="note" id="note" value="${info.note}"/>
                     </td>
 
                 </tr>

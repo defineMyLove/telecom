@@ -794,7 +794,7 @@ body {
                         <span>回访</span>
                     </div>
                 </a>
-                <a href="tel:${cus_tel}" class="item flex1 luotuobook">
+                <a href="tel:${tel.tel}" class="item flex1 luotuobook">
                     <div class="pos">
                         <i></i>
                         <span>联系我们</span>
@@ -816,7 +816,7 @@ body {
                             </div>
                             <div class="media-body">
                                 <div class="lv-title">${bean.name}</div>
-                                <small class="lv-small">${bean.desc}
+                                <small class="lv-small">${bean.note}
                                 </small>
                             </div>
                         </div>

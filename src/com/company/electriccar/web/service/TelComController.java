@@ -69,7 +69,7 @@ public class TelComController {
     @RequestMapping(value = "add")
     public ModelAndView add(HttpServletRequest request, CUS_INFO user) {
        ServiceResponse response= cusInfoService.add(user);
-        return WebUtil.goSysInfoPage(request,"","history.go(-1);alert('"+response.getMsg()+"');");
+        return WebUtil.goSysInfoPage(request,"","alert('"+response.getMsg()+"');history.go(-1);");
     }
 
     /**
@@ -83,6 +83,10 @@ public class TelComController {
     public ModelAndView queryList() {
         ModelAndView view = new ModelAndView("/phone/newindex");
         view.addObject("list",zhuanLanService.queryList());
+        List<Map> telMap = zhuanLanService.queryTelList();
+        if (telMap!=null&telMap.size()!=0) {
+            view.addObject("tel",telMap.get(0));
+        }
         return view;
     }
 }
