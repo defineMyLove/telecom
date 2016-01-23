@@ -31,6 +31,7 @@ public class FANGAN_INFO extends BaseBean{
 		KEYS.put("fenlei_id", "String");
 		KEYS.put("order_no", "Integer");
 		KEYS.put("create_time", "Long");
+		KEYS.put("desc", "String");
 	}
 	public Map getColumnMap(){
 		return KEYS;
@@ -51,6 +52,8 @@ public class FANGAN_INFO extends BaseBean{
 	private Boolean isSetted_order_no = false;
 	private Long create_time;
 	private Boolean isSetted_create_time = false;
+	private String desc;
+	private Boolean isSetted_desc = false;
 
 	private void initBeanValues(){
 		BEAN_VALUES = new HashMap<String, Object>();
@@ -61,6 +64,7 @@ public class FANGAN_INFO extends BaseBean{
 			BEAN_VALUES.put("fenlei_id", null);
 			BEAN_VALUES.put("order_no", null);
 			BEAN_VALUES.put("create_time", null);
+			BEAN_VALUES.put("desc", null);
 	}
 	
 	public FANGAN_INFO() {
@@ -111,6 +115,9 @@ public class FANGAN_INFO extends BaseBean{
 			if (isSetted_create_time) {
 				sBuffer.append("create_time=:create_time,");
 			}
+			if (isSetted_desc) {
+				sBuffer.append("desc=:desc,");
+			}
 		String sql = sBuffer.toString();
 		return StringUtils.removeEnd(sql, ",") + " where id=:id";
 	}
@@ -133,6 +140,8 @@ public class FANGAN_INFO extends BaseBean{
 			values.append(":order_no,");
 			fileds.append("create_time,");
 			values.append(":create_time,");
+			fileds.append("desc,");
+			values.append(":desc,");
 		sBuffer.append(StringUtils.removeEnd(fileds.toString(), ",") + ") values("+StringUtils.removeEnd(values.toString(), ",")+")");
 		return sBuffer.toString();
 	}
@@ -140,14 +149,14 @@ public class FANGAN_INFO extends BaseBean{
 
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-48-23 hh:01
 		 */
 		public String getName() {
 			return name;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-48-23 hh:01
 		 */
 		public FANGAN_INFO setName(String name) {
 			this.name = name;
@@ -157,14 +166,14 @@ public class FANGAN_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-48-23 hh:01
 		 */
 		public String getPic_path() {
 			return pic_path;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-48-23 hh:01
 		 */
 		public FANGAN_INFO setPic_path(String pic_path) {
 			this.pic_path = pic_path;
@@ -174,14 +183,14 @@ public class FANGAN_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-48-23 hh:01
 		 */
 		public String getContent() {
 			return content;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-48-23 hh:01
 		 */
 		public FANGAN_INFO setContent(String content) {
 			this.content = content;
@@ -191,14 +200,14 @@ public class FANGAN_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-48-23 hh:01
 		 */
 		public String getFenlei_id() {
 			return fenlei_id;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-48-23 hh:01
 		 */
 		public FANGAN_INFO setFenlei_id(String fenlei_id) {
 			this.fenlei_id = fenlei_id;
@@ -208,14 +217,14 @@ public class FANGAN_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-48-23 hh:01
 		 */
 		public Integer getOrder_no() {
 			return order_no;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-48-23 hh:01
 		 */
 		public FANGAN_INFO setOrder_no(Integer order_no) {
 			this.order_no = order_no;
@@ -225,19 +234,36 @@ public class FANGAN_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-48-23 hh:01
 		 */
 		public Long getCreate_time() {
 			return create_time;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-48-23 hh:01
 		 */
 		public FANGAN_INFO setCreate_time(Long create_time) {
 			this.create_time = create_time;
 			this.isSetted_create_time = true;
 			BEAN_VALUES.put("create_time",create_time);
+			return this;
+		}
+		/**
+		 * 获取<BR/>
+		 * 䣺2016-48-23 hh:01
+		 */
+		public String getDesc() {
+			return desc;
+		}
+		/**
+		 * 设置<BR/>
+		 * 2016-48-23 hh:01
+		 */
+		public FANGAN_INFO setDesc(String desc) {
+			this.desc = desc;
+			this.isSetted_desc = true;
+			BEAN_VALUES.put("desc",desc);
 			return this;
 		}
 
@@ -284,6 +310,9 @@ public class FANGAN_INFO extends BaseBean{
 				}
 				if (isSetted_create_time) {
 					sBuffer.append("create_time=:create_time and ");
+				}
+				if (isSetted_desc) {
+					sBuffer.append("desc=:desc and ");
 				}
 			String sql = sBuffer.toString();
 			sql = StringUtils.removeEnd(sql, " and ");
@@ -361,6 +390,9 @@ public class FANGAN_INFO extends BaseBean{
 			obj = rs.getObject("CREATE_TIME");
 			BEAN_VALUES.put("create_time",obj);
 				this.setCreate_time(ConvertUtil.obj2Long(obj));
+			obj = rs.getObject("DESC");
+			BEAN_VALUES.put("desc",obj);
+				this.setDesc(ConvertUtil.obj2Str(obj));
 			return this;
 		}
 		

@@ -73,7 +73,7 @@
                             totalPage: 0
                         },
                         detail:function(el){
-                            window.open("${path}/service/telcom/detail?id="+el.id);
+                            window.open("${path}/service/telcom/detail?id="+el.id,'_self');
                         }
                     });
                     window.pageVM = pageVM;

@@ -237,7 +237,7 @@
             <a class="l-link"
                href="javascript:addTab('readermanger','发展人管理','${path}/toView?view=/maintain/saleman/saleMain')">发展人管理</a>
             <a class="l-link"
-               href="javascript:addTab('readermanger','综合查询','${path}/toView?view=/maintain/saleman/query')">综合查询</a>
+               href="javascript:addTab('query','综合查询','${path}/toView?view=/maintain/saleman/query')">综合查询</a>
         </div>
 
 

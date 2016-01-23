@@ -2,8 +2,10 @@ package com.company.electriccar.web.cusinfo;
 
 import com.company.electriccar.common.syscontext.Const;
 import com.company.electriccar.common.syscontext.ResponseMes;
+import com.company.electriccar.domain.CUS_CARD_INFO;
 import com.company.electriccar.domain.CUS_INFO;
 import com.company.electriccar.domain.SALEMAN;
+import com.company.electriccar.service.CusCardService;
 import com.company.electriccar.service.CusInfoService;
 import com.company.electriccar.service.SaleManService;
 import com.company.modules.utils.JsonUtil;
@@ -26,7 +28,8 @@ import javax.servlet.http.HttpServletResponse;
 public class CusInfoController {
     @Autowired
     CusInfoService zhuanLanService;
-
+    @Autowired
+    CusCardService cusCardService;
     /**
      * 添加动作
      *
@@ -60,8 +63,8 @@ public class CusInfoController {
     }
 
     /**
-     * 跳转到办理套餐界面
-     * @param id
+     * 跳转到办理套餐界面(未归档的套餐数据)
+     * @param id 套餐实例ID
      * @param res
      * @return
      */
@@ -70,11 +73,19 @@ public class CusInfoController {
         ModelAndView view = new ModelAndView("/maintain/cusinfo/cardAdd");
         view.addObject("msg", ResponseMes.parseMsg(res));
         if (StringUtil.isNotBlank(id)) {
-            view.addObject("info", zhuanLanService.selectByPk(id));
+            view.addObject("info", cusCardService.selectByPk(id));
+            view.addObject("phontListJson", JsonUtil.obj2Json(cusCardService.selectViceList(id)));
         } else {
             //view.addObject("info",new FANGAN_FENLEI());
         }
         return view;
+    }
+
+    // 保存套餐办理信息(主卡、背卡)并修改套餐数据,修改状态为已办理
+    @RequestMapping(value = "productUpdate")
+    public ModelAndView productUpdate(String vice_card_str,CUS_CARD_INFO card_info, HttpServletRequest request) {
+        zhuanLanService.updateProduct(vice_card_str, card_info);
+        return WebUtil.goSysInfoPage(request, "", "window.top.refreshGrid();window.top.closeDialog();");
     }
 
 
@@ -93,7 +104,7 @@ public class CusInfoController {
     // 修改状态为处理
     @RequestMapping(value = "chuli")
     public void chuli(String id, HttpServletResponse response) {
-        WebUtil.writeJson(response, JsonUtil.obj2JsonObj(zhuanLanService.updateState(id, Const.CUS_STATE_WANSHAN)));
+        WebUtil.writeJson(response, JsonUtil.obj2JsonObj(zhuanLanService.updateState(id, Const.CUS_STATE_NEW)));
     }
 
     // 归档

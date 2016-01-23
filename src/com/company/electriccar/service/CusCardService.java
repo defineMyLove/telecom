@@ -3,10 +3,8 @@ package com.company.electriccar.service;
 import com.company.electriccar.common.syscontext.Const;
 import com.company.electriccar.domain.CUS_CARD_INFO;
 import com.company.electriccar.domain.CUS_INFO;
-import com.company.electriccar.domain.CUS_VICE_CARD_INFO;
 import com.company.modules.dao.BaseDao;
 import com.company.modules.dao.SqlParameter;
-import com.company.modules.utils.JsonUtil;
 import com.company.modules.utils.StringUtil;
 import com.company.modules.web.ServiceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +18,10 @@ import java.util.Map;
 
 /**
  * Created by zxl on 14-6-22.
+ * 快带办理服务类
  */
 @Service
-public class CusInfoService {
+public class CusCardService {
     @Autowired
     private BaseDao baseDao;
 
@@ -63,7 +62,7 @@ public class CusInfoService {
      */
     public Map selectByPk(String id) {
         return
-                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from CUS_INFO where id ='" + id + "'");
+                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from CUS_CARD_INFO where id ='" + id + "'");
     }
 
     /**
@@ -129,32 +128,12 @@ public class CusInfoService {
     }
 
     /**
-     * 保存套餐办理信息(主卡、背卡)并修改套餐数据,修改状态为已办理
-     * @param vice_card_str
-     * @param card_info
+     * 查询副卡信息
+     * @param id
      * @return
      */
-    public ServiceResponse updateProduct(String vice_card_str, CUS_CARD_INFO card_info) {
-        ServiceResponse response = new ServiceResponse();
-        response.setResult(true);
-        response.setMsg("操作成功");
-        card_info.setBanli_time(new Date().getTime());
-        card_info.setState(Const.CUS_STATE_BANLI);
-        card_info.insertOrUpdate();
-
-        //副卡信息(先删除后添加)
-        baseDao.execute("delete from CUS_VICE_CARD_INFO where main_card_id='" + card_info.getId() + "'",null);
-        List<Map> viceCardInfos = JsonUtil.json2List(vice_card_str);
-        long time = new Date().getTime();
-        for (Map<String,String> map : viceCardInfos) {
-            CUS_VICE_CARD_INFO temp = new CUS_VICE_CARD_INFO();
-            temp.setVice_card_id(map.get("vice_card_id"));
-            temp.setBack_card_id(map.get("back_card_id"));
-            temp.setCreate_time(time);
-            temp.setCus_id(card_info.getCus_id());
-            temp.setMain_card_id(card_info.getId());
-            temp.insert();
-        }
-        return response;
+    public List<Map> selectViceList(String id) {
+        List<Map> resultMap = baseDao.queryForList("select * from cus_vice_card_info where main_card_id='" + id + "'");
+        return resultMap == null ? new ArrayList<Map>():resultMap;
     }
 }

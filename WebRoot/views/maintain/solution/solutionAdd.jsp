@@ -70,6 +70,15 @@
                 </tr>
                 <tr>
                     <td width="20%" class="tabRight required">
+                        简短描述
+                    </td>
+                    <td width="80%" style="text-align: left;">
+                        <input type="text" class="text" name="desc" id="desc" value="${info.desc}"/>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td width="20%" class="tabRight required">
                         内容
                     </td>
                     <td width="30%" style="text-align: left;">

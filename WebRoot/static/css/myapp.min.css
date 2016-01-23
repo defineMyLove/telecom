@@ -12137,7 +12137,10 @@ input:focus {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	display: block
+	display: block;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: .1rem;
 }
 .listview a.lv-item:hover {
 	background: #ECF9FF

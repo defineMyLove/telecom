@@ -230,9 +230,6 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
 <body>
 <section id="content" ms-controller="pageVM" class="ms-controller">
     <div class="container">
-        <div class="block-header">
-            <h2>机会库</h2>
-        </div>
 
         <div class="card">
             <%--  <div class="card-header ch-alt">
@@ -250,7 +247,6 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         <th>发展人编号</th>
                         <th>发展人姓名</th>
                         <th>状态</th>
-                        <th>操作</th>
                     </tr>
                     <tr>
                         <td>
@@ -306,24 +302,6 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         <td>{{el.sale_id}}</td>
                         <td>{{el.sale_name}}</td>
                         <td>{{el.state|state}}</td>
-                        <td>
-                                <span ms-if="el.state==0||el.state==2">
-                                <a class="btn btn-default" href="#" role="button" ms-click="addInfo(el)">完善信息</a>
-                                <button class="btn btn-danger" ms-click="buchuli(el)">暂不处理</button>
-                                <button class="btn btn-primary" ms-click="banli(el)">办理套餐</button>
-                                </span>
-
-                                  <span ms-if="el.state==3">
-                                <button class="btn btn-default" ms-click="guidang(el)">归档</button>
-                                      </span>
-                                    <span ms-if="el.state==1">
-                                <button class="btn btn-default" ms-click="chuli(el)">重新处理</button>
-                                        </span>
-
-                            <span ms-if="el.state==4||el.state==3||el.state==2||el.state==1">
-                                    <button class="btn btn-default" ms-click="log(el)">操作日志</button>
-                        </span>
-                        </td>
                     </tr>
                     </tbody>
                 </table>

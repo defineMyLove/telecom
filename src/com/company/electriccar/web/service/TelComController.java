@@ -59,7 +59,9 @@ public class TelComController {
     }
 
     /**
-     * 添加用户信息
+     * 添加用户信息(微信用户中心没有确定前用户信息不判断唯一性)
+     * 1.如果没有用户ID直接添加用户信息
+     * 2.如果有则不添加而只是添加套餐信息
      * @param request
      * @param user
      * @return
@@ -68,5 +70,19 @@ public class TelComController {
     public ModelAndView add(HttpServletRequest request, CUS_INFO user) {
        ServiceResponse response= cusInfoService.add(user);
         return WebUtil.goSysInfoPage(request,"","history.go(-1);alert('"+response.getMsg()+"');");
+    }
+
+    /**
+     * 显示在首页的产品（最多十个）
+     * @param raftId
+     * @param month
+     * @param request
+     * @param response
+     */
+    @RequestMapping(value = "queryList")
+    public ModelAndView queryList() {
+        ModelAndView view = new ModelAndView("/phone/newindex");
+        view.addObject("list",zhuanLanService.queryList());
+        return view;
     }
 }

@@ -2,13 +2,17 @@
   <library name="lib">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
       <root url="file://$PROJECT_DIR$/../kisso/kisso/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
     </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" recursive="false" type="SOURCES" />
     <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" recursive="false" type="SOURCES" />
   </library>
 </component>

@@ -36,6 +36,8 @@ public class SolutionService {
             String fileName = mFile.getOriginalFilename();
             user.setPic_path(url);
         }
+        int cardNo = baseDao.queryForInteger("SELECT nextval('sequence');");
+        user.setOrder_no(cardNo);
         user.insertOrUpdate();
     }
 

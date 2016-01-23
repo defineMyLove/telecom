@@ -36,11 +36,13 @@
                 height: '80%',
                 onBeforeShowData: renderFormData,
                 columns: [
+                    { display: '图片', name: 'pic_path', align: 'left'},
                     { display: '标题', name: 'name', align: 'left'},
+                    { display: '描述', name: 'desc', align: 'left'},
                     { display: '创建时间', name: 'create_time', align: 'left'},
-                    { display: '内容', name: 'content', align: 'left'},
-                    { display: '图片', name: 'pic_path', align: 'left'}
+                    { display: '内容', name: 'content', align: 'left'}
                 ],
+
                 url: '${path}/maintain/solution/list',
                 parms:{
                     fenlei_id:'${fenlei_id}'
@@ -86,6 +88,7 @@
         function renderFormData(data) {
             jQuery.each(data.rows, function () {
                 this.create_time = top.common.getDateStr(this.create_time);
+                this.pic_path = "<img style='width:35px;height:35px;' src='${path}"+this.pic_path+"'/>";
             });
         }
         /**  按钮动作**/

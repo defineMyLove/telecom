@@ -53,11 +53,15 @@ public interface Const {
 
 
     /**
-     * 客户状态   //(0:新入库1:暂不处理2:完善数据,3:办理套餐4:归档)
+     * 客户状态   //(0:未办理 1:已办理 2:归档)
      */
     Integer CUS_STATE_NEW =0;
-    Integer CUS_STATE_BUCHULI =1;
-    Integer CUS_STATE_WANSHAN =2;
-    Integer CUS_STATE_BANLI =3;
-    Integer CUS_STATE_GUIDANG =4;
+    Integer CUS_STATE_BANLI =1;
+    Integer CUS_STATE_GUIDANG =2;
+    int CUS_STATE_BUCHULI =3 ;
+    /**
+     * 产品类型 0:宽带
+     */
+    Integer PRODUCT_TYPE_0 = 0;
+
 }
