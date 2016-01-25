@@ -1,14 +1,9 @@
 package com.company.electriccar.web;
 
-import com.company.electriccar.domain.FANGAN_FENLEI;
-import com.company.electriccar.domain.FANGAN_INFO;
-import com.company.electriccar.domain.NEW_INFO;
 import com.company.electriccar.service.news.NewsService;
-import com.company.electriccar.service.product.ProductService;
 import com.company.electriccar.service.solution.SolutionClassifyService;
 import com.company.electriccar.service.solution.SolutionService;
 import com.company.electriccar.service.yeji.YejiService;
-import com.company.modules.displayTag.PaginationHelper;
 import com.company.modules.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,17 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/")
 public class HomeController {
     @Autowired
     NewsService newsService;
-    @Autowired
-    ProductService productService;
-
     @Autowired
     SolutionService solutionService;
     @Autowired

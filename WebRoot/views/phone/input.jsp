@@ -24,11 +24,7 @@
                  "cus_tel": {required: true, isTel: true}
                  },
                 submitHandler: function (form) {
-                  /*  if ($.trim($('[name=cus_tel]').val()) == '') {
-                        alert("电话号码必须填写");
-                    }*/
                     form.submit();
-                    window.history.go(-1);
                 }
             });
         });

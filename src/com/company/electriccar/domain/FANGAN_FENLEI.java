@@ -80,7 +80,7 @@ public class FANGAN_FENLEI extends BaseBean{
 	
 	@Override
 	public String getUpdateSql() {
-		StringBuffer sBuffer = new StringBuffer("update FANGAN_FENLEI set ");
+		StringBuffer sBuffer = new StringBuffer("update "+getTableName() +" set ");
 			if (isSetted_name) {
 				sBuffer.append("name=:name,");
 			}
@@ -97,7 +97,7 @@ public class FANGAN_FENLEI extends BaseBean{
 	
 	@Override
 	public String getInsertSql() {
-		StringBuffer sBuffer = new StringBuffer("insert into FANGAN_FENLEI(");
+		StringBuffer sBuffer = new StringBuffer("insert into "+getTableName() +"(");
 		StringBuffer fileds = new StringBuffer("id,");
 		StringBuffer values = new StringBuffer(":id,");		
 			fileds.append("name,");
@@ -113,14 +113,14 @@ public class FANGAN_FENLEI extends BaseBean{
 
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getName() {
 			return name;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-56-25 hh:01
 		 */
 		public FANGAN_FENLEI setName(String name) {
 			this.name = name;
@@ -130,14 +130,14 @@ public class FANGAN_FENLEI extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Long getCreate_time() {
 			return create_time;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-56-25 hh:01
 		 */
 		public FANGAN_FENLEI setCreate_time(Long create_time) {
 			this.create_time = create_time;
@@ -147,14 +147,14 @@ public class FANGAN_FENLEI extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2014-48-09 hh:07
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Integer getOrder_no() {
 			return order_no;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2014-48-09 hh:07
+		 * 2016-56-25 hh:01
 		 */
 		public FANGAN_FENLEI setOrder_no(Integer order_no) {
 			this.order_no = order_no;
@@ -185,7 +185,7 @@ public class FANGAN_FENLEI extends BaseBean{
 		
 		@Override
 		public FANGAN_FENLEI queryForBean() {
-			StringBuffer sBuffer = new StringBuffer("select * from FANGAN_FENLEI where ");
+			StringBuffer sBuffer = new StringBuffer("select * from "+getTableName() +" where ");
 			if(isSetted_id){
 				sBuffer.append("id=:id and ");
 			}
@@ -205,7 +205,7 @@ public class FANGAN_FENLEI extends BaseBean{
 	
 		@Override
 		public String getTableName() {
-			return "FANGAN_FENLEI";
+			return "fangan_fenlei";
 		}
 		
 		

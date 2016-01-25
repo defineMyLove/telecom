@@ -10,14 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="${path}/static/css/myapp.min.css" rel="stylesheet">
+    <link href="${path}/static/sea-modules/arale/calendar/1.0.0/calendar.css" rel="stylesheet">
     <script type="text/javascript" src="${path}/static/sea-modules/sea.js"></script>
     <script type="text/javascript" src="${path}/static/sea-modules/seajs-config.js"></script>
     <script type="text/javascript">
         if ('${msg}') {
             top.common.tip.notify({title: '${msg}'});
         }
-        seajs.use([ '$', 'app-util','json', 'validateUtil', 'avalon', 'todc-bootstrap', 'lhgdialog', 'chosen'],
-                function ($, appUtil,JSON, validateUtil, avalon) {
+        seajs.use([ '$', 'app-util', 'json', 'validateUtil', 'avalon',"calendar", 'todc-bootstrap', 'lhgdialog', 'chosen'],
+                function ($, appUtil, JSON, validateUtil, avalon,Calendar) {
+                    $('.tag-select').chosen({
+                        width: '90%',
+                        allow_single_deselect: true
+                    });
+                    new Calendar({trigger: '#expire_time'});
                     //全局变量
                     window.$ = $;
                     //表单验证
@@ -30,6 +36,8 @@
                             "cus_tel": {required: true, isTel: true}
                         },
                         submitHandler: function (form) {
+                            //提取select值
+
                             form.submit();
                         }
                     });
@@ -106,14 +114,14 @@
                 });
 
         function submitForm() {
-            if(otherPhoneVM.save()) {
+            if (otherPhoneVM.save()) {
                 $('#submitBtn')[0].click();
             }
         }
     </script>
     <style type="text/css">
-        table td{
-            vertical-align: middle!important;
+        table td {
+            vertical-align: middle !important;
         }
     </style>
 </head>
@@ -135,13 +143,23 @@
                                        method="post"
                                        action="${path}/maintain/cusinfo/productUpdate">
                             <input name="id" type="hidden" value="${info.id}"/>
+
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">选择套餐</label>
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <input type="text" value="${info.product_order_no}" class="form-control" name="product_order_no" maxlength="20">
-                                        <input type="hidden" value="${info.product_type}"  name="product_type">
+                                        <select id="product_id" name="product_id" class="tag-select" data-placeholder="选择套餐" style="display: none;">
+                                            <option value="">无</option>
+                                            <c:forEach items="${productList}" var="model">
+                                                <option
+                                                        <c:if test="${info.product_id==model.id}">selected="true"</c:if>
+                                                        value="${model.id}">${model.name}</option>
+                                            </c:forEach>
+                                        </select>
+                                        <input type="hidden" value="${info.product_order_no}" class="form-control"
+                                               name="product_order_no" maxlength="20">
+                                        <input type="hidden" value="${info.product_type}" name="product_type">
                                     </div>
                                 </div>
                             </div>
@@ -150,7 +168,8 @@
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <input type="text" value="${info.expire_time}" class="form-control" name="expire_time" maxlength="20">
+                                        <input type="text" value="${info.expire_time}" class="form-control"
+                                               name="expire_time" id="expire_time" maxlength="20">
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +178,8 @@
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <input type="text" class="form-control" value="${info.main_card_num}" name="main_card_num" maxlength="20">
+                                        <input type="text" class="form-control" value="${info.main_card_num}"
+                                               name="main_card_num" maxlength="20">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +188,8 @@
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <input type="text" class="form-control" value="${info.back_card_num}" name="back_card_num" maxlength="20">
+                                        <input type="text" class="form-control" value="${info.back_card_num}"
+                                               name="back_card_num" maxlength="20">
                                     </div>
                                 </div>
                             </div>
@@ -177,7 +198,8 @@
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <input type="text" class="form-control" value="${info.broadband_id}" name="broadband_id" maxlength="20">
+                                        <input type="text" class="form-control" value="${info.broadband_id}"
+                                               name="broadband_id" maxlength="20">
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +208,8 @@
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <input type="text" class="form-control"  value="${info.route_id}" name="route_id" maxlength="20">
+                                        <input type="text" class="form-control" value="${info.route_id}" name="route_id"
+                                               maxlength="20">
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +218,8 @@
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <input type="text" class="form-control" value="${info.serial_num}" name="serial_num" maxlength="20">
+                                        <input type="text" class="form-control" value="${info.serial_num}"
+                                               name="serial_num" maxlength="20">
                                     </div>
                                 </div>
                             </div>

@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="${path}/static/css/common.css"/>
     <script src="${path}/static/sea-modules/sea.js"></script>
-    <script src="${path}/static/seajs-config.js"></script>
+    <script src="${path}/static/sea-modules/seajs-config.js"></script>
     <script type="text/javascript">
         if ('${msg}') {
             top.common.tip.notify({title: '${msg}'});
         }
-        seajs.use(['$', 'jquery-util'], function ($, jqueryUtil) {
+        seajs.use(['$', 'validateUtil'], function ($, jqueryUtil) {
             //全局变量
             window.$ = $;
             //表单验证

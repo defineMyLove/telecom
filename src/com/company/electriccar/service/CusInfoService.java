@@ -41,6 +41,14 @@ public class CusInfoService {
         user.insertOrUpdate();
         //添加套餐信息(目前只有电话卡ID，之后其他套餐的话需要判断套餐类型)
         CUS_CARD_INFO cusCardInfo = new CUS_CARD_INFO();
+        if (StringUtil.isNotBlank(user.getChanpin_id())) {
+            Map<String,String> productMap = baseDao.queryForMap("select name,order_no from fangan_info where id ='" + user.getChanpin_id() + "'");
+            if (productMap != null) {
+                cusCardInfo.setProduct_name(productMap.get("name"));
+                cusCardInfo.setProduct_order_no(productMap.get("order"));
+            }
+            cusCardInfo.setProduct_id(user.getChanpin_id());
+        }
         cusCardInfo.setCus_id(user.getId());
         cusCardInfo.setState(Const.CUS_STATE_NEW);
         if (StringUtil.isNotBlank(user.getSale_id())) {
@@ -63,7 +71,7 @@ public class CusInfoService {
      */
     public Map selectByPk(String id) {
         return
-                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from CUS_INFO where id ='" + id + "'");
+                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from cus_info where id ='" + id + "'");
     }
 
     /**
@@ -74,7 +82,7 @@ public class CusInfoService {
      */
     public Map selectAllByPk(String id) {
         return
-                baseDao.queryForMap("select a.*,FROM_UNIXTIME(left( a.create_time,10), '%Y-%m-%d' )  as create_time_str,b.* from CUS_INFO a left join cus_card_info b on a.id = b.cus_id and id ='" + id + "'");
+                baseDao.queryForMap("select a.*,FROM_UNIXTIME(left( a.create_time,10), '%Y-%m-%d' )  as create_time_str,b.* from cus_info a left join cus_card_info b on a.id = b.cus_id and id ='" + id + "'");
     }
 
     public ServiceResponse deleteById(String id) {
@@ -88,9 +96,18 @@ public class CusInfoService {
     }
 
     public Map find(CUS_INFO zhuan, HttpServletRequest request) {
-        StringBuffer buffer = new StringBuffer("select b.*,d.id as product_id,d.createTimeStr,d.productCreateTime,d.sale_name,d.card_state,d.product_order_no,d.product_type from cus_info b RIGHT JOIN (");
-        buffer.append("select a.*,a.create_time as productCreateTime,FROM_UNIXTIME(left( a.create_time,10), '%Y-%m-%d' ) as createTimeStr,a.state as card_state,c.name as sale_name  from cus_card_info a left join saleman c on  a.sale_id = c.card_no) as d");
-        buffer.append(" on d.cus_id = b.id ");
+        StringBuffer buffer = new StringBuffer("SELECT\n" +
+                "\tb.*, d.id AS product_id,\n" +
+                "\td.createTimeStr,\n" +
+                "\td.productCreateTime,\n" +
+                "\td.sale_name,\n" +
+                "\td.card_state,\n" +
+                "\td.product_order_no,\n" +
+                "\td.product_type,\n" +
+                "  d.product_no,\n" +
+                "\td.product_name FROM\n" +
+                "\tcus_info b\n" +
+                "RIGHT JOIN cus_car_sale_info d ON d.cus_id = b.id");
         if (StringUtil.isNotBlank(zhuan.getCus_name())) {
             buffer.append(" and b.cus_name like '%" + zhuan.getCus_name() + "%'");
         }

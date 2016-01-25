@@ -92,7 +92,7 @@ public class CUS_VICE_CARD_INFO extends BaseBean{
 	
 	@Override
 	public String getUpdateSql() {
-		StringBuffer sBuffer = new StringBuffer("update CUS_VICE_CARD_INFO set ");
+		StringBuffer sBuffer = new StringBuffer("update cus_vice_card_info set ");
 			if (isSetted_main_card_id) {
 				sBuffer.append("main_card_id=:main_card_id,");
 			}
@@ -118,7 +118,7 @@ public class CUS_VICE_CARD_INFO extends BaseBean{
 	
 	@Override
 	public String getInsertSql() {
-		StringBuffer sBuffer = new StringBuffer("insert into CUS_VICE_CARD_INFO(");
+		StringBuffer sBuffer = new StringBuffer("insert into cus_vice_card_info(");
 		StringBuffer fileds = new StringBuffer("id,");
 		StringBuffer values = new StringBuffer(":id,");		
 			fileds.append("main_card_id,");
@@ -263,7 +263,7 @@ public class CUS_VICE_CARD_INFO extends BaseBean{
 		
 		@Override
 		public CUS_VICE_CARD_INFO queryForBean() {
-			StringBuffer sBuffer = new StringBuffer("select * from CUS_VICE_CARD_INFO where ");
+			StringBuffer sBuffer = new StringBuffer("select * from cus_vice_card_info where ");
 			if(isSetted_id){
 				sBuffer.append("id=:id and ");
 			}
@@ -292,7 +292,7 @@ public class CUS_VICE_CARD_INFO extends BaseBean{
 	
 		@Override
 		public String getTableName() {
-			return "CUS_VICE_CARD_INFO";
+			return "cus_vice_card_info";
 		}
 		
 		
@@ -335,7 +335,7 @@ public class CUS_VICE_CARD_INFO extends BaseBean{
 				throw new RuntimeException("ID不能为空!");
 			}
 			
-			return dao.queryForMap("select * from CUS_VICE_CARD_INFO where id=:id",BEAN_VALUES);
+			return dao.queryForMap("select * from cus_vice_card_info where id=:id",BEAN_VALUES);
 		}
 
 		public Object mapRow(ResultSet rs, int rownum) throws SQLException {

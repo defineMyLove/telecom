@@ -8,6 +8,7 @@ import com.company.electriccar.domain.SALEMAN;
 import com.company.electriccar.service.CusCardService;
 import com.company.electriccar.service.CusInfoService;
 import com.company.electriccar.service.SaleManService;
+import com.company.electriccar.service.solution.SolutionService;
 import com.company.modules.utils.JsonUtil;
 import com.company.modules.utils.StringUtil;
 import com.company.modules.utils.WebUtil;
@@ -30,6 +31,8 @@ public class CusInfoController {
     CusInfoService zhuanLanService;
     @Autowired
     CusCardService cusCardService;
+    @Autowired
+    SolutionService solutionService;
     /**
      * 添加动作
      *
@@ -46,8 +49,6 @@ public class CusInfoController {
     /**
      * 完善信息
      *
-     * @param request
-     * @param user
      * @return
      */
     @RequestMapping(value = "addInfo")
@@ -74,6 +75,7 @@ public class CusInfoController {
         view.addObject("msg", ResponseMes.parseMsg(res));
         if (StringUtil.isNotBlank(id)) {
             view.addObject("info", cusCardService.selectByPk(id));
+            view.addObject("productList", solutionService.findAll());
             view.addObject("phontListJson", JsonUtil.obj2Json(cusCardService.selectViceList(id)));
         } else {
             //view.addObject("info",new FANGAN_FENLEI());

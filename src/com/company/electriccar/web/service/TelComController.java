@@ -73,14 +73,10 @@ public class TelComController {
     }
 
     /**
-     * 显示在首页的产品（最多十个）
-     * @param raftId
-     * @param month
-     * @param request
-     * @param response
+     * 手机显示在首页的产品（最多十个）
      */
-    @RequestMapping(value = "queryList")
-    public ModelAndView queryList() {
+    @RequestMapping(value = "index")
+    public ModelAndView index() {
         ModelAndView view = new ModelAndView("/phone/newindex");
         view.addObject("list",zhuanLanService.queryList());
         List<Map> telMap = zhuanLanService.queryTelList();

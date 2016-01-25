@@ -96,7 +96,7 @@ public class SALEMAN extends BaseBean{
 	
 	@Override
 	public String getUpdateSql() {
-		StringBuffer sBuffer = new StringBuffer("update SALEMAN set ");
+		StringBuffer sBuffer = new StringBuffer("update "+getTableName() +" set ");
 			if (isSetted_name) {
 				sBuffer.append("name=:name,");
 			}
@@ -125,7 +125,7 @@ public class SALEMAN extends BaseBean{
 	
 	@Override
 	public String getInsertSql() {
-		StringBuffer sBuffer = new StringBuffer("insert into SALEMAN(");
+		StringBuffer sBuffer = new StringBuffer("insert into "+getTableName() +"(");
 		StringBuffer fileds = new StringBuffer("id,");
 		StringBuffer values = new StringBuffer(":id,");		
 			fileds.append("name,");
@@ -149,14 +149,14 @@ public class SALEMAN extends BaseBean{
 
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-05-20 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getName() {
 			return name;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-05-20 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public SALEMAN setName(String name) {
 			this.name = name;
@@ -166,14 +166,14 @@ public class SALEMAN extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-05-20 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getTel() {
 			return tel;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-05-20 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public SALEMAN setTel(String tel) {
 			this.tel = tel;
@@ -183,14 +183,14 @@ public class SALEMAN extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-05-20 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getAddress() {
 			return address;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-05-20 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public SALEMAN setAddress(String address) {
 			this.address = address;
@@ -200,14 +200,14 @@ public class SALEMAN extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-05-20 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCreate_user() {
 			return create_user;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-05-20 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public SALEMAN setCreate_user(String create_user) {
 			this.create_user = create_user;
@@ -217,14 +217,14 @@ public class SALEMAN extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-05-20 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCreate_user_name() {
 			return create_user_name;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-05-20 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public SALEMAN setCreate_user_name(String create_user_name) {
 			this.create_user_name = create_user_name;
@@ -234,14 +234,14 @@ public class SALEMAN extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-05-20 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Long getCreate_time() {
 			return create_time;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-05-20 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public SALEMAN setCreate_time(Long create_time) {
 			this.create_time = create_time;
@@ -251,14 +251,14 @@ public class SALEMAN extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-05-20 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCard_no() {
 			return card_no;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-05-20 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public SALEMAN setCard_no(String card_no) {
 			this.card_no = card_no;
@@ -289,7 +289,7 @@ public class SALEMAN extends BaseBean{
 		
 		@Override
 		public SALEMAN queryForBean() {
-			StringBuffer sBuffer = new StringBuffer("select * from SALEMAN where ");
+			StringBuffer sBuffer = new StringBuffer("select * from "+getTableName() +" where ");
 			if(isSetted_id){
 				sBuffer.append("id=:id and ");
 			}
@@ -321,7 +321,7 @@ public class SALEMAN extends BaseBean{
 	
 		@Override
 		public String getTableName() {
-			return "SALEMAN";
+			return "saleman";
 		}
 		
 		

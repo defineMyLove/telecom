@@ -43,7 +43,7 @@ public class SolutionService {
 
     public Map selectByPk(String id) {
         return
-        baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from FANGAN_INFO where id ='" + id + "'");
+        baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from fangan_info where id ='" + id + "'");
     }
 
     public void deleteById(String id) {
@@ -53,7 +53,7 @@ public class SolutionService {
     }
 
     public Map find(FANGAN_INFO zhuan, HttpServletRequest request) {
-        StringBuffer buffer = new StringBuffer("select * from FANGAN_INFO where 1=1 ");
+        StringBuffer buffer = new StringBuffer("select * from fangan_info where 1=1 ");
         if (StringUtil.isNotBlank(zhuan.getName())) {
             buffer.append(" and name like '%").append(zhuan.getName()).append("%'");
         }
@@ -66,7 +66,7 @@ public class SolutionService {
     }
 
     public List<Map> find(FANGAN_INFO fangan, int i) {
-        StringBuffer buffer = new StringBuffer("select * from FANGAN_INFO where 1=1 ");
+        StringBuffer buffer = new StringBuffer("select * from fangan_info where 1=1 ");
         if (StringUtil.isNotBlank(fangan.getName())) {
             buffer.append(" and name like '%").append(fangan.getName()).append("%'");
         }
@@ -76,7 +76,7 @@ public class SolutionService {
     }
 
     public List<Map> findAll() {
-        StringBuffer buffer = new StringBuffer("select * from FANGAN_INFO where 1=1 order by create_time desc");
+        StringBuffer buffer = new StringBuffer("select * from fangan_info where 1=1 order by create_time desc");
         return baseDao.queryForList(buffer.toString());
     }
 }

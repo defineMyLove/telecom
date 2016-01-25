@@ -1,11 +1,8 @@
 package com.company.electriccar.service;
 
-import com.company.electriccar.domain.PRO_FLAG;
-import com.company.electriccar.domain.PRO_FLAG_RECORD;
 import com.company.electriccar.domain.SALEMAN;
 import com.company.modules.dao.BaseDao;
 import com.company.modules.dao.SqlParameter;
-import com.company.modules.utils.DateUtil;
 import com.company.modules.utils.StringUtil;
 import com.company.modules.web.ServiceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -35,7 +31,7 @@ public class SaleManService {
 
     public Map selectByPk(String id) {
         return
-                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from SALEMAN where id ='" + id + "'");
+                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from saleman where id ='" + id + "'");
     }
 
     public ServiceResponse deleteById(String id) {
@@ -49,7 +45,7 @@ public class SaleManService {
     }
 
     public Map find(SALEMAN zhuan, HttpServletRequest request) {
-        StringBuffer buffer = new StringBuffer("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' ) as createTime from SALEMAN where 1=1 ");
+        StringBuffer buffer = new StringBuffer("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' ) as createTime from saleman where 1=1 ");
         if (StringUtil.isNotBlank(zhuan.getName())) {
             buffer.append(" and name like '%" + zhuan.getName() + "%'");
         }

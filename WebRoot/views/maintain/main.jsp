@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>公司网站后台管理</title>
+<title>电信内部管理系统</title>
 <link rel="stylesheet" type="text/css" href="${path }/static/css/common.css"/>
 <script src="${path}/static/sea-modules/sea.js"></script>
 <script src="${path}/static/seajs-config.js"></script>
@@ -91,7 +91,7 @@
         //全局变量
         window.$ = $;
 
-        tab.addTabItem({tabid:"homePage", text: "首页", url: '${path}/toView?view=/maintain/homePage',showClose:false});
+        tab.addTabItem({tabid:"homePage", text: "机会库", url: '${path}/toView?view=/maintain/homePage',showClose:false});
     });
     function f_heightChanged(options) {
         if (tab)
@@ -231,13 +231,19 @@
         <div title="系统管理">
             <div style=" height:7px;"></div>
             <a class="l-link"
+               href="javascript:addTab('readermanger','发展人管理','${path}/toView?view=/maintain/saleman/saleMain')">发展人管理</a>
+
+        </div>
+        <div title="电信管理">
+            <div style=" height:7px;"></div>
+            <a class="l-link"
                href="javascript:addTab('solutionfenlei','套餐类别管理','${path}/toView?view=/maintain/solution/solutionClassifyMain')">套餐类别管理</a>
             <a class="l-link"
                href="javascript:addTab('lingqudianpage','套餐管理','${path}/toView?view=/maintain/solution/tree')">套餐管理</a>
+
             <a class="l-link"
-               href="javascript:addTab('readermanger','发展人管理','${path}/toView?view=/maintain/saleman/saleMain')">发展人管理</a>
-            <a class="l-link"
-               href="javascript:addTab('query','综合查询','${path}/toView?view=/maintain/saleman/query')">综合查询</a>
+               href="javascript:addTab('query','电信套餐办理查询','${path}/toView?view=/maintain/saleman/query')">电信套餐办理查询</a>
+
         </div>
 
 

@@ -39,6 +39,9 @@ public class CUS_CARD_INFO extends BaseBean{
 		KEYS.put("broadband_id", "String");
 		KEYS.put("route_id", "String");
 		KEYS.put("serial_num", "String");
+		KEYS.put("product_id", "String");
+		KEYS.put("product_no", "Integer");
+		KEYS.put("product_name", "String");
 	}
 	public Map getColumnMap(){
 		return KEYS;
@@ -75,6 +78,12 @@ public class CUS_CARD_INFO extends BaseBean{
 	private Boolean isSetted_route_id = false;
 	private String serial_num;
 	private Boolean isSetted_serial_num = false;
+	private String product_id;
+	private Boolean isSetted_product_id = false;
+	private Integer product_no;
+	private Boolean isSetted_product_no = false;
+	private String product_name;
+	private Boolean isSetted_product_name = false;
 
 	private void initBeanValues(){
 		BEAN_VALUES = new HashMap<String, Object>();
@@ -93,6 +102,9 @@ public class CUS_CARD_INFO extends BaseBean{
 			BEAN_VALUES.put("broadband_id", null);
 			BEAN_VALUES.put("route_id", null);
 			BEAN_VALUES.put("serial_num", null);
+			BEAN_VALUES.put("product_id", null);
+			BEAN_VALUES.put("product_no", null);
+			BEAN_VALUES.put("product_name", null);
 	}
 	
 	public CUS_CARD_INFO() {
@@ -124,7 +136,7 @@ public class CUS_CARD_INFO extends BaseBean{
 	
 	@Override
 	public String getUpdateSql() {
-		StringBuffer sBuffer = new StringBuffer("update CUS_CARD_INFO set ");
+		StringBuffer sBuffer = new StringBuffer("update "+getTableName() +" set ");
 			if (isSetted_sale_id) {
 				sBuffer.append("sale_id=:sale_id,");
 			}
@@ -167,6 +179,15 @@ public class CUS_CARD_INFO extends BaseBean{
 			if (isSetted_serial_num) {
 				sBuffer.append("serial_num=:serial_num,");
 			}
+			if (isSetted_product_id) {
+				sBuffer.append("product_id=:product_id,");
+			}
+			if (isSetted_product_no) {
+				sBuffer.append("product_no=:product_no,");
+			}
+			if (isSetted_product_name) {
+				sBuffer.append("product_name=:product_name,");
+			}
 		String sql = sBuffer.toString();
 		return StringUtils.removeEnd(sql, ",") + " where id=:id";
 	}
@@ -174,7 +195,7 @@ public class CUS_CARD_INFO extends BaseBean{
 	
 	@Override
 	public String getInsertSql() {
-		StringBuffer sBuffer = new StringBuffer("insert into CUS_CARD_INFO(");
+		StringBuffer sBuffer = new StringBuffer("insert into "+getTableName() +"(");
 		StringBuffer fileds = new StringBuffer("id,");
 		StringBuffer values = new StringBuffer(":id,");		
 			fileds.append("sale_id,");
@@ -205,6 +226,12 @@ public class CUS_CARD_INFO extends BaseBean{
 			values.append(":route_id,");
 			fileds.append("serial_num,");
 			values.append(":serial_num,");
+			fileds.append("product_id,");
+			values.append(":product_id,");
+			fileds.append("product_no,");
+			values.append(":product_no,");
+			fileds.append("product_name,");
+			values.append(":product_name,");
 		sBuffer.append(StringUtils.removeEnd(fileds.toString(), ",") + ") values("+StringUtils.removeEnd(values.toString(), ",")+")");
 		return sBuffer.toString();
 	}
@@ -212,14 +239,14 @@ public class CUS_CARD_INFO extends BaseBean{
 
 		/**
 		 * 获取发展人ID<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getSale_id() {
 			return sale_id;
 		}
 		/**
 		 * 设置发展人ID<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setSale_id(String sale_id) {
 			this.sale_id = sale_id;
@@ -229,14 +256,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取套餐(产品)编号<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getProduct_order_no() {
 			return product_order_no;
 		}
 		/**
 		 * 设置套餐(产品)编号<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setProduct_order_no(String product_order_no) {
 			this.product_order_no = product_order_no;
@@ -246,14 +273,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取创建时间<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Long getCreate_time() {
 			return create_time;
 		}
 		/**
 		 * 设置创建时间<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setCreate_time(Long create_time) {
 			this.create_time = create_time;
@@ -263,14 +290,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取开卡时间<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Long getBanli_time() {
 			return banli_time;
 		}
 		/**
 		 * 设置开卡时间<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setBanli_time(Long banli_time) {
 			this.banli_time = banli_time;
@@ -280,14 +307,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取到期时间<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Long getExpire_time() {
 			return expire_time;
 		}
 		/**
 		 * 设置到期时间<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setExpire_time(Long expire_time) {
 			this.expire_time = expire_time;
@@ -297,14 +324,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取主卡号<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Integer getMain_card_num() {
 			return main_card_num;
 		}
 		/**
 		 * 设置主卡号<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setMain_card_num(Integer main_card_num) {
 			this.main_card_num = main_card_num;
@@ -314,14 +341,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取主卡背卡号<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Integer getBack_card_num() {
 			return back_card_num;
 		}
 		/**
 		 * 设置主卡背卡号<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setBack_card_num(Integer back_card_num) {
 			this.back_card_num = back_card_num;
@@ -331,14 +358,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取客户ID<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCus_id() {
 			return cus_id;
 		}
 		/**
 		 * 设置客户ID<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setCus_id(String cus_id) {
 			this.cus_id = cus_id;
@@ -348,14 +375,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取客户编号<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Integer getCus_no() {
 			return cus_no;
 		}
 		/**
 		 * 设置客户编号<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setCus_no(Integer cus_no) {
 			this.cus_no = cus_no;
@@ -365,14 +392,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取(0:未办理1:已办理2:归档)<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Integer getState() {
 			return state;
 		}
 		/**
 		 * 设置(0:未办理1:已办理2:归档)<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setState(Integer state) {
 			this.state = state;
@@ -382,14 +409,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取(产品类型0:宽带)<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Integer getProduct_type() {
 			return product_type;
 		}
 		/**
 		 * 设置(产品类型0:宽带)<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setProduct_type(Integer product_type) {
 			this.product_type = product_type;
@@ -399,14 +426,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取宽带<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getBroadband_id() {
 			return broadband_id;
 		}
 		/**
 		 * 设置宽带<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setBroadband_id(String broadband_id) {
 			this.broadband_id = broadband_id;
@@ -416,14 +443,14 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取猫<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getRoute_id() {
 			return route_id;
 		}
 		/**
 		 * 设置猫<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setRoute_id(String route_id) {
 			this.route_id = route_id;
@@ -433,19 +460,70 @@ public class CUS_CARD_INFO extends BaseBean{
 		}
 		/**
 		 * 获取串号<BR/>
-		 * 䣺2016-14-23 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getSerial_num() {
 			return serial_num;
 		}
 		/**
 		 * 设置串号<BR/>
-		 * 2016-14-23 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_CARD_INFO setSerial_num(String serial_num) {
 			this.serial_num = serial_num;
 			this.isSetted_serial_num = true;
 			BEAN_VALUES.put("serial_num",serial_num);
+			return this;
+		}
+		/**
+		 * 获取产品ID<BR/>
+		 * 䣺2016-56-25 hh:01
+		 */
+		public String getProduct_id() {
+			return product_id;
+		}
+		/**
+		 * 设置产品ID<BR/>
+		 * 2016-56-25 hh:01
+		 */
+		public CUS_CARD_INFO setProduct_id(String product_id) {
+			this.product_id = product_id;
+			this.isSetted_product_id = true;
+			BEAN_VALUES.put("product_id",product_id);
+			return this;
+		}
+		/**
+		 * 获取产品编号<BR/>
+		 * 䣺2016-56-25 hh:01
+		 */
+		public Integer getProduct_no() {
+			return product_no;
+		}
+		/**
+		 * 设置产品编号<BR/>
+		 * 2016-56-25 hh:01
+		 */
+		public CUS_CARD_INFO setProduct_no(Integer product_no) {
+			this.product_no = product_no;
+			this.isSetted_product_no = true;
+			BEAN_VALUES.put("product_no",product_no);
+			return this;
+		}
+		/**
+		 * 获取套餐名称<BR/>
+		 * 䣺2016-56-25 hh:01
+		 */
+		public String getProduct_name() {
+			return product_name;
+		}
+		/**
+		 * 设置套餐名称<BR/>
+		 * 2016-56-25 hh:01
+		 */
+		public CUS_CARD_INFO setProduct_name(String product_name) {
+			this.product_name = product_name;
+			this.isSetted_product_name = true;
+			BEAN_VALUES.put("product_name",product_name);
 			return this;
 		}
 
@@ -471,7 +549,7 @@ public class CUS_CARD_INFO extends BaseBean{
 		
 		@Override
 		public CUS_CARD_INFO queryForBean() {
-			StringBuffer sBuffer = new StringBuffer("select * from CUS_CARD_INFO where ");
+			StringBuffer sBuffer = new StringBuffer("select * from "+getTableName() +" where ");
 			if(isSetted_id){
 				sBuffer.append("id=:id and ");
 			}
@@ -517,6 +595,15 @@ public class CUS_CARD_INFO extends BaseBean{
 				if (isSetted_serial_num) {
 					sBuffer.append("serial_num=:serial_num and ");
 				}
+				if (isSetted_product_id) {
+					sBuffer.append("product_id=:product_id and ");
+				}
+				if (isSetted_product_no) {
+					sBuffer.append("product_no=:product_no and ");
+				}
+				if (isSetted_product_name) {
+					sBuffer.append("product_name=:product_name and ");
+				}
 			String sql = sBuffer.toString();
 			sql = StringUtils.removeEnd(sql, " and ");
 			return dao.queryForBean(sql,this);
@@ -524,7 +611,7 @@ public class CUS_CARD_INFO extends BaseBean{
 	
 		@Override
 		public String getTableName() {
-			return "CUS_CARD_INFO";
+			return "cus_card_info";
 		}
 		
 		
@@ -617,6 +704,15 @@ public class CUS_CARD_INFO extends BaseBean{
 			obj = rs.getObject("SERIAL_NUM");
 			BEAN_VALUES.put("serial_num",obj);
 				this.setSerial_num(ConvertUtil.obj2Str(obj));
+			obj = rs.getObject("PRODUCT_ID");
+			BEAN_VALUES.put("product_id",obj);
+				this.setProduct_id(ConvertUtil.obj2Str(obj));
+			obj = rs.getObject("PRODUCT_NO");
+			BEAN_VALUES.put("product_no",obj);
+				this.setProduct_no(ConvertUtil.obj2Integer(obj));
+			obj = rs.getObject("PRODUCT_NAME");
+			BEAN_VALUES.put("product_name",obj);
+				this.setProduct_name(ConvertUtil.obj2Str(obj));
 			return this;
 		}
 		

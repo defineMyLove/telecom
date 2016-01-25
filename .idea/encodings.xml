@@ -28,8 +28,10 @@
     <file url="file://$PROJECT_DIR$/WebRoot/static/sea-modules/todc-bootstrap" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebRoot/static/sea-modules/zTree" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebRoot/static/sea-modules/zui" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebRoot/views/maintain/TwoHomePage.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebRoot/views/maintain/flag/userMng.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebRoot/views/maintain/homePage.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebRoot/views/maintain/newHomePage.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebRoot/views/maintain/saleman/query.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebRoot/views/maintain/saleman/saleMain.jsp" charset="UTF-8" />
   </component>

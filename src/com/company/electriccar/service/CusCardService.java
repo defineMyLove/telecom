@@ -62,7 +62,7 @@ public class CusCardService {
      */
     public Map selectByPk(String id) {
         return
-                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from CUS_CARD_INFO where id ='" + id + "'");
+                baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from cus_card_info where id ='" + id + "'");
     }
 
     /**

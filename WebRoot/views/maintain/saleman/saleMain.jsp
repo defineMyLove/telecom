@@ -100,7 +100,7 @@
                                 });
                             },
                             edit: function (user) {
-                                window.top.openDialog("修改", "${path}/maintain/saleman/addUI?id=" + user.id, 80, 80, [
+                                window.top.openDialog("修改", "${path}/maintain/saleman/addUI?id=" + user.id, 40, 40, [
                                     { text: '确定', onclick: function (item, dialog) {
                                         window.top.submitForm()
                                     }, cls: 'l-dialog-btn-highlight' },
@@ -112,7 +112,7 @@
                             isAdd: false,
                             keyForAdd: '',
                             showAdd: function (show) {
-                                window.top.openDialog("添加", "${path}/maintain/saleman/addUI", 80, 80, [
+                                window.top.openDialog("添加", "${path}/maintain/saleman/addUI", 40, 40, [
                                     { text: '确定', onclick: function (item, dialog) {
                                         window.top.submitForm()
                                     }, cls: 'l-dialog-btn-highlight' },
@@ -270,22 +270,6 @@
                 </table>
             </div>
             <div class="bootgrid-footer container-fluid">
-                <%--<div class="row">
-                    <div class="col-sm-6">
-                        <ul class="pagination" style="margin: 0;">
-                            <li class="prev active" ms-class="disabled:page.pageNumber<2"
-                                ms-click="pageQuery(page.pageNumber-1)"><a class="button"><i
-                                    class="md md-chevron-left"></i></a></li>
-                            <li class="next active"
-                                ms-class="disabled:page.pageNumber==page.totalPage||page.totalPage==0"
-                                ms-click="pageQuery(page.pageNumber+1)"><a class="button"><i
-                                    class="md md-chevron-right"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 infoBar">
-                        <div class="infos">第{{page.pageNumber}}页，共{{page.totalPage}}页,{{page.totalRow}}条</div>
-                    </div>
-                </div>--%>
                 <div class="pager form-horizontal tablesorter-pager" data-column="0">
                     <button type="button" ms-class="disabled:page.pageNumber<2" class="btn first"
                             ms-click="pageQuery(1)">首页

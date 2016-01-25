@@ -9,7 +9,6 @@
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- app css -->
-<link href="${path}/static/css/bootstrap-all.css" rel="stylesheet" type="text/css"/>
 <link href="${path}/static/css/myapp.min.css" rel="stylesheet">
 <script type="text/javascript" src="${path}/static/sea-modules/sea.js"></script>
 <script type="text/javascript" src="${path}/static/sea-modules/seajs-config.js"></script>
@@ -255,48 +254,103 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         <th>客户地址</th>
                         <th>发展人编号</th>
                         <th>发展人姓名</th>
+                        <th>套餐类型</th>
+                        <th>套餐名称</th>
                         <th>状态</th>
                         <th>操作</th>
                     </tr>
                     <tr>
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                           <%-- <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
                                 <input class="span2" ms-on-input="filter" name="cus_name" td type="text"
                                        placeholder="客户姓名">
+                            </div>--%>
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text" ms-on-input="filter" name="cus_name" class="form-control" placeholder="客户姓名" >
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                          <%--  <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
                                 <input class="span2" ms-on-input="filter" name="cus_tel" td type="text"
                                        placeholder="客户电话">
+                            </div>--%>
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text" ms-on-input="filter" name="cus_tel" class="form-control" placeholder="客户电话" >
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                         <%--   <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
                                 <input class="span2" ms-on-input="filter" name="cus_card_id" td type="text"
                                        placeholder="客户身份证号">
+                            </div>--%>
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text" ms-on-input="filter" name="cus_card_id" class="form-control" placeholder="客户身份证号" >
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                        <%--    <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
                                 <input class="span2" ms-on-input="filter" name="cus_address" td type="text"
                                        placeholder="客户地址">
+                            </div>--%>
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text" ms-on-input="filter" name="cus_address" class="form-control" placeholder="客户地址" >
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                         <%--   <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
                                 <input class="span2" ms-on-input="filter" name="sale_no" td type="text"
                                        placeholder="发展人编号">
+                            </div>--%>
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text" ms-on-input="filter" name="sale_no" class="form-control" placeholder="发展人编号" >
+                                </div>
                             </div>
                         </td>
+
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                          <%--  <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
                                 <input class="span2" ms-on-input="filter" name="sale_name" td type="text"
                                        placeholder="发展人姓名">
+                            </div>--%>
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text" ms-on-input="filter" name="sale_name" class="form-control" placeholder="发展人姓名" >
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text"  name="product_type" class="form-control" placeholder="套餐类型" >
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <input type="text" ms-on-input="filter" name="product_name" class="form-control" placeholder="套餐名称" >
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                         <%--   <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
+                                <select name="state"  ms-on-change="filter" class="form-control">
+                                    <option value="0">选择状态</option>
+                                    <option value="1">新入库</option>
+                                    <option value="2">已处理</option>
+                                    <option value="3">归档</option>
+                                </select>
+                            </div>--%>
+                            <div class="form-group">
                                 <select name="state"  ms-on-change="filter" class="form-control">
                                     <option value="0">选择状态</option>
                                     <option value="1">新入库</option>
@@ -315,6 +369,8 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         <td>{{el.cus_address}}</td>
                         <td>{{el.sale_id}}</td>
                         <td>{{el.sale_name}}</td>
+                        <td>宽带</td>
+                        <td>{{el.product_name}}</td>
                         <td>{{el.card_state|state}}</td>
                         <td>
                                 <span ms-if="el.card_state==0">

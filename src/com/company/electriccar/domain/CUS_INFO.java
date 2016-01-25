@@ -100,7 +100,7 @@ public class CUS_INFO extends BaseBean{
 	
 	@Override
 	public String getUpdateSql() {
-		StringBuffer sBuffer = new StringBuffer("update CUS_INFO set ");
+		StringBuffer sBuffer = new StringBuffer("update "+getTableName() +" set ");
 			if (isSetted_sale_id) {
 				sBuffer.append("sale_id=:sale_id,");
 			}
@@ -132,7 +132,7 @@ public class CUS_INFO extends BaseBean{
 	
 	@Override
 	public String getInsertSql() {
-		StringBuffer sBuffer = new StringBuffer("insert into CUS_INFO(");
+		StringBuffer sBuffer = new StringBuffer("insert into "+getTableName() +"(");
 		StringBuffer fileds = new StringBuffer("id,");
 		StringBuffer values = new StringBuffer(":id,");		
 			fileds.append("sale_id,");
@@ -157,15 +157,15 @@ public class CUS_INFO extends BaseBean{
 	
 
 		/**
-		 * 获取<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 获取当前正在办理的产品ID<BR/>
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getSale_id() {
 			return sale_id;
 		}
 		/**
-		 * 设置<BR/>
-		 * 2016-16-21 hh:01
+		 * 设置当前正在办理的产品ID<BR/>
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setSale_id(String sale_id) {
 			this.sale_id = sale_id;
@@ -175,14 +175,14 @@ public class CUS_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Long getCreate_time() {
 			return create_time;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-16-21 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setCreate_time(Long create_time) {
 			this.create_time = create_time;
@@ -192,14 +192,14 @@ public class CUS_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCus_name() {
 			return cus_name;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-16-21 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setCus_name(String cus_name) {
 			this.cus_name = cus_name;
@@ -209,14 +209,14 @@ public class CUS_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCus_tel() {
 			return cus_tel;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-16-21 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setCus_tel(String cus_tel) {
 			this.cus_tel = cus_tel;
@@ -226,14 +226,14 @@ public class CUS_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCus_address() {
 			return cus_address;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-16-21 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setCus_address(String cus_address) {
 			this.cus_address = cus_address;
@@ -243,14 +243,14 @@ public class CUS_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getCus_card_id() {
 			return cus_card_id;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-16-21 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setCus_card_id(String cus_card_id) {
 			this.cus_card_id = cus_card_id;
@@ -260,14 +260,14 @@ public class CUS_INFO extends BaseBean{
 		}
 		/**
 		 * 获取(0:新入库1:暂不处理2:完善数据,3:办理套餐4:归档)<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public Integer getState() {
 			return state;
 		}
 		/**
 		 * 设置(0:新入库1:暂不处理2:完善数据,3:办理套餐4:归档)<BR/>
-		 * 2016-16-21 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setState(Integer state) {
 			this.state = state;
@@ -277,14 +277,14 @@ public class CUS_INFO extends BaseBean{
 		}
 		/**
 		 * 获取<BR/>
-		 * 䣺2016-16-21 hh:01
+		 * 䣺2016-56-25 hh:01
 		 */
 		public String getChanpin_id() {
 			return chanpin_id;
 		}
 		/**
 		 * 设置<BR/>
-		 * 2016-16-21 hh:01
+		 * 2016-56-25 hh:01
 		 */
 		public CUS_INFO setChanpin_id(String chanpin_id) {
 			this.chanpin_id = chanpin_id;
@@ -315,7 +315,7 @@ public class CUS_INFO extends BaseBean{
 		
 		@Override
 		public CUS_INFO queryForBean() {
-			StringBuffer sBuffer = new StringBuffer("select * from CUS_INFO where ");
+			StringBuffer sBuffer = new StringBuffer("select * from "+getTableName() +" where ");
 			if(isSetted_id){
 				sBuffer.append("id=:id and ");
 			}
@@ -350,7 +350,7 @@ public class CUS_INFO extends BaseBean{
 	
 		@Override
 		public String getTableName() {
-			return "CUS_INFO";
+			return "cus_info";
 		}
 		
 		

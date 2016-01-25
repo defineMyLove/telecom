@@ -16,3 +16,8 @@ truncate Table saleman;
 
 /* 客服电话 **/
 truncate Table service_tel;
+
+
+/** 宽带分类**/
+truncate Table fangan_fenlei;
+truncate Table fangan_info;

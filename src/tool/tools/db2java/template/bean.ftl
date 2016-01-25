@@ -81,7 +81,7 @@ public class ${TABLENAME?upper_case} extends BaseBean{
 	
 	@Override
 	public String getUpdateSql() {
-		StringBuffer sBuffer = new StringBuffer("update ${TABLENAME} set ");
+		StringBuffer sBuffer = new StringBuffer("update "+getTableName() +" set ");
 		<#list columns as column>
 			if (isSetted_${column.COLUMN_NAME?lower_case}) {
 				sBuffer.append("${column.COLUMN_NAME?lower_case}=:${column.COLUMN_NAME?lower_case},");
@@ -94,7 +94,7 @@ public class ${TABLENAME?upper_case} extends BaseBean{
 	
 	@Override
 	public String getInsertSql() {
-		StringBuffer sBuffer = new StringBuffer("insert into ${TABLENAME}(");
+		StringBuffer sBuffer = new StringBuffer("insert into "+getTableName() +"(");
 		StringBuffer fileds = new StringBuffer("id,");
 		StringBuffer values = new StringBuffer(":id,");		
 		<#list columns as column>
@@ -169,7 +169,7 @@ public class ${TABLENAME?upper_case} extends BaseBean{
 		
 		@Override
 		public ${TABLENAME} queryForBean() {
-			StringBuffer sBuffer = new StringBuffer("select * from ${TABLENAME} where ");
+			StringBuffer sBuffer = new StringBuffer("select * from "+getTableName() +" where ");
 			if(isSetted_id){
 				sBuffer.append("id=:id and ");
 			}
@@ -185,7 +185,7 @@ public class ${TABLENAME?upper_case} extends BaseBean{
 	
 		@Override
 		public String getTableName() {
-			return "${TABLENAME}";
+			return "${TABLENAME?lower_case}";
 		}
 		
 		

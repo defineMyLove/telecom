@@ -29,7 +29,7 @@ public class SolutionClassifyService {
 
     public Map selectByPk(String id) {
         return
-        baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from FANGAN_FENLEI where id ='" + id + "'");
+        baseDao.queryForMap("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' )  as create_time_str  from fangan_fenlei where id ='" + id + "'");
     }
 
     public void deleteById(String id) {
@@ -39,7 +39,7 @@ public class SolutionClassifyService {
     }
 
     public Map find(FANGAN_FENLEI zhuan, HttpServletRequest request) {
-        StringBuffer buffer = new StringBuffer("select * from FANGAN_FENLEI where 1=1 ");
+        StringBuffer buffer = new StringBuffer("select * from fangan_fenlei where 1=1 ");
         if (StringUtil.isNotBlank(zhuan.getName())) {
             buffer.append(" and name like '%").append(zhuan.getName()).append("%'");
         }
@@ -50,11 +50,11 @@ public class SolutionClassifyService {
     }
 
     public List<Map> getAll(String id) {
-        return baseDao.queryForList("select * from FANGAN_FENLEI  order by order_no,create_time desc");
+        return baseDao.queryForList("select * from fangan_fenlei  order by order_no,create_time desc");
     }
 
     public List<Map> find(FANGAN_FENLEI fangan, int i) {
-        StringBuffer buffer = new StringBuffer("select * from FANGAN_FENLEI where 1=1 ");
+        StringBuffer buffer = new StringBuffer("select * from fangan_fenlei where 1=1 ");
         if (StringUtil.isNotBlank(fangan.getName())) {
             buffer.append(" and name like '%").append(fangan.getName()).append("%'");
         }
@@ -64,7 +64,7 @@ public class SolutionClassifyService {
     }
 
     public List<Map> findAll() {
-        StringBuffer buffer = new StringBuffer("select * from FANGAN_FENLEI where 1=1 ");
+        StringBuffer buffer = new StringBuffer("select * from fangan_fenlei where 1=1 ");
         buffer.append(" order by order_no,create_time desc");
         return baseDao.queryForList(buffer.toString());
 
