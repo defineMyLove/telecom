@@ -32,7 +32,7 @@
                             $.ajax({
                                 async: true,
                                 type: "POST",
-                                url: "${path}/service/telcom/productList",
+                                url: "${path}/service/productList",
                                 success: function (response) {
                                     for(var i =0; i<response.length;i++) {
                                         response[i].current=false;
@@ -73,7 +73,7 @@
                             totalPage: 0
                         },
                         detail:function(el){
-                            window.open("${path}/service/telcom/detail?id="+el.id,'_self');
+                            window.open("${path}/service/detail?id="+el.id,'_self');
                         }
                     });
                     window.pageVM = pageVM;

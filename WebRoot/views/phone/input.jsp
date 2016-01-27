@@ -14,17 +14,48 @@
     <script src="${path}/static/sea-modules/sea.js"></script>
     <script src="${path}/static/sea-modules/seajs-config.js"></script>
     <script type="text/javascript">
-        seajs.use(['$', 'validateUtil'], function ($, jqueryUtil) {
+        seajs.use(['$', 'app-util', 'validateUtil'], function ($, appUtil, jqueryUtil) {
+            //添加属性
+            $.fn.serializeObject = function () {
+                var o = {};
+                var a = this.serializeArray();
+                $.each(a, function () {
+                    if (o[this.name]) {
+                        if (!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            };
             //全局变量
             window.$ = $;
             //表单验证
             jqueryUtil.formValidate({
                 form: "showForm",
-                 rules: {
-                 "cus_tel": {required: true, isTel: true}
-                 },
+                mask: false,
+                rules: {
+                    "cus_tel": {required: true, isTel: true}
+                },
                 submitHandler: function (form) {
-                    form.submit();
+                    var mainParam = $('#showForm').serializeObject();
+                    $.ajax({
+                        async: true,
+                        type: "POST",
+                        url: "${path}/service/add",
+                        data: mainParam,
+                        success: function (response) {
+                            if (response.result) {
+                                appUtil.messager.success(response.msg);
+                            } else {
+                                appUtil.messager.danger(response.msg);
+                            }
+                            window.open("${path}/service/index", '_self');
+                        }
+                    });
                 }
             });
         });
@@ -61,21 +92,20 @@
                         <small>谢谢您的配合，我们会在24小时内联系您。</small>
                     </h2>
                 </div>
-                <form:form id="showForm" method="post" action="${path}/service/telcom/add">
+                <form:form id="showForm" method="post" action="${path}/service/add">
                     <div class="card-body card-padding">
-
 
                         <div class="form-group">
                             <div class="fg-line">
-                                <input type="text" name="cus_name" id="cus_name" class="form-control"
-                                       placeholder="请输入您的姓名">
+                                <input type="text" name="cus_tel" id="cus_tel" class="form-control"
+                                       placeholder="请输入您的电话(必填项)">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="fg-line">
-                                <input type="text" name="cus_tel" id="cus_tel" class="form-control"
-                                       placeholder="请输入您的电话">
+                                <input type="text" name="cus_name" id="cus_name" class="form-control"
+                                       placeholder="请输入您的姓名">
                             </div>
                         </div>
 
@@ -108,7 +138,5 @@
         </div>
     </section>
 </section>
-
-
 </body>
 </html>

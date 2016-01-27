@@ -17,100 +17,81 @@
         if ('${msg}') {
             top.common.tip.notify({title: '${msg}'});
         }
-        seajs.use([ '$', 'app-util', 'json', 'validateUtil', 'avalon',"calendar", 'todc-bootstrap', 'lhgdialog', 'chosen'],
-                function ($, appUtil, JSON, validateUtil, avalon,Calendar) {
-                    $('.tag-select').chosen({
-                        width: '90%',
-                        allow_single_deselect: true
-                    });
-                    new Calendar({trigger: '#expire_time'});
-                    //全局变量
-                    window.$ = $;
-                    //表单验证
-                    validateUtil.formValidate({
-                        form: "showForm",
-                        rules: {
-                            "cus_name": {maxlength: 10},
-                            "cus_card_id": {isIDCard: true},
-                            "cus_address": {maxlength: 200},
-                            "cus_tel": {required: true, isTel: true}
-                        },
-                        submitHandler: function (form) {
-                            //提取select值
-
-                            form.submit();
-                        }
-                    });
-                    //其他电话号码维护VM
-                    var phontList =${phontListJson};
-                    var otherPhoneVM = avalon.define({
-                        $id: 'otherPhoneVM',
-                        list: phontList.slice(0),
-                        change: false,
-                        changeUpdate: function () {
-                            otherPhoneVM.change = true;
-                            if (otherPhoneVM.list.size() == 0) {
-                                otherPhoneVM.addNew();
+        seajs.use([ '$', 'app-util', 'json', 'validateUtil', 'avalon', "calendar", 'todc-bootstrap', 'lhgdialog', 'chosen'],
+                function ($, appUtil, JSON, validateUtil, avalon, Calendar) {
+                    $(function () {
+                        $('.tag-select').chosen({
+                            width: '90%',
+                            allow_single_deselect: true
+                        });
+                        new Calendar({
+                            trigger: '#expire_time',
+                            range: ["YYYY-MM-DD", null]
+                        });
+                        //全局变量
+                        window.$ = $;
+                    /*    //表单验证
+                        validateUtil.formValidate({
+                            form: "showForm",
+                            rules: {
+                                "expire_time": {required: true}
+                            },
+                            submitHandler: function (form) {
+                                form.submit();
                             }
-                        },
-                        addNew: function () {
-                            otherPhoneVM.list.unshift({
-                                vice_card_id: '',
-                                back_card_id: ''
-                            });
-                        },
-                        save: function () {
-                            var check = true;
-                            var phoneArr = [];
-                            for (var i = 0; i < otherPhoneVM.list.$model.length; i++) {
-                                var model = {};
-                                model.vice_card_id = otherPhoneVM.list.$model[i].vice_card_id;
-                                model.back_card_id = otherPhoneVM.list.$model[i].back_card_id;
-                                phone = $.trim(model.vice_card_id);
-                                if (phone == '' || !/^((13\d)|(15\d)|(18\d))\d{8}$/.test(phone)) {
-                                    check = false;
-                                    appUtil.messager.danger("请正确填写副卡手机号码！");
-                                    break;
+                        });*/
+                        //其他电话号码维护VM
+                        var phontList =${phontListJson};
+                        var otherPhoneVM = avalon.define({
+                            $id: 'otherPhoneVM',
+                            list: phontList.slice(0),
+                            change: false,
+                            changeUpdate: function () {
+                                otherPhoneVM.change = true;
+                                if (otherPhoneVM.list.size() == 0) {
+                                    otherPhoneVM.addNew();
                                 }
-                                if ($.inArray(model, phoneArr) > -1) {
-                                    check = false;
-                                    appUtil.messager.danger("副卡重复！");
-                                    break;
+                            },
+                            addNew: function () {
+                                otherPhoneVM.list.unshift({
+                                    vice_card_id: '',
+                                    back_card_id: ''
+                                });
+                            },
+                            save: function () {
+                                var check = true;
+                                var phoneArr = [];
+                                for (var i = 0; i < otherPhoneVM.list.$model.length; i++) {
+                                    var model = {};
+                                    model.vice_card_id = otherPhoneVM.list.$model[i].vice_card_id;
+                                    model.back_card_id = otherPhoneVM.list.$model[i].back_card_id;
+                                    phone = $.trim(model.vice_card_id);
+                                    if (phone == '' || !/^((13\d)|(15\d)|(18\d))\d{8}$/.test(phone)) {
+                                        check = false;
+                                        appUtil.messager.danger("请正确填写副卡手机号码！");
+                                        break;
+                                    }
+                                    if ($.inArray(model, phoneArr) > -1) {
+                                        check = false;
+                                        appUtil.messager.danger("副卡重复！");
+                                        break;
+                                    }
+                                    phoneArr.push(model);
                                 }
-                                phoneArr.push(model);
+                                if (!check) {
+                                    return false;
+                                }
+                                //保存副卡值
+                                $('#vice_card_str').val(JSON.stringify(phoneArr));
+                                return true;
+                            },
+                            cancel: function () {
+                                otherPhoneVM.list = phontList;
+                                otherPhoneVM.change = false;
                             }
-                            if (!check) {
-                                return false;
-                            }
-                            //保存副卡值
-                            $('#vice_card_str').val(JSON.stringify(phoneArr));
-                            return true;
-                            /*var btn = $(this).button('loading');
-                             $.ajax({
-                             async: true,
-                             type: "POST",
-                             data: {phoneArr: phoneArr.join(',')},
-                             url: "
-                            ${path}/cusinfo/updateUserPhone",
-                             success: function (response) {
-                             btn.button("reset");
-                             if (response.result) {
-                             appUtil.messager.success(response.msg);
-                             phontList = response.data;
-                             otherPhoneVM.list = phontList.slice(0);
-                             otherPhoneVM.change = false;
-                             } else {
-                             appUtil.messager.danger(response.msg);
-                             }
-                             }
-                             });*/
-                        },
-                        cancel: function () {
-                            otherPhoneVM.list = phontList;
-                            otherPhoneVM.change = false;
-                        }
+                        });
+                        window.otherPhoneVM = otherPhoneVM;
                     });
-                    window.otherPhoneVM = otherPhoneVM;
                 });
 
         function submitForm() {
@@ -140,6 +121,7 @@
                         </div>
                         <div class="card-body">
                             <form:form class="form-horizontal form-sm" cssStyle="margin:10px;" id="showForm"
+                                       name="showForm"
                                        method="post"
                                        action="${path}/maintain/cusinfo/productUpdate">
                             <input name="id" type="hidden" value="${info.id}"/>
@@ -149,8 +131,8 @@
 
                                 <div class="col-sm-9">
                                     <div class="fg-line">
-                                        <select id="product_id" name="product_id" class="tag-select" data-placeholder="选择套餐" style="display: none;">
-                                            <option value="">无</option>
+                                        <select id="product_id" name="product_id" class="tag-select"
+                                                data-placeholder="选择套餐" style="display: none;">
                                             <c:forEach items="${productList}" var="model">
                                                 <option
                                                         <c:if test="${info.product_id==model.id}">selected="true"</c:if>

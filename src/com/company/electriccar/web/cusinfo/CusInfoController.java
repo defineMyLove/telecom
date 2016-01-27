@@ -19,6 +19,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 发展人控制器
@@ -33,6 +35,7 @@ public class CusInfoController {
     CusCardService cusCardService;
     @Autowired
     SolutionService solutionService;
+
     /**
      * 添加动作
      *
@@ -52,12 +55,12 @@ public class CusInfoController {
      * @return
      */
     @RequestMapping(value = "addInfo")
-    public ModelAndView addInfo(String id,ResponseMes res) {
+    public ModelAndView addInfo(String id, ResponseMes res) {
         ModelAndView view = new ModelAndView("/maintain/cusinfo/cusinfoAdd");
         view.addObject("msg", ResponseMes.parseMsg(res));
         if (StringUtil.isNotBlank(id)) {
-            view.addObject("info",zhuanLanService.selectByPk(id));
-        }else {
+            view.addObject("info", zhuanLanService.selectByPk(id));
+        } else {
             //view.addObject("info",new FANGAN_FENLEI());
         }
         return view;
@@ -65,7 +68,8 @@ public class CusInfoController {
 
     /**
      * 跳转到办理套餐界面(未归档的套餐数据)
-     * @param id 套餐实例ID
+     *
+     * @param id  套餐实例ID
      * @param res
      * @return
      */
@@ -83,9 +87,26 @@ public class CusInfoController {
         return view;
     }
 
+    /**
+     * 套餐详情
+     *
+     * @param id
+     * @param response
+     * @return
+     */
+    @RequestMapping(value = "detail")
+    public void detail(String id,HttpServletResponse response) {
+        Map resMap = new HashMap();
+        if (StringUtil.isNotBlank(id)) {
+            resMap.put("info", zhuanLanService.find(id));
+            resMap.put("viceList", JsonUtil.obj2Json(cusCardService.selectViceList(id)));
+        }
+        WebUtil.writeJson(response, JsonUtil.obj2JsonObj(resMap));
+    }
+
     // 保存套餐办理信息(主卡、背卡)并修改套餐数据,修改状态为已办理
     @RequestMapping(value = "productUpdate")
-    public ModelAndView productUpdate(String vice_card_str,CUS_CARD_INFO card_info, HttpServletRequest request) {
+    public ModelAndView productUpdate(String vice_card_str, CUS_CARD_INFO card_info, HttpServletRequest request) {
         zhuanLanService.updateProduct(vice_card_str, card_info);
         return WebUtil.goSysInfoPage(request, "", "window.top.refreshGrid();window.top.closeDialog();");
     }
@@ -97,7 +118,7 @@ public class CusInfoController {
         WebUtil.writeJson(response, JsonUtil.obj2JsonObj(zhuanLanService.deleteById(id)));
     }
 
-     // 修改状态为不处理
+    // 修改状态为不处理
     @RequestMapping(value = "buchuli")
     public void buchuli(String id, HttpServletResponse response) {
         WebUtil.writeJson(response, JsonUtil.obj2JsonObj(zhuanLanService.updateState(id, Const.CUS_STATE_BUCHULI)));

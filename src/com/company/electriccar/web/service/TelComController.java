@@ -23,10 +23,9 @@ import java.util.Map;
  * Date: 13-10-22
  * Time: 下午4:20
  * 手机服务接口
- *
  */
 @Controller
-@RequestMapping("service/telcom")
+@RequestMapping("service")
 public class TelComController {
     @Autowired
     TelComService zhuanLanService;
@@ -35,6 +34,7 @@ public class TelComController {
 
     /**
      * 宽带产品展示
+     *
      * @param request
      * @param response
      */
@@ -45,16 +45,16 @@ public class TelComController {
     }
 
     @RequestMapping(value = "detail")
-    public ModelAndView detail(String id,HttpServletRequest request,HttpServletResponse response) {
+    public ModelAndView detail(String id, HttpServletRequest request, HttpServletResponse response) {
         ModelAndView view = new ModelAndView("/phone/detail");
         view.addObject("info", zhuanLanService.selectByPk(id));
         return view;
     }
 
     @RequestMapping(value = "input")
-    public ModelAndView input(String chanpin_id,HttpServletRequest request,HttpServletResponse response) {
+    public ModelAndView input(String chanpin_id, HttpServletRequest request, HttpServletResponse response) {
         ModelAndView view = new ModelAndView("/phone/input");
-        view.addObject("chanpin_id",chanpin_id);
+        view.addObject("chanpin_id", chanpin_id);
         return view;
     }
 
@@ -62,14 +62,13 @@ public class TelComController {
      * 添加用户信息(微信用户中心没有确定前用户信息不判断唯一性)
      * 1.如果没有用户ID直接添加用户信息
      * 2.如果有则不添加而只是添加套餐信息
-     * @param request
      * @param user
      * @return
      */
     @RequestMapping(value = "add")
-    public ModelAndView add(HttpServletRequest request, CUS_INFO user) {
-       ServiceResponse response= cusInfoService.add(user);
-        return WebUtil.goSysInfoPage(request,"","alert('"+response.getMsg()+"');history.go(-1);");
+    public void add(HttpServletResponse response, CUS_INFO user) {
+        ServiceResponse res = cusInfoService.add(user);
+        WebUtil.writeJson(response, JsonUtil.obj2JsonObj(res));
     }
 
     /**
@@ -78,10 +77,10 @@ public class TelComController {
     @RequestMapping(value = "index")
     public ModelAndView index() {
         ModelAndView view = new ModelAndView("/phone/newindex");
-        view.addObject("list",zhuanLanService.queryList());
+        view.addObject("list", zhuanLanService.queryList());
         List<Map> telMap = zhuanLanService.queryTelList();
-        if (telMap!=null&telMap.size()!=0) {
-            view.addObject("tel",telMap.get(0));
+        if (telMap != null & telMap.size() != 0) {
+            view.addObject("tel", telMap.get(0));
         }
         return view;
     }

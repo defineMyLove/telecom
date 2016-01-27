@@ -51,10 +51,10 @@
 </head>
 <body>
 <div id="layout1" style="width:99.2%;height:99.2%; margin:0 auto; margin-top:4px; ">
-    <div position="left" id="accordion1" title="解决方案分类树">
+    <div position="left" id="accordion1" title="宽带类别树">
         <div id="treeC" class="ztree"></div>
     </div>
-    <div position="center" id="framecenter" title="解决方案管理">
+    <div position="center" id="framecenter" title="宽带套餐管理">
         <iframe frameborder="0" name="moduleFrame" id="moduleFrame" width="100%"></iframe>
     </div>
 </div>

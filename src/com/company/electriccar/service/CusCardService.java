@@ -133,7 +133,7 @@ public class CusCardService {
      * @return
      */
     public List<Map> selectViceList(String id) {
-        List<Map> resultMap = baseDao.queryForList("select * from cus_vice_card_info where main_card_id='" + id + "'");
+        List<Map> resultMap = baseDao.queryForList("select * from cus_vice_card_info where main_card_id='" + id + "' order by create_time desc");
         return resultMap == null ? new ArrayList<Map>():resultMap;
     }
 }

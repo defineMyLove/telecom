@@ -809,7 +809,7 @@ body {
         <div class="card-body">
             <div class="listview">
                 <c:forEach var="bean" items="${list}">
-                    <a class="lv-item" href="javascript:window.open('${path}/service/telcom/detail?id=${bean.id}','_self');">
+                    <a class="lv-item" href="javascript:window.open('${path}/service/detail?id=${bean.id}','_self');">
                         <div class="media">
                             <div class="pull-left">
                                 <img class="lv-img" src="${path}${bean.pic_path}" alt="">

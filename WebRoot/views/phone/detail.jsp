@@ -22,7 +22,7 @@
 </div>
 <section class="pro-property-action-area" id="pro-operation">
     <article class="pro-property-action">
-        <a id="prdDetailBuyNow" href="javascript:window.open('${path}/service/telcom/input?chanpin_id=${info.id}');" class="button-buy"><span>立即下单</span></a>
+        <a id="prdDetailBuyNow" href="javascript:window.open('${path}/service/input?chanpin_id=${info.id}');" class="button-buy"><span>立即下单</span></a>
     </article>
 </section>
 </body>

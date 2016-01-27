@@ -2870,7 +2870,7 @@ select[multiple].form-group-lg .form-control {
 }
 .form-control-feedback {
 	position: absolute;
-	top: 0;
+	top: 10px;
 	right: 0;
 	z-index: 2;
 	display: block;
@@ -2878,7 +2878,8 @@ select[multiple].form-group-lg .form-control {
 	height: 35px;
 	line-height: 35px;
 	text-align: center;
-	pointer-events: none
+	/*pointer-events: none*/
+    cursor:hand;
 }
 .input-lg+.form-control-feedback {
 	width: 40px;
@@ -10690,11 +10691,11 @@ only screen and (min-resolution: 2dppx) {
 }
 /*!
  * Waves v0.6.0
- * /fian.my.id/Waves 
- * 
- * Copyright 2014 Alfiana E. Sibuea and other contributors 
- * Released under the MIT license 
- * https://github.com/fians/Waves/blob/master/LICENSE 
+ * /fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
  */
 
 .waves-effect {
@@ -14902,7 +14903,8 @@ html:not(.ie9) .select.fg-line:before {
 	box-shadow: none
 }
 .form-control-feedback {
-	font-size: 20px
+	font-size: 16px;
+
 }
 .control-label {
 	font-weight: 400
@@ -17401,12 +17403,11 @@ only screen and (min-resolution: 2dppx) {
 */
    	#task-sidebar{
    		position: fixed;
-   		top: 65px;
+   		top: 0px;
    		width: 500px;
-   		height: calc(100% - 65px);
+   		height: calc(100%);
 		background: #fff;
 		padding: 0;
-		box-shadow: 0 0 10px rgba(51, 51, 51, .38);
 		-webkit-transform: translate3d(100vw, 0, 0);
 		transform: translate3d(100vw, 0, 0);
 		-webkit-transition: all;
@@ -17418,17 +17419,29 @@ only screen and (min-resolution: 2dppx) {
 		z-index: 4;
 		opacity: 0;
 		filter: alpha(opacity=0);
+        box-shadow: rgba(0, 0, 0, 0.0980392) -3px 0px 3px 0px;
    	}
    	#task-sidebar .task-header{
    		width: 100%;
    		padding: 10px;
    		/*background-color: #3F51B5;
    		*/
-   		background: #292929;
-   		color: #fff;
    		position: relative;
-   		box-shadow: 0 0 10px rgba(51, 51, 51, .38);
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
    	}
+
+    #task-sidebar .task-header:after {
+        position: absolute;
+        content: ' ';
+        bottom: 0;
+        height: 1px;
+        left: 15px;
+        right: 15px;
+        background-color: #d9d9d9;
+    }
+
    	#task-sidebar .task-header .actions{
    		margin-top: -5px;
    	}
@@ -17562,3 +17575,4 @@ box-shadow: 0 2px 1px rgba(0,0,0,.1);
 	background-color: rgb(66, 133, 244);
 	color:#FFF;
 }
+

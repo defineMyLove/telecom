@@ -227,25 +227,25 @@
                     <tr>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="card_no" td type="text"
+                                <input class="span2" ms-on-input="filter" name="card_no" td type="text" autocomplete="off"
                                        placeholder="编号">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="name" td type="text"
+                                <input class="span2" ms-on-input="filter" name="name" td type="text" autocomplete="off"
                                        placeholder="姓名">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="tel" td type="text"
+                                <input class="span2" ms-on-input="filter" name="tel" td type="text" autocomplete="off"
                                        placeholder="电话">
                             </div>
                         </td>
                         <td>
                             <div class="input-prepend input-append" style="display: inline-block;margin-right: 10px;">
-                                <input class="span2" ms-on-input="filter" name="address" td type="text"
+                                <input class="span2" ms-on-input="filter" name="address" td type="text" autocomplete="off"
                                        placeholder="地址">
                             </div>
                         </td>
