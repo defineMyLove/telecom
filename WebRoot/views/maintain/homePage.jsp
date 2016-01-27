@@ -250,6 +250,9 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         $('#task-sidebar').removeClass('toggled');
                     },
                     pageQuery: function (dyn) {
+                        dynInfoVM.dyn = {};
+                        dynInfoVM.viceList = [];
+
                         var data = {
                             id: dyn.product_id
                         };
@@ -541,7 +544,7 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                 </ul>
             </div>
 
-            <div class="m-b-20" ms-visible="viceList.length != 0">
+            <div class="m-b-20" ms-visible="viceList.length > 0">
                 <p class="f-500 m-b-20 c-black">副卡信息</p>
                 <ul class="list-group">
                     <li class="list-group-item" ms-repeat="viceList">

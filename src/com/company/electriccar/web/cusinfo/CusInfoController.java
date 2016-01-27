@@ -99,7 +99,7 @@ public class CusInfoController {
         Map resMap = new HashMap();
         if (StringUtil.isNotBlank(id)) {
             resMap.put("info", zhuanLanService.find(id));
-            resMap.put("viceList", JsonUtil.obj2Json(cusCardService.selectViceList(id)));
+            resMap.put("viceList",cusCardService.selectViceList(id));
         }
         WebUtil.writeJson(response, JsonUtil.obj2JsonObj(resMap));
     }
