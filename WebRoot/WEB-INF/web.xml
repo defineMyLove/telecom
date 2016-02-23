@@ -38,7 +38,7 @@
         </init-param>
     </filter>
 
-     <!--<filter>
+     <filter>
          <filter-name>sessionFilter</filter-name>
          <filter-class>com.company.electriccar.common.filter.SessionTimeoutHandler</filter-class>
          <init-param>
@@ -52,10 +52,10 @@
          <init-param>
              <param-name>filterExcludes</param-name>
              <param-value>
-                 /toView;/page;/download;/mainlogin;/mainlogin/login;/service/flag;
+                /phone;/page;/download;/mainlogin/login;/mainlogin/loginOut;/service;
              </param-value>
          </init-param>
-     </filter>-->
+     </filter>
 
     <filter>
         <filter-name>httpMethodFilter</filter-name>
@@ -65,10 +65,10 @@
         <filter-name>characterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <!-- <filter-mapping>
+     <filter-mapping>
          <filter-name>sessionFilter</filter-name>
          <url-pattern>/*</url-pattern>
-     </filter-mapping>-->
+     </filter-mapping>
 
     <filter-mapping>
         <filter-name>httpMethodFilter</filter-name>

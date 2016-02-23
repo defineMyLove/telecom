@@ -6,6 +6,7 @@ import com.company.electriccar.service.CusInfoService;
 import com.company.electriccar.service.TelComService;
 import com.company.electriccar.service.reader.FlagService;
 import com.company.modules.utils.JsonUtil;
+import com.company.modules.utils.StringUtil;
 import com.company.modules.utils.WebUtil;
 import com.company.modules.web.ServiceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +55,9 @@ public class TelComController {
     @RequestMapping(value = "input")
     public ModelAndView input(String chanpin_id, HttpServletRequest request, HttpServletResponse response) {
         ModelAndView view = new ModelAndView("/phone/input");
-        view.addObject("chanpin_id", chanpin_id);
+        if (StringUtil.isNotBlank(chanpin_id)) {
+            view.addObject("chanpin_id", chanpin_id);
+        }
         return view;
     }
 
@@ -62,6 +65,7 @@ public class TelComController {
      * 添加用户信息(微信用户中心没有确定前用户信息不判断唯一性)
      * 1.如果没有用户ID直接添加用户信息
      * 2.如果有则不添加而只是添加套餐信息
+     *
      * @param user
      * @return
      */
@@ -69,6 +73,11 @@ public class TelComController {
     public void add(HttpServletResponse response, CUS_INFO user) {
         ServiceResponse res = cusInfoService.add(user);
         WebUtil.writeJson(response, JsonUtil.obj2JsonObj(res));
+    }
+
+    @RequestMapping(value = "category")
+    public String category(HttpServletResponse response, CUS_INFO user) {
+        return "/phone/category";
     }
 
     /**

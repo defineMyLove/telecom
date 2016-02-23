@@ -1,7 +1,7 @@
 package com.company.electriccar.common.filter;
 
 import com.company.electriccar.common.syscontext.SystemContext;
-import com.company.electriccar.domain.Account;
+import com.gengzi.nuocommon.UserToken;
 import org.apache.commons.lang.StringUtils;
 import wang.leq.sso.client.SSOHelper;
 
@@ -46,23 +46,38 @@ public class SessionTimeoutHandler implements Filter {
             return;
         }
         if (isLogon(request)) {
-            filterChain.doFilter(request, response);
-            return;
+            UserToken userToken = SystemContext.getUser(request);
+            if (isAdminUser(userToken)) {
+                filterChain.doFilter(request, response);
+                return;
+            }else{
+                SSOHelper.loginClear(request,response);
+                SystemContext.clearCurrentAccount(request.getSession());
+                response.sendRedirect(request.getContextPath() + "/mainlogin/loginOut");
+            }
         } else if (isExcludeURL(request)) {//是不是maintain后台访问，如果不是则返回ture.
             filterChain.doFilter(servletRequest, servletResponse);
             return;
         } else {
-           /* String path = handlePage;
+            String path = handlePage;
             String special = findSpecialHandlePage(request);
             if (special != null) {
                 path = special;
             }
-            response.sendRedirect(request.getContextPath() + path);*/
-            /**
-             * 重新登录
-             */
-            SSOHelper.login(request, response);
+            response.sendRedirect(request.getContextPath() + path);
         }
+    }
+
+
+    /**
+     * 验证是否可登陆此系统
+     * @param userToken
+     * @return
+     */
+    private boolean isAdminUser(UserToken userToken) {
+        if("18937353535".equals(userToken.getPhone())||"15936500111".equals(userToken.getPhone())||"13781989557".equals(userToken.getPhone()))
+            return true;
+        return false;
     }
 
     /**
@@ -123,13 +138,17 @@ public class SessionTimeoutHandler implements Filter {
             return true;
         }
 
-        if (uri.startsWith("/resources/")) {//静态资源文件
+        if (uri.startsWith("/js/")) {//静态资源文件
             return true;
         }
-        /*if(uri.equals(handlePage) || uri.endsWith(".js") || uri.endsWith(".css")
+
+        if (uri.contains("/resources/")) {//静态资源文件
+            return true;
+        }
+        if(uri.equals(handlePage) || uri.endsWith(".js") || uri.endsWith(".css")
     			|| uri.endsWith(".gif") || uri.endsWith(".png") || uri.endsWith(".jpg")){//访问超时页面或资源时让其通过
     		return true;
-    	}*/
+    	}
         if (uri.equals(handlePage)) {//访问超时页面
             return true;
         }
@@ -181,7 +200,7 @@ public class SessionTimeoutHandler implements Filter {
             for (String orExcludeParam : orExcludeParams) {//2是否满足任一个参数配置
                 String[] andExcludeParams = orExcludeParam.split("&");
                 boolean isParamsRequired = true;
-                ;//是否符合所有参数配置
+                //是否符合所有参数配置
                 for (String andExcludeParam : andExcludeParams) {//3是否满足某个参数配置
                     String[] requestParams = andExcludeParam.split("=");
                     if (requestParams.length != 2) {
@@ -213,11 +232,10 @@ public class SessionTimeoutHandler implements Filter {
     private boolean isLogon(HttpServletRequest request) {
         boolean flag = false;
 
-        Account user = SystemContext.getCurrentAccount(request);
+        UserToken user = SystemContext.getUser(request);
         if (user != null && !"".equals(user.getUserId())) {
             flag = true;
         }
-
         return flag;
     }
 

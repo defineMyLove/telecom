@@ -785,10 +785,10 @@ body {
     <div class="qn_nav">
         <ul>
             <li>
-                <a href="${path}/toView?view=/phone/category" class="item flex2 dangdiren">
+                <a href="${path}/service/category" class="item flex2 dangdiren">
                     <span>电信业务</span>
                 </a>
-                <a href="${path}/toView?view=/phone/input" class="item flex1 qianzheng">
+                <a href="${path}/service/input" class="item flex1 qianzheng">
                     <div class="pos">
                         <i></i>
                         <span>回访</span>
@@ -812,7 +812,7 @@ body {
                     <a class="lv-item" href="javascript:window.open('${path}/service/detail?id=${bean.id}','_self');">
                         <div class="media">
                             <div class="pull-left">
-                                <img class="lv-img" src="${path}${bean.pic_path}" alt="">
+                                <img class="lv-img" src="${bean.pic_path}" alt="">
                             </div>
                             <div class="media-body">
                                 <div class="lv-title">${bean.name}</div>
@@ -822,7 +822,7 @@ body {
                         </div>
                     </a>
                 </c:forEach>
-                <a class="lv-footer" href="${path}/toView?view=/phone/category">查看更多</a>
+                <a class="lv-footer" href="${path}/service/category">查看更多</a>
             </div>
         </div>
     </div>

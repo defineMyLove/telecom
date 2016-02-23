@@ -89,7 +89,7 @@
         function renderFormData(data) {
             jQuery.each(data.rows, function () {
                 this.create_time = top.common.getDateStr(this.create_time);
-                this.pic_path = "<img style='width:35px;height:35px;' src='${path}"+this.pic_path+"'/>";
+                this.pic_path = "<img style='width:35px;height:35px;' src='"+this.pic_path+"'/>";
             });
         }
         /**  按钮动作**/

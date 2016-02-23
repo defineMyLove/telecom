@@ -33,8 +33,7 @@
                 <h3 class="ui-tipbox-title">业务处理异常</h3>
                 <p class="ui-tipbox-explain">${msg}</p>
                 <p class="ui-tipbox-explain">
-                    <a href="${path}/">去首页</a>
-                    <c:if test="${!empty LOGIN_USER}">| <a href="${path}/user/userCenter">去用户中心</a> </c:if>
+                    <a href="/x">去首页</a>x
                 </p>
             </div>
         </div>

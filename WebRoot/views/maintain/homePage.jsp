@@ -58,9 +58,8 @@ seajs.use([ '$', 'app-util', 'avalon', 'niceScroll', 'todc-bootstrap', 'chosen']
                         totalPage: 0
                     },
                     playSound: function (src) {
-                        /* $('#embed').remove();
-                         $('body').append('<embed id="embed" src="
-                        ${path}/static/sound/chat_request.wav" autostart="true"  style="visibility: hidden" loop="false">');*/
+                         $('#embed').remove();
+                         $('body').append('<embed id="embed" src="${path}/static/sound/chat_request.wav" autostart="true"  style="visibility: hidden" loop="false">');
                     },
                     addInfo: function (el) {
                         window.top.openDialog("完善信息", "${path}/maintain/cusinfo/addInfo?id=" + el.id, 40, 30, [

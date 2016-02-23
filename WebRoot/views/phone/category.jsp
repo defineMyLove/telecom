@@ -84,6 +84,23 @@
             vertical-align: middle !important;
         }
 
+        .lv-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: .1rem;
+        }
+
+       .lv-small{
+           font-size: 12px;
+           color: #A9A9A9;
+           overflow: hidden;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           width: 100%;
+       }
 
     </style>
 </head>
@@ -127,9 +144,10 @@
     <section class="category-right" ms-controller="contentVM" class="ms-controller">
         <ul>
             <li ms-repeat="list" ms-click="detail(el)" location.href="javascript;;">
-                <div class="pro-panels"><p class="p-img"><img
-                        ms-src="${path}el.pic_path"></p>
-                    <p class="p-name"><span>{{el.name}}</span></p></div>
+                <div class="pro-panels">
+                    <p class="p-img"><img ms-src="el.pic_path"></p>
+                    <p class="p-name"><div>{{el.name}}</div><div><small class="lv-small">&nbsp;&nbsp;&nbsp;&nbsp; {{el.note}}</small></div></p>
+                </div>
             </li>
         </ul>
     </section>

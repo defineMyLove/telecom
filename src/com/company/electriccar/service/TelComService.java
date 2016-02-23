@@ -41,7 +41,7 @@ public class TelComService {
     }
 
     public List<Map> queryList() {
-        StringBuffer buffer = new StringBuffer("select *,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' ) as createTime from fangan_info limit 0,10");
+        StringBuffer buffer = new StringBuffer("select id,name,pic_path,note,FROM_UNIXTIME(left( create_time,10), '%Y-%m-%d' ) as createTime from fangan_info limit 0,10");
         return baseDao.queryForList(buffer.toString());
     }
 
